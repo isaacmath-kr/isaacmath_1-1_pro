@@ -243,7 +243,6 @@
   <a href="#s5" class="tlink">⑤ 일차방정식 풀이</a>
   <a href="#s6" class="tlink">⑥ 괄호가 있을 때</a>
   <a href="#s7" class="tlink">⑦ 소수·분수 계수</a>
-  <a href="#s8" class="tlink">⑧ 심화</a>
   <a href="#wrong" class="tlink">📕 오답노트</a>
   <a href="#gate" class="tlink">✏️ 연습문제</a>
 </nav>
@@ -470,32 +469,6 @@
     </div>
   </section>
 
-  <section class="section" id="s8">
-    <div class="section-head"><span class="section-num">8</span><span class="section-title">심화 — 킬러 문제</span>
-      <button class="complete-btn" onclick="toggleDone('s8')">완료하기</button></div>
-    <div class="box box-purple"><div class="box-title">🔮 유료 전용 심화 — 내신 서술형 단골</div>
-      <p style="margin:0;">일차방정식의 <strong>활용(문장제)</strong> — 나이 문제는 시험에서 가장 자주 나오는 유형 중 하나예요.</p></div>
-    <div class="solution">
-      <div class="sol-head">🧩 단계별 풀이 — 나이 문제</div>
-      <div class="sol-q">현재 아버지의 나이는 아들의 나이의 3배이다. 10년 후에는 아버지의 나이가 아들의 나이의 2배가 된다. 현재 아들의 나이는?</div>
-      <div class="step"><span class="s-label">STEP 1</span><br>현재 아들의 나이를 x라 하면, 아버지의 나이는 3x</div>
-      <div class="step"><span class="s-label">STEP 2</span><br>10년 후: 아들 (x+10), 아버지 (3x+10). 조건: 3x + 10 = 2(x + 10)</div>
-      <div class="step"><span class="s-label">STEP 3</span><br>전개·이항: 3x + 10 = 2x + 20 → x = 10</div>
-      <div class="step"><span class="s-label">정답</span><br>현재 아들 나이 = <strong>10살</strong>, 아버지 나이 = 3 × 10 = <strong>30살</strong></div>
-      <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
-    </div>
-    <div class="quiz" data-qid="b17" data-ans="10" data-type="num">
-      <div class="quiz-q">Q. 위 문제에서 현재 아들의 나이는?</div>
-      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="나이"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-fb"></div>
-    </div>
-    <div class="quiz" data-qid="b18" data-ans="30" data-type="num">
-      <div class="quiz-q">Q. 위 문제에서 현재 아버지의 나이는?</div>
-      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="나이"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-fb"></div>
-    </div>
-  </section>
-
   <section class="wrongnote" id="wrong">
     <h2>📕 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(본문에서 틀린 문제가 자동으로 모여요)</span></h2>
     <div id="wrongList"><p class="empty">아직 틀린 문제가 없어요. 퀴즈를 풀어보세요!</p></div>
@@ -507,7 +480,7 @@
     <h2>🔓 연습문제 잠금 해제</h2>
     <p class="desc">아래 두 조건을 모두 채우면 기본·응용·심화 연습문제가 열려요.</p>
     <ul class="checklist">
-      <li id="ck_quiz"><span class="mark">✓</span><span>본문 퀴즈 전부 채점하기 (<span id="gradedCount">0</span> / <span id="quizTotal">18</span>)</span></li>
+      <li id="ck_quiz"><span class="mark">✓</span><span>본문 퀴즈 전부 채점하기 (<span id="gradedCount">0</span> / <span id="quizTotal">16</span>)</span></li>
       <li id="ck_review"><span class="mark">✓</span><span>오답노트 확인하기 (위에서 '오답 정리 완료' 누르기)</span></li>
     </ul>
     <button class="start-btn locked" id="startBtn" onclick="startPractice()">🔒 연습문제 풀기 (잠김)</button>
@@ -518,52 +491,72 @@
     <div class="practice-sub">기본 10문제를 모두 채점하면 응용이, 응용을 모두 채점하면 심화가 열려요. 음수는 −5 처럼 입력. 틀린 문제는 아래 연습 오답노트에 모입니다.</div>
 
     <div class="pset" id="pset_basic">
-      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">등식의 성질·이항 기본기</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">판별 · 이항 · 기본 풀이</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
       <div class="pbody">
-        <div class="prob" data-qid="pb1" data-ans="7" data-type="num"><div class="pq"><span class="pnum">1.</span>x + 5 = 12 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb2" data-ans="13" data-type="num"><div class="pq"><span class="pnum">2.</span>x − 4 = 9 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb3" data-ans="5" data-type="num"><div class="pq"><span class="pnum">3.</span>3x = 15 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb4" data-ans="3" data-type="num"><div class="pq"><span class="pnum">4.</span>5x − 3 = 12 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb5" data-ans="4" data-type="num"><div class="pq"><span class="pnum">5.</span>2x + 7 = 15 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb6" data-ans="-6" data-type="num"><div class="pq"><span class="pnum">6.</span>−x = 6 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb7" data-ans="-5" data-type="num"><div class="pq"><span class="pnum">7.</span>4x = −20 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb8" data-ans="예|네|응" data-type="text"><div class="pq"><span class="pnum">8.</span>2x + 3 = 2x + 3 은 항등식인가요? (예 / 아니오)</div><div class="quiz-row"><input class="quiz-input" placeholder="예 / 아니오" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb9" data-ans="-2" data-type="num"><div class="pq"><span class="pnum">9.</span>6 − 2x = 10 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb10" data-ans="0" data-type="num"><div class="pq"><span class="pnum">10.</span>7x + 1 = 1 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb1" data-ans="2" data-type="num"><div class="pq"><span class="pnum">1.</span>다음 중 [ ] 안의 수가 그 방정식의 <strong>해</strong>인 것은 몇 개인가?<br>ㄱ. x + 3 = −2 &nbsp;[−1] &nbsp; ㄴ. <sup>2</sup>⁄<sub>3</sub>x = 2 &nbsp;[3]<br>ㄷ. 3x − 4 = x &nbsp;[−2] &nbsp; ㄹ. 3x − 2 = 2x − 2 &nbsp;[0]</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 대입해서 좌변과 우변이 <strong>같아지는지</strong> 확인할 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb2" data-ans="3" data-type="num"><div class="pq"><span class="pnum">2.</span>등식의 성질에 대한 다음 설명 중 <strong>옳은 것</strong>은 몇 개인가?<br>ㄱ. a = b 이면 a − 3 = b − 3 이다 &nbsp; ㄴ. 5a = 10b 이면 a = 2b 이다<br>ㄷ. a = 9 이면 a + (−2) = 5 이다 &nbsp; ㄹ. x − 4 = y − 2 이면 x − 2 = y 이다<br>ㅁ. a = 2b 이면 a − 1 = 2(b − 1) 이다</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ ㅁ은 우변을 전개해 보면 2b − 2 다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb3" data-ans="4" data-type="num"><div class="pq"><span class="pnum">3.</span>다음 중 <strong>이항을 바르게 한 것</strong>은 몇 개인가?<br>ㄱ. 5x − 2 = 3 → 5x = 3 + 2 &nbsp; ㄴ. −3x − 3 = 6 → 3x = 6 + 3<br>ㄷ. 3x + 7 = 4x → 3x − 4x + 7 = 0 &nbsp; ㄹ. 6x = 2x + 8 → 6x − 2x = 8<br>ㅁ. 5x − 3 = 8x − 6 → 5x − 8x = −6 + 3</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 이항하면 <strong>부호가 바뀐다</strong>. 옮기지 않은 항의 부호까지 바꾸면 안 된다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb4" data-ans="-3" data-type="num"><div class="pq"><span class="pnum">4.</span>일차방정식 7 − 3x = 2x + 22 의 해는?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb5" data-ans="7" data-type="num"><div class="pq"><span class="pnum">5.</span>일차방정식 3(x − 2) = 2x + 1 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb6" data-ans="6" data-type="num"><div class="pq"><span class="pnum">6.</span>일차방정식 0.3x − 0.5 = 0.1x + 0.7 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 양변에 10을 곱해 소수를 없앨 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb7" data-ans="4" data-type="num"><div class="pq"><span class="pnum">7.</span>일차방정식 <sup>x</sup>⁄<sub>2</sub> − <sup>x−1</sup>⁄<sub>3</sub> = 1 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 양변에 6을 곱할 때 <strong>모든 항</strong>에 곱해야 한다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb8" data-ans="2" data-type="num"><div class="pq"><span class="pnum">8.</span>다음 중 x 에 어떤 값을 넣어도 항상 성립하는 것(<strong>항등식</strong>)은 몇 개인가?<br>ㄱ. 2x + 3 = 2x + 3 &nbsp; ㄴ. 3(x − 1) = 3x − 3<br>ㄷ. x + 1 = 2x &nbsp; ㄹ. 2(x + 2) = 2x + 2</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb9" data-ans="2" data-type="num"><div class="pq"><span class="pnum">9.</span>일차방정식 −(2x − 5) = x − 1 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 괄호 앞의 −는 안쪽 <strong>모든 항</strong>의 부호를 바꾼다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb10" data-ans="-2" data-type="num"><div class="pq"><span class="pnum">10.</span>두 방정식 2x − 1 = 5 와 x + a = 1 의 <strong>해가 같을 때</strong>, 상수 a 의 값은?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ a 가 없는 방정식부터 풀어 해를 구할 것</div><div class="quiz-fb"></div></div>
       </div>
     </div>
 
     <div class="pset locked" id="pset_applied">
-      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">괄호·소수·분수 계수</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">해가 같을 조건 · 항등식 · 해의 조건</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
       <div class="lockmsg">🔒 기본 10문제를 모두 채점하면 열려요.</div>
       <div class="pbody">
-        <div class="prob" data-qid="pa1" data-ans="5" data-type="num"><div class="pq"><span class="pnum">1.</span>2(x + 3) = 16 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa2" data-ans="7" data-type="num"><div class="pq"><span class="pnum">2.</span>3(x − 2) = 2x + 1 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa3" data-ans="6" data-type="num"><div class="pq"><span class="pnum">3.</span>4x − 3 = 2x + 9 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa4" data-ans="7" data-type="num"><div class="pq"><span class="pnum">4.</span>5(x − 1) = 3(x + 3) 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa5" data-ans="10" data-type="num"><div class="pq"><span class="pnum">5.</span>0.2x + 1 = 0.5x − 2 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa6" data-ans="20" data-type="num"><div class="pq"><span class="pnum">6.</span>0.4x − 1 = 0.2x + 3 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa7" data-ans="18" data-type="num"><div class="pq"><span class="pnum">7.</span>(1/3)x + 2 = (1/2)x − 1 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa8" data-ans="12" data-type="num"><div class="pq"><span class="pnum">8.</span>(2/3)x − 1 = (1/3)x + 3 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa9" data-ans="3" data-type="num"><div class="pq"><span class="pnum">9.</span>3x − (x − 4) = 10 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 괄호 앞 마이너스 부호 주의!</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa10" data-ans="2" data-type="num"><div class="pq"><span class="pnum">10.</span>−(2x − 5) = x − 1 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa1" data-ans="2/5|0.4" data-type="text"><div class="pq"><span class="pnum">1.</span>일차방정식 <sup>7−x</sup>⁄<sub>2</sub> = 3(1.5 − x) 의 해는? (기약분수)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 2/5" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 1.5 를 분수 <sup>3</sup>⁄<sub>2</sub> 로 바꾸면 통분이 쉬워진다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa2" data-ans="1" data-type="num"><div class="pq"><span class="pnum">2.</span>일차방정식 2(x − 3) = 5x + 3 의 근과 <sup>x</sup>⁄<sub>2</sub> = 2 의 근의 <strong>합</strong>은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa3" data-ans="-4" data-type="num"><div class="pq"><span class="pnum">3.</span>두 일차방정식 1 − <sup>x+a</sup>⁄<sub>3</sub> = <sup>x−2a</sup>⁄<sub>2</sub> 와 5x + 6 = 2x 의 <strong>해가 같을 때</strong>, 상수 a 의 값은?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ a 가 없는 오른쪽 방정식부터 풀어 해를 구한 뒤 대입</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa4" data-ans="3" data-type="num"><div class="pq"><span class="pnum">4.</span>일차방정식 0.2(x − a) − 0.5(x − 2) = 1 의 <strong>해가 x = −2</strong> 일 때, 상수 a 의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ x = −2 를 먼저 대입하면 a 에 대한 방정식이 된다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa5" data-ans="-1" data-type="num"><div class="pq"><span class="pnum">5.</span>두 방정식 0.5x + 3 = 1 과 k(x + 2) + 3 = 5 의 해가 서로 같을 때, 상수 k 의 값은?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa6" data-ans="1" data-type="num"><div class="pq"><span class="pnum">6.</span>등식 (2a + 7)x + 6 = 15x − (b − 3) 이 <strong>x 의 값에 관계없이 항상 성립</strong>할 때, a + b 의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 항등식이므로 <strong>x 의 계수끼리, 상수항끼리</strong> 각각 같다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa7" data-ans="2" data-type="num"><div class="pq"><span class="pnum">7.</span>일차방정식 <sup>1</sup>⁄<sub>2</sub>x − <sup>3</sup>⁄<sub>2</sub> = <sup>1</sup>⁄<sub>4</sub>x 의 해가 일차방정식 a(x − 1) = 8 − 3x 의 해의 <strong>3배</strong>일 때, 상수 a 의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 왼쪽 방정식의 해를 먼저 구하고, 그 값을 3으로 나눈 것이 오른쪽의 해</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa8" data-ans="8" data-type="num"><div class="pq"><span class="pnum">8.</span>소윤이가 일차방정식 5x + 3 = 6x − 12 에서 <strong>6을 잘못 보고</strong> 풀었더니 해가 x = 5 가 되었다. 소윤이는 6을 어떤 수로 잘못 보았는가?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 잘못 본 수를 □ 로 놓고 x = 5 를 대입</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa9" data-ans="5" data-type="num"><div class="pq"><span class="pnum">9.</span>x 에 관한 일차방정식 3(11 − 2x) = k 의 해가 <strong>자연수</strong>일 때, 가능한 <strong>자연수 k 의 개수</strong>는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ x 를 k 에 대한 식으로 정리하면 x = <sup>33−k</sup>⁄<sub>6</sub>. 이것이 자연수가 되어야 한다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa10" data-ans="10" data-type="num"><div class="pq"><span class="pnum">10.</span>x 에 관한 일차방정식 x − <sup>1</sup>⁄<sub>5</sub>(x + 4a) = −4 의 해가 <strong>음의 정수</strong>일 때, 자연수 a 의 값을 <strong>모두 더하면</strong>?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 정리하면 x = a − 5. 음의 정수가 되는 자연수 a 를 모두 찾을 것</div><div class="quiz-fb"></div></div>
       </div>
     </div>
 
     <div class="pset locked" id="pset_hard">
-      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">킬러 — 문장제·활용</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">킬러 — 문자계수 · 조건부 해 · 역산</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
       <div class="lockmsg">🔒 응용 10문제를 모두 채점하면 열려요.</div>
       <div class="pbody">
-        <div class="prob" data-qid="ph1" data-ans="16" data-type="num"><div class="pq"><span class="pnum">1.</span>연속하는 세 자연수의 합이 51일 때, 가장 작은 수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="가장 작은 수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ x + (x+1) + (x+2) = 51</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph2" data-ans="18" data-type="num"><div class="pq"><span class="pnum">2.</span>위 1번에서 가장 큰 수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="가장 큰 수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph3" data-ans="12" data-type="num"><div class="pq"><span class="pnum">3.</span>어떤 수의 2배에서 5를 뺀 값이 그 수에 7을 더한 값과 같다. 그 수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="그 수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 2x − 5 = x + 7</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph4" data-ans="5" data-type="num"><div class="pq"><span class="pnum">4.</span>가로가 세로보다 3만큼 긴 직사각형의 둘레가 26일 때, 세로의 길이는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="세로"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 세로 x, 가로 x+3, 둘레 2(x+x+3)=26</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph5" data-ans="8" data-type="num"><div class="pq"><span class="pnum">5.</span>위 4번에서 가로의 길이는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="가로"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph6" data-ans="40" data-type="num"><div class="pq"><span class="pnum">6.</span>시속 x km로 2시간 동안 달린 거리가 80 km일 때, x의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 2x = 80</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph7" data-ans="16" data-type="num"><div class="pq"><span class="pnum">7.</span>어떤 수에서 7을 빼야 할 것을 잘못하여 더했더니 23이 되었다. 어떤 수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="어떤 수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ A + 7 = 23</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph8" data-ans="9" data-type="num"><div class="pq"><span class="pnum">8.</span>위 7번에서 바르게 계산한 값(어떤 수 − 7)은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph9" data-ans="10000" data-type="num"><div class="pq"><span class="pnum">9.</span>어떤 물건의 정가에서 2000원을 할인하여 팔았더니 정가의 80%가 되었다. 정가는? (원)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="정가(원)"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ x − 2000 = 0.8x</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph10" data-ans="8000" data-type="num"><div class="pq"><span class="pnum">10.</span>위 9번에서 실제로 판매한 가격은? (원)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="판매가(원)"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="box box-purple"><div class="box-title">🔮 이 세트의 핵심 — 해를 구하는 게 아니라 <em>조건</em>을 다룬다</div>
+          <p style="margin:0;">여기서부터는 "풀어서 x 를 구하시오"가 거의 없습니다. 대신 <strong>해에 조건이 붙거나(자연수·음의 정수), 계수 자리에 문자가 있거나, 누군가 잘못 풀었거나</strong> 합니다. 요령은 둘입니다 — ① <strong>문자를 포함한 채로 끝까지 정리</strong>해 x = (a 에 대한 식) 꼴을 만든다. ② 문제가 <strong>무엇을 물었는지</strong> 다시 확인한다. a 를 구해 놓고 그대로 답으로 쓰는 실수가 이 세트에서 가장 많이 나옵니다.</p></div>
+        <div class="solution">
+          <div class="sol-head">🧩 준비 예제 — 해에 조건이 붙는 문제의 기본형</div>
+          <div class="sol-q">x 에 대한 일차방정식 ax = 6 의 해가 <strong>자연수</strong>가 되도록 하는 정수 a 를 모두 구하면?</div>
+          <div class="step"><span class="s-label">STEP 1</span><br>a ≠ 0 이므로 양변을 a 로 나누면 x = <sup>6</sup>⁄<sub>a</sub></div>
+          <div class="step"><span class="s-label">STEP 2</span><br>x 가 자연수 → <sup>6</sup>⁄<sub>a</sub> 가 자연수 → a 는 <strong>6의 약수</strong>이면서 <strong>양수</strong>여야 한다</div>
+          <div class="step"><span class="s-label">STEP 3</span><br>a = 1, 2, 3, 6 &nbsp;(이때 x = 6, 3, 2, 1)</div>
+          <div class="step"><span class="s-label">정답</span><br><strong>a = 1, 2, 3, 6</strong> — 핵심은 <strong>x = (분수 꼴)</strong> 로 만든 뒤 분모를 약수로 보는 것</div>
+          <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
+        </div>
+        <div class="solution">
+          <div class="sol-head">🧩 본 유형 — 우변이 음수일 때 (아래 1번 유형)</div>
+          <div class="sol-q">x 에 대한 일차방정식 ax + 5 = 2 의 해가 <strong>자연수</strong>가 되도록 하는 모든 정수 a 와, 그때의 해 x 를 구하면?</div>
+          <div class="step"><span class="s-label">STEP 1</span><br>이항하면 ax = −3 → x = −<sup>3</sup>⁄<sub>a</sub></div>
+          <div class="step"><span class="s-label">STEP 2</span><br>x 가 자연수(양수)인데 분자가 −3 이므로 <strong>a 는 음수</strong>여야 한다 — 여기서 부호를 놓치면 답이 반대로 나온다</div>
+          <div class="step"><span class="s-label">STEP 3</span><br>a = −1, −3 &nbsp;→ &nbsp;x = 3, 1</div>
+          <div class="step"><span class="s-label">정답</span><br><strong>a = −1, −3 (이때 x = 3, 1)</strong> — 문제가 a 를 물었는지 <strong>x 를 물었는지</strong> 반드시 확인할 것</div>
+          <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
+        </div>
+        <div class="prob" data-qid="ph1" data-ans="12" data-type="num"><div class="pq"><span class="pnum">1.</span>x 에 대한 일차방정식 ax + 4 = −2 의 해가 <strong>자연수</strong>가 되도록 하는 모든 <strong>정수 a</strong> 에 대하여, 그때의 <strong>해 x 를 모두 더하면</strong>?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 위 본 유형 풀이 참고. 묻는 것은 a 의 합이 아니라 <strong>해 x 의 합</strong>이다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph2" data-ans="-1" data-type="num"><div class="pq"><span class="pnum">2.</span>x 에 대한 일차방정식 x − <sup>3x+a</sup>⁄<sub>4</sub> = a + 5 의 해가 x = 5 일 때, 그 상수 a 에 대하여 방정식 a(x − 1) = x + 7 의 해는?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 먼저 a 를 구한 다음, 그 a 를 넣은 새 방정식을 다시 풀어야 한다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph3" data-ans="-12" data-type="num"><div class="pq"><span class="pnum">3.</span>두 일차방정식 (x − 3) : 12 = <sup>2x−3</sup>⁄<sub>4</sub> : 3 과 3(x − 2) = a 의 <strong>해의 차가 5</strong> 일 때, 가능한 모든 상수 a 의 값의 <strong>합</strong>은?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 비례식은 <strong>외항의 곱 = 내항의 곱</strong>. 차가 5이므로 <strong>두 경우</strong>가 나온다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph4" data-ans="-28" data-type="num"><div class="pq"><span class="pnum">4.</span>등식 (a − 2)x + 3b = 5x + b − 8 이 x 의 값에 관계없이 항상 성립할 때, a × b 의 값은?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 상수항을 비교할 때 b 가 <strong>양변에 모두</strong> 있다는 점에 주의</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph5" data-ans="12" data-type="num"><div class="pq"><span class="pnum">5.</span>세 수 a, b, c 에 대하여 <strong>a + b + c = 12</strong> 일 때, x 에 대한 일차방정식<br><sup>x</sup>⁄<sub>a</sub> + <sup>x</sup>⁄<sub>b</sub> + <sup>x</sup>⁄<sub>c</sub> − 3 = <sup>b+c</sup>⁄<sub>a</sub> + <sup>a+c</sup>⁄<sub>b</sub> + <sup>a+b</sup>⁄<sub>c</sub> &nbsp;의 해를 구하면? (단, abc ≠ 0)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 우변의 b + c 를 12 − a 로 바꿔 보면 양변이 같은 꼴로 보인다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph6" data-ans="30" data-type="num"><div class="pq"><span class="pnum">6.</span>어떤 학생이 일차방정식 4(x − a) = 3x + 2 에서 <strong>괄호를 풀지 않고</strong> 4x − a = 3x + 2 로 잘못 계산하여 해 x = 9 를 얻었다. 이 방정식의 <strong>바른 해</strong>는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 잘못된 식으로 a 를 먼저 구한 뒤 <strong>원래 식</strong>에 넣어 다시 풀 것. a 가 답이 아니다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph7" data-ans="3" data-type="num"><div class="pq"><span class="pnum">7.</span>x 에 관한 방정식 (a − 3)x = 2(a − 3) 에 대하여 다음 설명 중 <strong>옳은 것</strong>은 몇 개인가?<br>ㄱ. a = 3 이면 해가 무수히 많다 &nbsp; ㄴ. a = 5 이면 해는 x = 2 이다<br>ㄷ. 해가 없게 되는 a 의 값이 존재한다 &nbsp; ㄹ. a ≠ 3 이면 a 의 값과 관계없이 해는 항상 같다</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 양변을 (a − 3) 으로 나눌 수 있는 경우와 <strong>없는 경우</strong>를 나누어 볼 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph8" data-ans="2" data-type="num"><div class="pq"><span class="pnum">8.</span>일차방정식 0.3(x − 1) − <sup>2x−1</sup>⁄<sub>5</sub> = 0.1x − <sup>1</sup>⁄<sub>2</sub> 의 해는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 소수와 분수가 섞이면 <strong>양변에 10을 곱해</strong> 한 번에 정리하는 것이 빠르다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph9" data-ans="-6" data-type="num"><div class="pq"><span class="pnum">9.</span>일차방정식 3(2x − a) = 5x + 12 에서 어떤 학생이 <strong>a 를 4 로, 12 를 b 로</strong> 잘못 보고 풀어 해 x = 6 을 얻었다. 원래 방정식의 해가 x = 15 일 때, b 의 값은?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 원래 식과 잘못 본 식을 <strong>각각 따로</strong> 세울 것. 원래 식에서 a 부터 구한다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph10" data-ans="-1/3" data-type="text"><div class="pq"><span class="pnum">10.</span>일차방정식 <sup>x−1</sup>⁄<sub>2</sub> − <sup>x−2</sup>⁄<sub>3</sub> + <sup>x−3</sup>⁄<sub>4</sub> = <sup>x−4</sup>⁄<sub>6</sub> 의 해는? (기약분수)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: -1/3" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 분모 2, 3, 4, 6 의 최소공배수 12 를 양변에 곱할 것</div><div class="quiz-fb"></div></div>
       </div>
     </div>
 
@@ -648,6 +641,7 @@ function renderWrongList(boxId,list){
 
 function refresh(){
   const secs=document.querySelectorAll('.section');
+  state.done=state.done.filter(id=>document.getElementById(id));
   secs.forEach(s=>{const on=state.done.indexOf(s.id)>=0;s.classList.toggle('done',on);const b=s.querySelector('.complete-btn');if(b)b.textContent=on?'✓ 완료됨':'완료하기';});
   const total=secs.length;const p=Math.round(state.done.length/total*100);
   document.getElementById('ring').style.setProperty('--p',p);document.getElementById('ringTxt').textContent=p+'%';
