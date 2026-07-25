@@ -258,7 +258,6 @@
   <a href="#s5" class="tlink">⑤ 거듭제곱</a>
   <a href="#s6" class="tlink">⑥ 약수 구하기</a>
   <a href="#s7" class="tlink">⑦ 약수의 개수</a>
-  <a href="#s8" class="tlink">⑧ 심화</a>
   <a href="#wrong" class="tlink">📕 오답노트</a>
   <a href="#gate" class="tlink">✏️ 연습문제</a>
 </nav>
@@ -456,33 +455,6 @@
     </div>
   </section>
 
-  <section class="section" id="s8">
-    <div class="section-head"><span class="section-num">8</span><span class="section-title">심화 — 킬러 문제</span>
-      <button class="complete-btn" onclick="toggleDone('s8')">완료하기</button></div>
-    <div class="box box-purple"><div class="box-title">🔮 유료 전용 심화</div>
-      <p>약수의 개수 공식을 <strong>거꾸로</strong> 이용하는 출제 유형이에요. 지수를 역설계하는 게 핵심!</p></div>
-    <div class="solution">
-      <div class="sol-head">🧩 단계별 풀이 — 약수가 정확히 9개인 가장 작은 자연수?</div>
-      <div class="sol-q">약수의 개수가 9가 되도록 (지수+1)들의 곱을 만들어 보세요.</div>
-      <div class="step"><span class="s-label">STEP 1</span><br>9를 (지수+1)들의 곱으로 분해: 9 = 9 또는 9 = 3 × 3</div>
-      <div class="step"><span class="s-label">STEP 2</span><br>9 = 9 → 소인수 1개, 지수 8 → 최소는 2<sup>8</sup> = 256</div>
-      <div class="step"><span class="s-label">STEP 3</span><br>3 × 3 → 소인수 2개, 지수 각 2 → 최소는 2<sup>2</sup> × 3<sup>2</sup> = 36</div>
-      <div class="step"><span class="s-label">정답</span><br>36 &lt; 256 이므로 답은 <strong>36</strong> (작은 소수에 큰 지수를 몰아주는 게 최소!)</div>
-      <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
-    </div>
-    <div class="quiz" data-qid="b10" data-ans="36" data-type="num">
-      <div class="quiz-q">Q. 약수가 정확히 9개인 가장 작은 자연수는?</div>
-      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="자연수"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-fb"></div>
-    </div>
-    <div class="quiz" data-qid="b11" data-ans="4" data-type="num">
-      <div class="quiz-q">Q. 약수가 정확히 3개인 가장 작은 자연수는? (힌트: 3 = (지수+1) → 소수의 제곱)</div>
-      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="자연수"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">→ 2² = 4, 약수는 1·2·4</div>
-      <div class="quiz-fb"></div>
-    </div>
-  </section>
-
   <section class="wrongnote" id="wrong">
     <h2>📕 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(본문에서 틀린 문제가 자동으로 모여요)</span></h2>
     <div id="wrongList"><p class="empty">아직 틀린 문제가 없어요. 퀴즈를 풀어보세요!</p></div>
@@ -494,7 +466,7 @@
     <h2>🔓 연습문제 잠금 해제</h2>
     <p class="desc">아래 두 조건을 모두 채우면 기본·응용·심화 연습문제가 열려요.</p>
     <ul class="checklist">
-      <li id="ck_quiz"><span class="mark">✓</span><span>본문 퀴즈 전부 채점하기 (<span id="gradedCount">0</span> / <span id="quizTotal">11</span>)</span></li>
+      <li id="ck_quiz"><span class="mark">✓</span><span>본문 퀴즈 전부 채점하기 (<span id="gradedCount">0</span> / <span id="quizTotal">9</span>)</span></li>
       <li id="ck_review"><span class="mark">✓</span><span>오답노트 확인하기 (위에서 '오답 정리 완료' 누르기)</span></li>
     </ul>
     <button class="start-btn locked" id="startBtn" onclick="startPractice()">🔒 연습문제 풀기 (잠김)</button>
@@ -541,8 +513,19 @@
       <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">킬러 — 역산 · 개수 세기 · 모든 값의 합</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
       <div class="lockmsg">🔒 응용 10문제를 모두 채점하면 열려요.</div>
       <div class="pbody">
+        <div class="box box-purple"><div class="box-title">🔮 이 세트의 핵심 — 지수 역설계</div>
+          <p>약수의 개수 공식을 <strong>거꾸로</strong> 이용하는 출제 유형이에요. 지수를 역설계하는 게 핵심!</p></div>
         <div class="solution">
-          <div class="sol-head">🧩 단계별 풀이 — 기호가 정의된 문제 (아래 4번 유형)</div>
+          <div class="sol-head">🧩 준비 예제 — 약수가 정확히 9개인 가장 작은 자연수?</div>
+          <div class="sol-q">약수의 개수가 9가 되도록 (지수+1)들의 곱을 만들어 보세요.</div>
+          <div class="step"><span class="s-label">STEP 1</span><br>9를 (지수+1)들의 곱으로 분해: 9 = 9 또는 9 = 3 × 3</div>
+          <div class="step"><span class="s-label">STEP 2</span><br>9 = 9 → 소인수 1개, 지수 8 → 최소는 2<sup>8</sup> = 256</div>
+          <div class="step"><span class="s-label">STEP 3</span><br>3 × 3 → 소인수 2개, 지수 각 2 → 최소는 2<sup>2</sup> × 3<sup>2</sup> = 36</div>
+          <div class="step"><span class="s-label">정답</span><br>36 &lt; 256 이므로 답은 <strong>36</strong> (작은 소수에 큰 지수를 몰아주는 게 최소!)</div>
+          <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
+        </div>
+        <div class="solution">
+          <div class="sol-head">🧩 본 유형 — 기호가 정의된 문제 (아래 4번 유형)</div>
           <div class="sol-q">자연수 a의 약수의 개수를 [[a]]라 할 때, [[169]] × [[128]] × [[x]] = 240을 만족하는 자연수 x 중 가장 작은 수는?</div>
           <div class="step"><span class="s-label">STEP 1</span><br>기호부터 푼다. 169 = 13<sup>2</sup> → [[169]] = 2+1 = <strong>3</strong>, 128 = 2<sup>7</sup> → [[128]] = 7+1 = <strong>8</strong>.</div>
           <div class="step"><span class="s-label">STEP 2</span><br>3 × 8 × [[x]] = 240 → 24 × [[x]] = 240 → <strong>[[x]] = 10</strong>. (여기서 한 번 역산)</div>
@@ -646,6 +629,7 @@ function renderWrongList(boxId,list){
 function refresh(){
   // 섹션 완료 + 성취
   const secs=document.querySelectorAll('.section');
+  state.done=state.done.filter(id=>document.getElementById(id));
   secs.forEach(s=>{const on=state.done.indexOf(s.id)>=0;s.classList.toggle('done',on);const b=s.querySelector('.complete-btn');if(b)b.textContent=on?'✓ 완료됨':'완료하기';});
   const total=secs.length;const p=Math.round(state.done.length/total*100);
   document.getElementById('ring').style.setProperty('--p',p);document.getElementById('ringTxt').textContent=p+'%';
