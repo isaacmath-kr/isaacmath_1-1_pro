@@ -247,7 +247,6 @@
   <a href="#s5" class="tlink">⑤ 항·계수</a>
   <a href="#s6" class="tlink">⑥ 차수·일차식</a>
   <a href="#s7" class="tlink">⑦ 일차식 계산</a>
-  <a href="#s8" class="tlink">⑧ 심화</a>
   <a href="#wrong" class="tlink">📕 오답노트</a>
   <a href="#gate" class="tlink">✏️ 연습문제</a>
 </nav>
@@ -412,32 +411,6 @@
     </div>
   </section>
 
-  <section class="section" id="s8">
-    <div class="section-head"><span class="section-num">8</span><span class="section-title">심화 — 킬러 문제</span>
-      <button class="complete-btn" onclick="toggleDone('s8')">완료하기</button></div>
-    <div class="box box-purple"><div class="box-title">🔮 유료 전용 심화 — 내신 서술형 단골</div>
-      <p style="margin:0;">"어떤 식을 더해야 할 것을 잘못하여 뺐더니…" — 어떤 식을 역산하는 유형이에요.</p></div>
-    <div class="solution">
-      <div class="sol-head">🧩 단계별 풀이 — 바르게 계산한 식</div>
-      <div class="sol-q">어떤 식에 2x − 3을 더해야 할 것을 잘못하여 뺐더니 5x + 1이 되었다. 바르게 계산한 식은?</div>
-      <div class="step"><span class="s-label">STEP 1</span><br>어떤 식을 A라 하면, 잘못한 계산: A − (2x − 3) = 5x + 1</div>
-      <div class="step"><span class="s-label">STEP 2</span><br>A = (5x + 1) + (2x − 3) = 7x − 2</div>
-      <div class="step"><span class="s-label">STEP 3</span><br>바르게: A + (2x − 3) = (7x − 2) + (2x − 3)</div>
-      <div class="step"><span class="s-label">정답</span><br>= <strong>9x − 5</strong> (x의 계수 9, 상수항 −5)</div>
-      <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
-    </div>
-    <div class="quiz" data-qid="b14" data-ans="9" data-type="num">
-      <div class="quiz-q">Q. 위 '바르게 계산한 식'에서 x의 계수는?</div>
-      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="계수"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-fb"></div>
-    </div>
-    <div class="quiz" data-qid="b15" data-ans="-5" data-type="num">
-      <div class="quiz-q">Q. 위 '바르게 계산한 식'의 상수항은?</div>
-      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="상수항"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-fb"></div>
-    </div>
-  </section>
-
   <section class="wrongnote" id="wrong">
     <h2>📕 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(본문에서 틀린 문제가 자동으로 모여요)</span></h2>
     <div id="wrongList"><p class="empty">아직 틀린 문제가 없어요. 퀴즈를 풀어보세요!</p></div>
@@ -449,7 +422,7 @@
     <h2>🔓 연습문제 잠금 해제</h2>
     <p class="desc">아래 두 조건을 모두 채우면 기본·응용·심화 연습문제가 열려요.</p>
     <ul class="checklist">
-      <li id="ck_quiz"><span class="mark">✓</span><span>본문 퀴즈 전부 채점하기 (<span id="gradedCount">0</span> / <span id="quizTotal">15</span>)</span></li>
+      <li id="ck_quiz"><span class="mark">✓</span><span>본문 퀴즈 전부 채점하기 (<span id="gradedCount">0</span> / <span id="quizTotal">13</span>)</span></li>
       <li id="ck_review"><span class="mark">✓</span><span>오답노트 확인하기 (위에서 '오답 정리 완료' 누르기)</span></li>
     </ul>
     <button class="start-btn locked" id="startBtn" onclick="startPractice()">🔒 연습문제 풀기 (잠김)</button>
@@ -460,52 +433,89 @@
     <div class="practice-sub">기본 10문제를 모두 채점하면 응용이, 응용을 모두 채점하면 심화가 열려요. 음수는 −5 처럼 입력. 틀린 문제는 아래 연습 오답노트에 모입니다.</div>
 
     <div class="pset" id="pset_basic">
-      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">대입·계수·차수</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">표기 · 대입 · 항과 차수</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
       <div class="pbody">
-        <div class="prob" data-qid="pb1" data-ans="7" data-type="num"><div class="pq"><span class="pnum">1.</span>x = 3일 때 2x + 1 의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb2" data-ans="-5" data-type="num"><div class="pq"><span class="pnum">2.</span>a = −1일 때 5a 의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb3" data-ans="-7" data-type="num"><div class="pq"><span class="pnum">3.</span>−7x 의 계수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="계수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb4" data-ans="-1" data-type="num"><div class="pq"><span class="pnum">4.</span>−x 의 계수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="계수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb5" data-ans="2" data-type="num"><div class="pq"><span class="pnum">5.</span>3x<sup>2</sup> 의 차수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="차수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb6" data-ans="2" data-type="num"><div class="pq"><span class="pnum">6.</span>−5ab 의 차수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="차수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb7" data-ans="3" data-type="num"><div class="pq"><span class="pnum">7.</span>2a + 3b − 1 의 항의 개수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb8" data-ans="예|네" data-type="text"><div class="pq"><span class="pnum">8.</span>5 는 상수항인가요? (예 / 아니오)</div><div class="quiz-row"><input class="quiz-input" placeholder="예 / 아니오" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb9" data-ans="아니요|아니오" data-type="text"><div class="pq"><span class="pnum">9.</span>0.1 × x 를 0.x 로 쓸 수 있나요? (예 / 아니오)</div><div class="quiz-row"><input class="quiz-input" placeholder="예 / 아니오" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb10" data-ans="4" data-type="num"><div class="pq"><span class="pnum">10.</span>x = 2, y = −1 일 때 3x + 2y 의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb1" data-ans="2" data-type="num"><div class="pq"><span class="pnum">1.</span>다음 중 곱셈·나눗셈 기호를 <strong>바르게 생략한 것</strong>은 몇 개인가?<br>ㄱ. a × (−3) = −3a &nbsp; ㄴ. (a − b) × 5 = 5a − b &nbsp; ㄷ. 2 ÷ a = <sup>a</sup>⁄<sub>2</sub><br>ㄹ. a + b ÷ 4 = <sup>a+b</sup>⁄<sub>4</sub> &nbsp; ㅁ. a ÷ 4 × (−5) = −<sup>5a</sup>⁄<sub>4</sub></div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb2" data-ans="-1" data-type="num"><div class="pq"><span class="pnum">2.</span>x = −3 일 때 x<sup>2</sup> + 2x − 4 의 값은?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 음수는 괄호로 감싸 대입한다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb3" data-ans="15" data-type="num"><div class="pq"><span class="pnum">3.</span>a = −3, b = 2 일 때 a<sup>2</sup> − ab 의 값은?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb4" data-ans="3" data-type="num"><div class="pq"><span class="pnum">4.</span>다항식 −3x<sup>2</sup> + 2x − 1 의 <strong>항</strong>의 개수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb5" data-ans="-1/2|-0.5" data-type="text"><div class="pq"><span class="pnum">5.</span>y<sup>2</sup> − <sup>2</sup>⁄<sub>3</sub>y − <sup>1</sup>⁄<sub>2</sub> 의 <strong>상수항</strong>은? (기약분수)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: -1/2" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 상수항의 부호도 자기 앞 부호가 자기 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb6" data-ans="3" data-type="num"><div class="pq"><span class="pnum">6.</span>다음 중 3x<sup>2</sup> 과 <strong>동류항</strong>인 것은 몇 개인가?<br>ㄱ. −x<sup>2</sup> &nbsp; ㄴ. 3x &nbsp; ㄷ. <sup>x<sup>2</sup></sup>⁄<sub>2</sub> &nbsp; ㄹ. 2y<sup>2</sup> &nbsp; ㅁ. 5x<sup>2</sup></div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb7" data-ans="아니요|아니오" data-type="text"><div class="pq"><span class="pnum">7.</span>2x − 2(x + 1) 은 <strong>일차식</strong>인가요? (예 / 아니오)</div><div class="quiz-row"><input class="quiz-input" placeholder="예 / 아니오" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 괄호를 먼저 풀고 정리해 볼 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb8" data-ans="-10" data-type="num"><div class="pq"><span class="pnum">8.</span>8x ÷ ( −<sup>4</sup>⁄<sub>5</sub> ) 를 간단히 하면 ax 꼴이다. a 의 값은?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 분수로 나누기 = 역수를 곱하기</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb9" data-ans="8" data-type="num"><div class="pq"><span class="pnum">9.</span>(3x − 9) ÷ ( −<sup>3</sup>⁄<sub>4</sub> ) 를 간단히 하면 ax + b 꼴이다. a + b 의 값은?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 뒤의 −9 에도 역수를 빠뜨리지 말고 곱할 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb10" data-ans="37" data-type="num"><div class="pq"><span class="pnum">10.</span>십의 자리 숫자가 x, 일의 자리 숫자가 y 인 두 자리 자연수를 x, y 를 사용한 식으로 나타낸 뒤, x = 3, y = 7 을 대입한 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 십의 자리 숫자는 10배가 된다</div><div class="quiz-fb"></div></div>
       </div>
     </div>
 
     <div class="pset locked" id="pset_applied">
-      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">대입·분배·동류항 정리</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">표기 판별 · 분수계수 정리 · 식 세우기</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
       <div class="lockmsg">🔒 기본 10문제를 모두 채점하면 열려요.</div>
       <div class="pbody">
-        <div class="prob" data-qid="pa1" data-ans="11" data-type="num"><div class="pq"><span class="pnum">1.</span>x = −2 일 때 x<sup>2</sup> − 3x + 1 의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa2" data-ans="16" data-type="num"><div class="pq"><span class="pnum">2.</span>a = 3, b = −2 일 때 2a − 5b 의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa3" data-ans="-4" data-type="num"><div class="pq"><span class="pnum">3.</span>(3x + 5) + (−7x + 2) 정리 후 x의 계수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="계수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa4" data-ans="7" data-type="num"><div class="pq"><span class="pnum">4.</span>그 식 (3x + 5) + (−7x + 2) 의 상수항은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="상수항"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa5" data-ans="-15" data-type="num"><div class="pq"><span class="pnum">5.</span>5(2x − 3) 을 전개했을 때 상수항은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="상수항"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa6" data-ans="10" data-type="num"><div class="pq"><span class="pnum">6.</span>5(2x − 3) 전개 후 x의 계수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="계수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa7" data-ans="-6" data-type="num"><div class="pq"><span class="pnum">7.</span>(3a − b) × (−2) 전개 후 a의 계수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="계수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa8" data-ans="-1" data-type="num"><div class="pq"><span class="pnum">8.</span>2x + 3 − (3x + 2) 정리 후 x의 계수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="계수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa9" data-ans="3" data-type="num"><div class="pq"><span class="pnum">9.</span>−x/3 의 계수를 기약분수로 쓸 때 분모는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="분모"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 계수는 −1/3</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa10" data-ans="8" data-type="num"><div class="pq"><span class="pnum">10.</span>x = 10 일 때 x/2 + 3 의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa1" data-ans="2" data-type="num"><div class="pq"><span class="pnum">1.</span>다음 중 <sup>ab<sup>2</sup></sup>⁄<sub>4(x−y)</sub> 와 <strong>같은 식</strong>은 몇 개인가?<br>ㄱ. a × b × a × b ÷ 4 ÷ (x − y) &nbsp; ㄴ. a × b × b ÷ 4 × (x − y)<br>ㄷ. a × b × b ÷ 4 ÷ (x − y) &nbsp; ㄹ. a × b ÷ 4 × x − 4 × y<br>ㅁ. a × b × b × <sup>1</sup>⁄<sub>4</sub> ÷ (x − y)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ ÷(x−y) 와 ×(x−y) 는 완전히 다르다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa2" data-ans="-9" data-type="num"><div class="pq"><span class="pnum">2.</span>x = −1, y = 4 일 때 다음 중 <strong>가장 작은</strong> 식의 값은?<br>ㄱ. −7x + 2y &nbsp; ㄴ. −x<sup>2</sup> − 2y &nbsp; ㄷ. (x + 3)(y − 1) &nbsp; ㄹ. <sup>x</sup>⁄<sub>y</sub> + <sup>y</sup>⁄<sub>x</sub> &nbsp; ㅁ. <sup>x+3</sup>⁄<sub>y−2</sub></div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ −x<sup>2</sup> 은 −(x<sup>2</sup>) 이다. 전부 계산해 보고 비교할 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa3" data-ans="3" data-type="num"><div class="pq"><span class="pnum">3.</span>다음 중 <strong>바르게 설명한 것</strong>은 몇 개인가?<br>ㄱ. −3x<sup>2</sup> + 2x − 1 은 삼차식이다 &nbsp; ㄴ. −7x 와 <sup>x</sup>⁄<sub>2</sub> 는 동류항이다<br>ㄷ. <sup>x</sup>⁄<sub>3</sub> + 5 에서 x 의 계수는 3이다 &nbsp; ㄹ. 0.1x 의 계수는 0.1이다<br>ㅁ. 3x<sup>2</sup> − 3x<sup>2</sup> + 4x + 1 은 일차식이다</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ ㅁ은 동류항을 먼저 정리한 뒤 판단할 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa4" data-ans="7/6" data-type="text"><div class="pq"><span class="pnum">4.</span><sup>2x−1</sup>⁄<sub>2</sub> − <sup>x−3</sup>⁄<sub>3</sub> 을 간단히 했을 때, x 의 계수와 상수항의 <strong>합</strong>은? (기약분수)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 7/6" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 분모의 최소공배수 6으로 통분. 두 번째 분수 앞의 −는 분자 전체에 걸린다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa5" data-ans="9x-9|9x−9" data-type="text"><div class="pq"><span class="pnum">5.</span>5x − 6 에 어떤 다항식을 <strong>더해야 할 것을 잘못하여 뺐더니</strong> x − 3 이 되었다. 바르게 계산한 식은? (예: 9x-9 처럼 입력)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 9x-9" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 어떤 다항식을 A로 놓고 A부터 구할 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa6" data-ans="7x-4|7x−4" data-type="text"><div class="pq"><span class="pnum">6.</span>A = 2x + 1, B = −x + 2 일 때 2A − 3B 를 간단히 하면? (예: 7x-4 처럼 입력)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 7x-4" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ −3B 의 −3 은 B 의 <strong>모든 항</strong>에 곱해진다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa7" data-ans="15x+9|9+15x" data-type="text"><div class="pq"><span class="pnum">7.</span>다음 평행사변형에서 <strong>색칠한 부분</strong>의 넓이를 x 를 사용한 식으로 나타내면? (예: 15x+9 처럼 입력)
+          <div style="margin:10px 0;max-width:330px;">
+          <svg viewBox="0 0 290 150" xmlns="http://www.w3.org/2000/svg">
+            <path d="M75,25 L255,25 L215,115 L35,115 Z M135,45 L185,45 L185,95 L135,95 Z" fill-rule="evenodd" fill="#34d399" fill-opacity="0.22" stroke="#9aa7bd" stroke-width="2"/>
+            <line x1="75" y1="25" x2="75" y2="115" stroke="#9aa7bd" stroke-width="1.5" stroke-dasharray="5 4"/>
+            <polyline points="75,105 85,105 85,115" fill="none" stroke="#9aa7bd" stroke-width="1.5"/>
+            <text x="125" y="136" font-size="14" fill="#9aa7bd" text-anchor="middle">3x+2</text>
+            <text x="82" y="76" font-size="14" fill="#9aa7bd" text-anchor="start">6</text>
+            <text x="160" y="64" font-size="14" fill="#9aa7bd" text-anchor="middle">3</text>
+            <text x="192" y="76" font-size="14" fill="#9aa7bd" text-anchor="start">x+1</text>
+          </svg></div></div><div class="quiz-row"><input class="quiz-input" placeholder="예: 15x+9" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ (평행사변형 넓이) − (직사각형 넓이)</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa8" data-ans="51" data-type="num"><div class="pq"><span class="pnum">8.</span>성냥개비로 정삼각형을 한 줄로 이어 붙여 만든다. 1개를 만드는 데 3개비, 2개를 만드는 데 5개비, 3개를 만드는 데 7개비가 필요하다. 정삼각형 <strong>25개</strong>를 만들려면 성냥개비가 몇 개 필요한가?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 먼저 n 개일 때의 식을 세울 것 (하나 늘 때마다 몇 개씩 느는가?)</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa9" data-ans="13/6" data-type="text"><div class="pq"><span class="pnum">9.</span><sup>5x−3</sup>⁄<sub>2</sub> − <sup>4x−5</sup>⁄<sub>3</sub> + <sup>2x−5</sup>⁄<sub>6</sub> 을 간단히 하여 ax + b 꼴로 나타낼 때, a − b 의 값은? (기약분수)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 13/6" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ b 가 음수이면 a − b 는 더하기가 된다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa10" data-ans="x+2|2+x" data-type="text"><div class="pq"><span class="pnum">10.</span>n = 4 일 때 (−1)<sup>n</sup>(3x − 1) + (−1)<sup>n+3</sup>(2x − 3) 을 간단히 하면? (예: x+2 처럼 입력)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: x+2" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ (−1)<sup>4</sup> 와 (−1)<sup>7</sup> 의 부호를 먼저 정할 것</div><div class="quiz-fb"></div></div>
       </div>
     </div>
 
     <div class="pset locked" id="pset_hard">
-      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">킬러 — 바르게 계산·도형·대입</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">킬러 — 역산 · 기호 정의 · 조건 추론</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
       <div class="lockmsg">🔒 응용 10문제를 모두 채점하면 열려요.</div>
       <div class="pbody">
-        <div class="prob" data-qid="ph1" data-ans="9" data-type="num"><div class="pq"><span class="pnum">1.</span>어떤 식에 2x − 3을 더해야 할 것을 잘못하여 뺐더니 5x + 1이 되었다. 바르게 계산한 식의 x의 계수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="계수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph2" data-ans="-5" data-type="num"><div class="pq"><span class="pnum">2.</span>위 1번에서 바르게 계산한 식의 상수항은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="상수항"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph3" data-ans="2" data-type="num"><div class="pq"><span class="pnum">3.</span>가로 x, 세로 5인 직사각형의 둘레는 2(x+5)=2x+10. x의 계수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="계수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph4" data-ans="10" data-type="num"><div class="pq"><span class="pnum">4.</span>그 둘레 식 2x + 10 의 상수항은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="상수항"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph5" data-ans="-9" data-type="num"><div class="pq"><span class="pnum">5.</span>x = −3 일 때 −x<sup>2</sup> 의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ −(x²)</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph6" data-ans="9" data-type="num"><div class="pq"><span class="pnum">6.</span>x = −3 일 때 (−x)<sup>2</sup> 의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph7" data-ans="21" data-type="num"><div class="pq"><span class="pnum">7.</span>한 변이 a인 정삼각형의 둘레는 3a. a = 7이면 둘레는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="둘레"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph8" data-ans="1" data-type="num"><div class="pq"><span class="pnum">8.</span>3(x − 2) − 2(x − 5) 정리 후 x의 계수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="계수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph9" data-ans="4" data-type="num"><div class="pq"><span class="pnum">9.</span>그 식 3(x − 2) − 2(x − 5) 의 상수항은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="상수항"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ −6 + 10</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph10" data-ans="120" data-type="num"><div class="pq"><span class="pnum">10.</span>시속 x km로 3시간 간 거리는 3x km. x = 40이면 거리(km)는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="거리"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="box box-purple"><div class="box-title">🔮 이 세트의 핵심 — 조건을 식으로 바꾼 뒤 거꾸로 되짚기</div>
+          <p style="margin:0;">문자와 식 킬러는 대부분 <strong>거꾸로 가는 문제</strong>입니다. "잘못 계산한 결과"에서 원래 식을, "정리한 결과"에서 미지의 계수를 역산하죠. 요령은 하나 — <strong>모르는 식을 A, B로 놓고 문장을 그대로 등식으로 옮긴 뒤</strong> A, B를 먼저 구하는 것. 그리고 <strong>괄호 앞의 부호와 수는 안쪽 모든 항에 걸린다</strong>는 것만 놓치지 않으면 됩니다.</p></div>
+        <div class="solution">
+          <div class="sol-head">🧩 준비 예제 — '잘못 계산' 역산의 기본형</div>
+          <div class="sol-q">어떤 식에 2x − 3 을 더해야 할 것을 잘못하여 뺐더니 5x + 1 이 되었다. 바르게 계산한 식은?</div>
+          <div class="step"><span class="s-label">STEP 1</span><br>어떤 식을 A 라 하면, 잘못한 계산: A − (2x − 3) = 5x + 1</div>
+          <div class="step"><span class="s-label">STEP 2</span><br>A = (5x + 1) + (2x − 3) = 7x − 2 &nbsp;— <strong>답이 아니다.</strong> 여기서 멈추는 것이 최다 실수</div>
+          <div class="step"><span class="s-label">STEP 3</span><br>바르게: A + (2x − 3) = (7x − 2) + (2x − 3)</div>
+          <div class="step"><span class="s-label">정답</span><br>= <strong>9x − 5</strong> &nbsp;— 물어본 것은 A 가 아니라 <strong>바르게 계산한 식</strong></div>
+          <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
+        </div>
+        <div class="solution">
+          <div class="sol-head">🧩 본 유형 — 두 식을 각각 역산해서 합치기 (아래 1번 유형)</div>
+          <div class="sol-q">A 에 x + 1 을 <strong>더해야 할 것을 뺐더니</strong> 3x 가 되었고, B 에서 x + 1 을 <strong>빼야 할 것을 더했더니</strong> x 가 되었다. 바르게 계산한 두 식의 합은?</div>
+          <div class="step"><span class="s-label">STEP 1</span><br>실수의 방향이 <strong>서로 반대</strong>다. 각각 따로 등식을 세운다.</div>
+          <div class="step"><span class="s-label">STEP 2</span><br>A − (x + 1) = 3x → A = 4x + 1 &nbsp;/&nbsp; B + (x + 1) = x → B = −1</div>
+          <div class="step"><span class="s-label">STEP 3</span><br>바르게: A + (x + 1) = 5x + 2 &nbsp;/&nbsp; B − (x + 1) = −x − 2</div>
+          <div class="step"><span class="s-label">정답</span><br>합 = (5x + 2) + (−x − 2) = <strong>4x</strong> &nbsp;— 두 번의 역산을 끝까지 각각 밀고 갈 것</div>
+          <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
+        </div>
+        <div class="prob" data-qid="ph1" data-ans="-3x+3|−3x+3|3-3x|3−3x" data-type="text"><div class="pq"><span class="pnum">1.</span>어떤 다항식 A 에 x − 2 를 <strong>더해야 할 것을 잘못하여 뺐더니</strong> 2x + 3 이 되었고, 어떤 다항식 B 에서 3x − 1 을 <strong>빼야 할 것을 잘못하여 더했더니</strong> −x + 2 가 되었다. 두 식을 <strong>바르게 계산한 결과의 합</strong>은? (예: -3x+3 처럼 입력)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: -3x+3" style="width:160px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 위 본 유형 풀이 참고. A 와 B 의 실수 방향이 반대다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph2" data-ans="-x+7|−x+7|7-x|7−x" data-type="text"><div class="pq"><span class="pnum">2.</span>두 다항식 A, B 에 대하여 <strong>A ★ B = 2A − B</strong> 로 새롭게 정의한다. 이때 { (x + 1) ★ 2x } ★ (x − 3) 을 간단히 하면? (예: -x+7 처럼 입력)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: -x+7" style="width:160px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 중괄호 안을 먼저 계산해 <strong>하나의 식</strong>으로 만든 뒤 다시 ★ 를 적용</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph3" data-ans="-4x+6|−4x+6|6-4x|6−4x" data-type="text"><div class="pq"><span class="pnum">3.</span>n 이 <strong>홀수</strong>일 때 (−1)<sup>n</sup>(2x − 3) + (−1)<sup>n+1</sup>(x + 1) + (−1)<sup>n+2</sup>(3x − 2) 를 간단히 하면? (예: -4x+6 처럼 입력)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: -4x+6" style="width:160px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ n 이 홀수면 n+1 은 짝수, n+2 는 다시 홀수. 부호가 −, +, − 로 번갈아 간다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph4" data-ans="19" data-type="num"><div class="pq"><span class="pnum">4.</span>|a| = 3, |b| = 5 이고 a − b &gt; 0 일 때, a<sup>2</sup> − ab + b 의 값 중 <strong>가장 큰 값</strong>은?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ a − b &gt; 0 이면 b 의 부호가 하나로 정해진다. 남은 경우를 <strong>모두</strong> 계산해 비교할 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph5" data-ans="4" data-type="num"><div class="pq"><span class="pnum">5.</span>(a − 2)x<sup>2</sup> + (b + 3)x + 5 가 x 에 대한 <strong>일차식</strong>이고, x = 1 을 대입한 값이 10 일 때 a + b 의 값은?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 일차식이 되려면 이차항이 사라져야 한다. a 를 먼저 확정할 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph6" data-ans="-1" data-type="num"><div class="pq"><span class="pnum">6.</span><sup>3x+a</sup>⁄<sub>4</sub> − <sup>2x−1</sup>⁄<sub>3</sub> 을 간단히 했을 때 <strong>x 의 계수와 상수항이 서로 같다.</strong> 이때 a 의 값은?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 분모 12로 통분하면 (x + 3a + 4)⁄12 꼴이 된다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph7" data-ans="10" data-type="num"><div class="pq"><span class="pnum">7.</span>바둑돌을 정사각형 모양으로 늘어놓아 n 번째 그림에는 n<sup>2</sup> 개가 놓인다. (n + 1) 번째 그림이 n 번째 그림보다 바둑돌이 <strong>21개 더 많을 때</strong>, n 의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="n"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 두 개수의 차를 n 에 대한 식으로 먼저 정리할 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph8" data-ans="25x-14|25x−14" data-type="text"><div class="pq"><span class="pnum">8.</span>A = 3x − 2, B = −2x + 1 일 때 A − 2{ B − (A − 3B) } 를 간단히 하면? (예: 25x-14 처럼 입력)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 25x-14" style="width:160px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 소괄호 → 중괄호 순서로. 괄호를 풀 때마다 앞의 부호를 <strong>모든 항</strong>에 걸 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph9" data-ans="-19" data-type="num"><div class="pq"><span class="pnum">9.</span>한 변의 길이가 x 인 정사각형의 <strong>네 모퉁이</strong>에서 한 변의 길이가 2 인 정사각형을 각각 잘라냈다. 남은 도형의 넓이를 S, <strong>둘레의 길이</strong>를 L 이라 할 때, S − L 을 ax<sup>2</sup> + bx + c 꼴로 나타내면 a + b + c 의 값은? (단, x &gt; 4)
+          <div style="margin:10px 0;max-width:280px;">
+          <svg viewBox="0 0 260 215" xmlns="http://www.w3.org/2000/svg">
+            <rect x="40" y="20" width="180" height="180" fill="none" stroke="#9aa7bd" stroke-width="1.2" stroke-dasharray="5 4"/>
+            <path d="M76,20 L184,20 L184,56 L220,56 L220,164 L184,164 L184,200 L76,200 L76,164 L40,164 L40,56 L76,56 Z" fill="#c4b5fd" fill-opacity="0.22" stroke="#9aa7bd" stroke-width="2"/>
+            <text x="130" y="13" font-size="14" fill="#9aa7bd" text-anchor="middle">x</text>
+            <text x="58" y="43" font-size="13" fill="#9aa7bd" text-anchor="middle">2</text>
+          </svg></div></div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 넓이는 줄어든다. 그런데 <strong>둘레도 줄어들까?</strong> 잘린 자리를 따라가 보자</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph10" data-ans="4" data-type="num"><div class="pq"><span class="pnum">10.</span>x = −2, y = 3 일 때 −x<sup>2</sup>y + (−x)<sup>2</sup> ÷ y × 6 − x<sup>3</sup> 의 값은?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ −x<sup>2</sup> 과 (−x)<sup>2</sup> 은 다르다. 나눗셈과 곱셈은 <strong>앞에서부터</strong> 차례로</div><div class="quiz-fb"></div></div>
       </div>
     </div>
 
@@ -590,6 +600,7 @@ function renderWrongList(boxId,list){
 
 function refresh(){
   const secs=document.querySelectorAll('.section');
+  state.done=state.done.filter(id=>document.getElementById(id));
   secs.forEach(s=>{const on=state.done.indexOf(s.id)>=0;s.classList.toggle('done',on);const b=s.querySelector('.complete-btn');if(b)b.textContent=on?'✓ 완료됨':'완료하기';});
   const total=secs.length;const p=Math.round(state.done.length/total*100);
   document.getElementById('ring').style.setProperty('--p',p);document.getElementById('ringTxt').textContent=p+'%';
