@@ -246,7 +246,6 @@
   <a href="#s5" class="tlink">⑤ 판매·구입</a>
   <a href="#s6" class="tlink">⑥ 거속시</a>
   <a href="#s7" class="tlink">⑦ 농도</a>
-  <a href="#s8" class="tlink">⑧ 심화</a>
   <a href="#wrong" class="tlink">📕 오답노트</a>
   <a href="#gate" class="tlink">✏️ 연습문제</a>
 </nav>
@@ -420,32 +419,6 @@
     </div>
   </section>
 
-  <section class="section" id="s8">
-    <div class="section-head"><span class="section-num">8</span><span class="section-title">심화 — 킬러 문제</span>
-      <button class="complete-btn" onclick="toggleDone('s8')">완료하기</button></div>
-    <div class="box box-purple"><div class="box-title">🔮 유료 전용 심화 — 두 소금물 섞기</div>
-      <p style="margin:0;">농도가 다른 두 소금물을 섞는 유형은 <strong>각 소금물의 소금 양을 따로 구해서 더하는</strong> 게 핵심이에요.</p></div>
-    <div class="solution">
-      <div class="sol-head">🧩 단계별 풀이 — 소금물 섞기</div>
-      <div class="sol-q">6% 소금물 200g과 12% 소금물 x g을 섞어서 10% 소금물을 만들려고 한다. x는?</div>
-      <div class="step"><span class="s-label">STEP 1</span><br>6% 소금물 200g 속 소금: 200 × 0.06 = 12g</div>
-      <div class="step"><span class="s-label">STEP 2</span><br>12% 소금물 x g 속 소금: 0.12x g. 섞은 후 전체 소금물: (200 + x)g</div>
-      <div class="step"><span class="s-label">STEP 3</span><br>관계식: 12 + 0.12x = 0.10 × (200 + x) → 12 + 0.12x = 20 + 0.10x</div>
-      <div class="step"><span class="s-label">정답</span><br>0.02x = 8 → <strong>x = 400</strong> (검증: 12+0.12×400=60g, 전체 600g, 60/600=10% ✅)</div>
-      <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
-    </div>
-    <div class="quiz" data-qid="b15" data-ans="400" data-type="num">
-      <div class="quiz-q">Q. 위 문제에서 섞어야 하는 12% 소금물의 양(x)은? (g)</div>
-      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="g"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-fb"></div>
-    </div>
-    <div class="quiz" data-qid="b16" data-ans="600" data-type="num">
-      <div class="quiz-q">Q. 위 문제에서 섞은 후 최종 소금물의 총량은? (g)</div>
-      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="g"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-fb"></div>
-    </div>
-  </section>
-
   <section class="wrongnote" id="wrong">
     <h2>📕 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(본문에서 틀린 문제가 자동으로 모여요)</span></h2>
     <div id="wrongList"><p class="empty">아직 틀린 문제가 없어요. 퀴즈를 풀어보세요!</p></div>
@@ -457,7 +430,7 @@
     <h2>🔓 연습문제 잠금 해제</h2>
     <p class="desc">아래 두 조건을 모두 채우면 기본·응용·심화 연습문제가 열려요.</p>
     <ul class="checklist">
-      <li id="ck_quiz"><span class="mark">✓</span><span>본문 퀴즈 전부 채점하기 (<span id="gradedCount">0</span> / <span id="quizTotal">16</span>)</span></li>
+      <li id="ck_quiz"><span class="mark">✓</span><span>본문 퀴즈 전부 채점하기 (<span id="gradedCount">0</span> / <span id="quizTotal">14</span>)</span></li>
       <li id="ck_review"><span class="mark">✓</span><span>오답노트 확인하기 (위에서 '오답 정리 완료' 누르기)</span></li>
     </ul>
     <button class="start-btn locked" id="startBtn" onclick="startPractice()">🔒 연습문제 풀기 (잠김)</button>
@@ -468,52 +441,72 @@
     <div class="practice-sub">기본 10문제를 모두 채점하면 응용이, 응용을 모두 채점하면 심화가 열려요. 음수는 −5 처럼 입력. 틀린 문제는 아래 연습 오답노트에 모입니다.</div>
 
     <div class="pset" id="pset_basic">
-      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">한 단계 활용식 세우기</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">기본 유형 익히기</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
       <div class="pbody">
-        <div class="prob" data-qid="pb1" data-ans="7" data-type="num"><div class="pq"><span class="pnum">1.</span>어떤 수에 5를 더하면 12이다. 그 수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb2" data-ans="5" data-type="num"><div class="pq"><span class="pnum">2.</span>어떤 수의 3배는 그 수에 10을 더한 것과 같다. 그 수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb3" data-ans="4" data-type="num"><div class="pq"><span class="pnum">3.</span>가로 6cm, 세로 x cm인 직사각형의 둘레가 20cm일 때 x는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb4" data-ans="7" data-type="num"><div class="pq"><span class="pnum">4.</span>가로 x cm, 세로 5cm인 직사각형의 둘레가 24cm일 때 x는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb5" data-ans="8" data-type="num"><div class="pq"><span class="pnum">5.</span>사과 40개를 x명에게 5개씩 나누어주면 정확히 다 나누어진다. x는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb6" data-ans="8" data-type="num"><div class="pq"><span class="pnum">6.</span>공책 25권을 x명에게 3권씩 나눠주면 1권 남는다. x는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb7" data-ans="7" data-type="num"><div class="pq"><span class="pnum">7.</span>학생 x명에게 초콜릿을 3개씩 나눠주려면 2개가 부족하다. 초콜릿이 19개 있다면 x는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 3x − 19 = 2</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb8" data-ans="5" data-type="num"><div class="pq"><span class="pnum">8.</span>1000원짜리 지우개 x개를 사고 5000원을 냈더니 거스름돈이 없었다. x는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb9" data-ans="3" data-type="num"><div class="pq"><span class="pnum">9.</span>시속 60km로 x시간 이동한 거리가 180km이다. x는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb10" data-ans="20" data-type="num"><div class="pq"><span class="pnum">10.</span>10% 소금물 200g 속 소금의 양은? (g)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="g"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb1" data-ans="6" data-type="num"><div class="pq"><span class="pnum">1.</span>어떤 수의 3배에서 4를 뺀 값이 그 수에 8을 더한 값과 같다. 그 수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb2" data-ans="25" data-type="num"><div class="pq"><span class="pnum">2.</span>연속하는 세 자연수의 합이 72일 때, <strong>가장 큰 수</strong>는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 가운데 수를 x 로 놓으면 세 수의 합이 3x 가 된다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb3" data-ans="10" data-type="num"><div class="pq"><span class="pnum">3.</span>가로가 세로보다 4cm 긴 직사각형의 둘레가 32cm일 때, <strong>가로</strong>의 길이는? (cm)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 세로를 x 로 놓고 둘레 = 2(가로 + 세로) 를 세울 것. 묻는 것은 가로다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb4" data-ans="7" data-type="num"><div class="pq"><span class="pnum">4.</span>사탕을 학생들에게 5개씩 나누어 주면 3개가 남고, 6개씩 나누어 주면 4개가 부족하다. <strong>학생 수</strong>는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 사탕의 총 개수를 두 가지 방법으로 나타내 같다고 놓는다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb5" data-ans="30" data-type="num"><div class="pq"><span class="pnum">5.</span>길이가 30cm인 양초에 불을 붙이면 1분에 0.7cm씩 짧아진다. 양초의 길이가 9cm가 되는 것은 불을 붙인 지 몇 분 후인가?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb6" data-ans="15" data-type="num"><div class="pq"><span class="pnum">6.</span>둘레의 길이가 1500m인 호수를 두 사람이 같은 지점에서 동시에 출발하여 <strong>반대 방향</strong>으로 걸었다. 각각 분속 60m, 분속 40m로 걸을 때 처음으로 만나는 것은 몇 분 후인가?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 반대 방향이면 두 사람이 걸은 거리의 <strong>합</strong>이 둘레와 같아진다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb7" data-ans="30" data-type="num"><div class="pq"><span class="pnum">7.</span>12% 소금물 250g 속에 들어 있는 <strong>소금의 양</strong>은? (g)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb8" data-ans="250" data-type="num"><div class="pq"><span class="pnum">8.</span>소금 20g이 녹아 있는 8% 소금물의 <strong>전체 양</strong>은? (g)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ (소금의 양) = (소금물의 양) × (농도)</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb9" data-ans="10000" data-type="num"><div class="pq"><span class="pnum">9.</span>원가가 8000원인 물건에 25%의 이익을 붙여 정가를 정했다. <strong>정가</strong>는? (원)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb10" data-ans="12000" data-type="num"><div class="pq"><span class="pnum">10.</span>정가가 15000원인 옷을 20% 할인하여 팔았다. <strong>판매 가격</strong>은? (원)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
       </div>
     </div>
 
     <div class="pset locked" id="pset_applied">
-      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">두 단계 활용 · 복합 조건</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">증감률 · 과부족 · 기차 · 일률</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
       <div class="lockmsg">🔒 기본 10문제를 모두 채점하면 열려요.</div>
       <div class="pbody">
-        <div class="prob" data-qid="pa1" data-ans="3" data-type="num"><div class="pq"><span class="pnum">1.</span>어떤 수의 5배에서 3을 뺀 값이 그 수에 9를 더한 값과 같다. 그 수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa2" data-ans="6" data-type="num"><div class="pq"><span class="pnum">2.</span>가로가 세로보다 4cm 긴 직사각형의 둘레가 32cm일 때, 세로의 길이는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="세로"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 세로 x, 가로 x+4</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa3" data-ans="10" data-type="num"><div class="pq"><span class="pnum">3.</span>위 2번에서 가로의 길이는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="가로"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa4" data-ans="7" data-type="num"><div class="pq"><span class="pnum">4.</span>과자 45개를 x명에게 6개씩 나누어주었더니 3개가 남았다. x는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa5" data-ans="8" data-type="num"><div class="pq"><span class="pnum">5.</span>학생 x명에게 사탕을 4개씩 나눠주려면 5개가 부족하다. 사탕이 27개 있다면 x는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 4x − 27 = 5</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa6" data-ans="6" data-type="num"><div class="pq"><span class="pnum">6.</span>1200원짜리 사인펜과 2000원짜리 마카를 합쳐서 10개 사고 15200원을 지불했다. 사인펜을 x개 샀다면 x는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa7" data-ans="10" data-type="num"><div class="pq"><span class="pnum">7.</span>A,B 왕복, 갈 때 시속 5km, 올 때 시속 10km로 이동해 총 3시간 걸렸다. 거리 x km는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa8" data-ans="75" data-type="num"><div class="pq"><span class="pnum">8.</span>15% 소금물 300g에서 물을 증발시켜 20% 소금물을 만들려고 한다. 증발시킬 물의 양 x g은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="g"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 소금의 양은 변하지 않는다</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa9" data-ans="50" data-type="num"><div class="pq"><span class="pnum">9.</span>시속 x km로 3시간 달린 거리가 150km일 때, x는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa10" data-ans="20000" data-type="num"><div class="pq"><span class="pnum">10.</span>어떤 물건의 정가에서 15%를 할인하여 팔았더니 정가보다 3000원 싸게 팔렸다. 정가는? (원)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="원"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa1" data-ans="288" data-type="num"><div class="pq"><span class="pnum">1.</span>어느 중학교의 작년 학생 수는 588명이었고, 올해 남학생 수는 작년에 비하여 4% 감소하여 <strong>작년 여학생 수와 같아졌다</strong>. 올해 남학생 수는? (명)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 작년 남학생을 x 로 놓으면 작년 여학생은 588 − x 다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa2" data-ans="14" data-type="num"><div class="pq"><span class="pnum">2.</span>학생들에게 사탕을 나누어 주는데, 한 학생에게 6개씩 주면 <strong>5개가 남고</strong>, 7개씩 주면 <strong>9개가 부족</strong>하다. <strong>학생 수</strong>는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 사탕 전체를 x 로 놓으면 학생 수는 <sup>x−5</sup>⁄<sub>6</sub> 이자 <sup>x+9</sup>⁄<sub>7</sub> 다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa3" data-ans="21/8|2.625" data-type="text"><div class="pq"><span class="pnum">3.</span>주현이는 집에서 영화관까지 갈 때는 시속 9km로 뛰었고, 영화를 본 뒤 돌아올 때는 시속 3km로 걸었다. <strong>영화 상영 시간이 110분</strong>이고 총 소요 시간이 3시간일 때, 집과 영화관 사이의 거리는? (기약분수, km)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 21/8" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 이동에 쓴 시간은 3시간에서 <strong>상영 시간을 뺀</strong> 만큼이다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa4" data-ans="300" data-type="num"><div class="pq"><span class="pnum">4.</span>영석이는 소설책을 모두 읽는 데 5일이 걸렸다. 첫째 날 전체의 <sup>1</sup>⁄<sub>3</sub>, 둘째 날 전체의 <sup>1</sup>⁄<sub>4</sub>, 셋째 날 50쪽, 넷째 날 전체의 <sup>1</sup>⁄<sub>12</sub>, 마지막 날 전체의 <sup>1</sup>⁄<sub>6</sub> 을 읽었다. 이 소설책의 <strong>전체 쪽수</strong>는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 분수로 읽은 부분을 모두 더하고, 나머지가 50쪽임을 이용</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa5" data-ans="25" data-type="num"><div class="pq"><span class="pnum">5.</span>길이가 80cm인 테이프를 길이가 서로 다른 세 개로 나누었다. 중간 것은 가장 짧은 것보다 10cm 길고, 가장 긴 것은 중간 것보다 15cm 길다. <strong>중간 크기</strong> 테이프의 길이는? (cm)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa6" data-ans="18" data-type="num"><div class="pq"><span class="pnum">6.</span>일정한 속력으로 달리는 기차가 길이 120m인 터널을 <strong>완전히 통과</strong>하는 데 10초, 길이 210m인 터널을 완전히 통과하는 데 15초가 걸린다. 기차의 속력은? (초속 m)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 완전히 통과하려면 (터널 길이 + 기차 길이) 만큼 움직여야 한다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa7" data-ans="12" data-type="num"><div class="pq"><span class="pnum">7.</span>석진이는 배점이 4점과 5점으로 구성된 수학 시험에서 <strong>5점짜리를 4점짜리 맞힌 개수의 2배보다 2개 더 많이</strong> 맞혀 총 80점을 얻었다. 석진이가 맞힌 <strong>5점짜리</strong> 문항의 개수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa8" data-ans="9000" data-type="num"><div class="pq"><span class="pnum">8.</span>미술관 관람권 6장(어른 3명, 청소년 2명, 어린이 1명)의 값이 모두 60,000원이다. 청소년 요금은 어른 요금보다 3,000원, 어린이 요금은 어른 요금보다 6,000원 저렴할 때 <strong>청소년 요금</strong>은? (원)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 어른 요금을 x 로 놓고 6장의 값을 모두 더할 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa9" data-ans="80" data-type="num"><div class="pq"><span class="pnum">9.</span>김밥 600줄을 마는 데 달인은 2시간, 달인의 동생은 4시간이 걸린다. 두 사람이 <strong>함께</strong> 김밥 600줄을 마는 데 걸리는 시간은? (분)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 두 사람이 <strong>1시간에 몇 줄</strong>씩 마는지를 먼저 구할 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa10" data-ans="30" data-type="num"><div class="pq"><span class="pnum">10.</span>하민이는 5분에 장미꽃 2송이를, 민혁이는 2분에 1송이를 만든다. 하민이는 12송이, 민혁이는 9송이를 미리 만들어 와서 동시에 만들기 시작했다. 두 사람의 장미꽃 개수가 <strong>같아지는 것</strong>은 몇 분 후인가?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ x 분 후 각자의 총 개수를 식으로 쓰고 같다고 놓는다</div><div class="quiz-fb"></div></div>
       </div>
     </div>
 
     <div class="pset locked" id="pset_hard">
-      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">킬러 — 혼합·연속수·따라잡기</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">킬러 — 2단 추론 · 단위 함정 · 농도</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
       <div class="lockmsg">🔒 응용 10문제를 모두 채점하면 열려요.</div>
       <div class="pbody">
-        <div class="prob" data-qid="ph1" data-ans="600" data-type="num"><div class="pq"><span class="pnum">1.</span>4% 소금물 300g과 10% 소금물 x g을 섞어서 8% 소금물을 만들려고 한다. x는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="g"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph2" data-ans="25" data-type="num"><div class="pq"><span class="pnum">2.</span>연속하는 세 자연수의 합이 72일 때, 가장 큰 수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="가장 큰 수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ x+(x+1)+(x+2)=72</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph3" data-ans="6" data-type="num"><div class="pq"><span class="pnum">3.</span>현재 아버지의 나이는 아들의 5배이다. 6년 후 아버지의 나이가 아들 나이의 3배가 된다면 아들의 현재 나이는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="나이"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 5x+6=3(x+6)</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph4" data-ans="30" data-type="num"><div class="pq"><span class="pnum">4.</span>위 3번에서 아버지의 현재 나이는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="나이"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph5" data-ans="12" data-type="num"><div class="pq"><span class="pnum">5.</span>형이 동생보다 3살 많고, 두 사람 나이의 합이 27일 때 동생의 나이는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="나이"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph6" data-ans="15000" data-type="num"><div class="pq"><span class="pnum">6.</span>정가에서 20%를 할인하여 12000원에 판매했다. 정가는? (원)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="원"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph7" data-ans="6" data-type="num"><div class="pq"><span class="pnum">7.</span>둘레가 34cm이고 가로가 세로보다 5cm 긴 직사각형이 있다. 세로의 길이는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="세로"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph8" data-ans="66" data-type="num"><div class="pq"><span class="pnum">8.</span>위 7번 직사각형의 넓이는? (cm²)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="넓이"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 가로 = 세로+5</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph9" data-ans="20" data-type="num"><div class="pq"><span class="pnum">9.</span>형이 집을 출발한 지 10분 후 동생이 같은 길로 따라 나섰다. 형은 분속 60m, 동생은 분속 90m로 걸을 때, 동생이 출발한 지 x분 후 형을 따라잡는다면 x는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 90x = 60(x+10)</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph10" data-ans="4" data-type="num"><div class="pq"><span class="pnum">10.</span>두 자연수의 합이 15이고, 큰 수가 작은 수의 2배보다 3만큼 크다. 작은 수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="작은 수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="box box-purple"><div class="box-title">🔮 이 세트의 핵심 — 그림을 그리거나 표로 정리한 뒤 식을 세운다</div>
+          <p style="margin:0;">활용 킬러는 계산이 어려운 게 아니라 <strong>상황을 식으로 옮기는 단계</strong>에서 갈립니다. 세 가지만 기억하세요 — ① <strong>단위를 먼저 통일</strong>한다(분↔시간, g↔%). ② 같은 양을 <strong>두 가지 방법으로</strong> 나타내 등식을 만든다(과부족·증감률이 전부 이 구조). ③ 답을 구한 뒤 <strong>문제가 무엇을 물었는지</strong> 다시 본다 — 의자 개수를 구해 놓고 학생 수를 안 구하는 실수가 가장 많습니다.</p></div>
+        <div class="solution">
+          <div class="sol-head">🧩 준비 예제 — 소금물 섞기</div>
+          <div class="sol-q">6% 소금물 200g과 12% 소금물 x g을 섞어서 10% 소금물을 만들려고 한다. x 는?</div>
+          <div class="step"><span class="s-label">STEP 1</span><br>6% 소금물 200g 속 소금 : 200 × 0.06 = 12g</div>
+          <div class="step"><span class="s-label">STEP 2</span><br>12% 소금물 x g 속 소금 : 0.12x g. 섞은 후 전체 소금물 : (200 + x)g</div>
+          <div class="step"><span class="s-label">STEP 3</span><br>관계식 : 12 + 0.12x = 0.10 × (200 + x) → 12 + 0.12x = 20 + 0.10x</div>
+          <div class="step"><span class="s-label">정답</span><br>0.02x = 8 → <strong>x = 400</strong> &nbsp;(검산 : 소금 12 + 48 = 60g, 전체 600g → <sup>60</sup>⁄<sub>600</sub> = 10% ✅)</div>
+          <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
+        </div>
+        <div class="solution">
+          <div class="sol-head">🧩 본 유형 — 과부족의 함정 "마지막 의자에는 4명" (아래 1번 유형)</div>
+          <div class="sol-q">긴 의자에 6명씩 앉으면 8명이 앉지 못하고, 7명씩 앉으면 빈 의자는 없고 <strong>마지막 의자에만 4명</strong>이 앉는다. 의자는 몇 개인가?</div>
+          <div class="step"><span class="s-label">STEP 1</span><br>의자를 x 개라 하면, 6명씩 앉을 때 학생 수 = <strong>6x + 8</strong></div>
+          <div class="step"><span class="s-label">STEP 2</span><br>7명씩 앉을 때 — <strong>마지막 의자를 빼고</strong> (x − 1)개에 7명씩, 마지막에 4명 → 학생 수 = <strong>7(x − 1) + 4</strong></div>
+          <div class="step"><span class="s-label">STEP 3</span><br>6x + 8 = 7(x − 1) + 4 = 7x − 3 → <strong>x = 11</strong> (의자 11개)</div>
+          <div class="step"><span class="s-label">정답</span><br>학생 수 = 6 × 11 + 8 = <strong>74명</strong> &nbsp;(검산 : 7 × 10 + 4 = 74 ✅) — "몇 명이 앉지 못한다"와 "마지막 의자에 몇 명"은 <strong>세는 방식이 다르다</strong></div>
+          <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
+        </div>
+        <div class="prob" data-qid="ph1" data-ans="74" data-type="num"><div class="pq"><span class="pnum">1.</span>음악실의 긴 의자에 학생들이 앉는데, 한 의자에 6명씩 앉으면 빈 의자 없이 모두 앉고도 <strong>8명이 앉지 못하고</strong>, 한 의자에 7명씩 앉으면 빈 의자는 없고 <strong>마지막 의자에는 4명</strong>만 앉는다. 이때 <strong>학생 수</strong>는? (명)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 위 본 유형 풀이 참고. 의자 개수를 구한 뒤 <strong>학생 수</strong>까지 가야 한다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph2" data-ans="96" data-type="num"><div class="pq"><span class="pnum">2.</span>집에서 공원까지 걸어서 시속 3km로 가면 자전거를 타고 시속 18km로 가는 것보다 <strong>40분이 더</strong> 걸린다. 이 거리를 걸어서 <strong>왕복</strong>하면 몇 분이 걸리는가?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 먼저 거리를 구할 것. 시간 단위를 <strong>시간과 분</strong> 중 하나로 통일해야 한다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph3" data-ans="270" data-type="num"><div class="pq"><span class="pnum">3.</span>D중학교의 작년 총 학생 수는 800명이었다. 올해 남학생 수는 작년보다 10% 증가하고 여학생 수는 10% 감소하였다. 내년에는 올해보다 남학생이 10% 감소하고 여학생은 변동이 없을 예정이다. 내년 총 학생 수가 작년보다 <strong>35명 감소</strong>한다고 할 때, <strong>내년 여학생 수</strong>는? (명)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 작년 남학생을 x 로 놓고 <strong>올해 → 내년</strong> 순서로 차근차근 나타낼 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph4" data-ans="40" data-type="num"><div class="pq"><span class="pnum">4.</span>일정한 속력으로 달리는 기차가 길이 440m인 터널을 완전히 통과하는 데 36초가 걸리고, 길이 120m인 터널을 통과할 때는 <strong>6초 동안 기차가 보이지 않았다</strong>. 이 기차의 길이는? (m)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ "보이지 않는다"는 것은 기차 전체가 터널 안에 있다는 뜻 — 이때 움직인 거리는 (터널 길이 − 기차 길이) 다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph5" data-ans="30" data-type="num"><div class="pq"><span class="pnum">5.</span>달력에서 어떤 날짜를 중심으로 <strong>바로 위쪽을 a, 왼쪽을 b, 아래쪽을 c, 오른쪽을 d</strong> 라 하자. 네 날짜 a, b, c, d 의 합이 72일 때, a + d 의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 가운데 날짜를 x 로 놓으면 위·아래는 7 차이, 좌·우는 1 차이다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph6" data-ans="63" data-type="num"><div class="pq"><span class="pnum">6.</span>두 자리 자연수가 있다. 십의 자리 숫자는 일의 자리 숫자의 2배이고, 십의 자리와 일의 자리 숫자를 <strong>바꾼 수</strong>는 처음 수보다 27만큼 작다. <strong>처음 수</strong>는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 십의 자리 숫자가 a, 일의 자리 숫자가 b 인 두 자리 수는 10a + b 다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph7" data-ans="3" data-type="num"><div class="pq"><span class="pnum">7.</span>등산 코스는 학교에서 정자까지 총 5km이다. 학교에서 쉼터까지는 시속 3km로 걷고, 쉼터에서 <strong>20분을 쉰 뒤</strong>, 쉼터에서 정자까지는 시속 2km로 걸어서 <strong>2시간 30분</strong> 만에 도착하였다. 쉼터에서 정자까지의 거리는? (km)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 쉰 시간도 전체 시간에 포함된다. 학교~쉼터를 x 로 놓으면 쉼터~정자는 5 − x</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph8" data-ans="8" data-type="num"><div class="pq"><span class="pnum">8.</span>어떤 일을 A가 혼자 하면 12일, B가 혼자 하면 18일이 걸린다. 두 사람이 <strong>함께 4일</strong> 동안 일한 뒤, 나머지를 <strong>B가 혼자</strong> 하여 끝냈다. B가 혼자 일한 날수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 전체 일의 양을 1로 놓고 하루에 하는 일의 양을 분수로 나타낼 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph9" data-ans="280" data-type="num"><div class="pq"><span class="pnum">9.</span>8% 소금물 200g과 15% 소금물을 섞은 다음, 물 100g을 <strong>더 넣었더니</strong> 10% 소금물이 되었다. 섞은 15% 소금물의 양은? (g)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 물을 더 넣어도 <strong>소금의 양은 변하지 않는다</strong>. 전체 양만 늘어난다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph10" data-ans="15" data-type="num"><div class="pq"><span class="pnum">10.</span>12% 소금물 400g에서 물 100g을 증발시킨 뒤 <strong>소금을 더 넣었더니</strong> 20% 소금물이 되었다. 더 넣은 소금의 양은? (g)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 소금을 넣으면 소금의 양과 전체 양이 <strong>둘 다</strong> 늘어난다</div><div class="quiz-fb"></div></div>
       </div>
     </div>
 
@@ -598,6 +591,7 @@ function renderWrongList(boxId,list){
 
 function refresh(){
   const secs=document.querySelectorAll('.section');
+  state.done=state.done.filter(id=>document.getElementById(id));
   secs.forEach(s=>{const on=state.done.indexOf(s.id)>=0;s.classList.toggle('done',on);const b=s.querySelector('.complete-btn');if(b)b.textContent=on?'✓ 완료됨':'완료하기';});
   const total=secs.length;const p=Math.round(state.done.length/total*100);
   document.getElementById('ring').style.setProperty('--p',p);document.getElementById('ringTxt').textContent=p+'%';
