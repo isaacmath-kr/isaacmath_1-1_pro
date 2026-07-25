@@ -253,7 +253,6 @@
   <a href="#s5" class="tlink">⑤ 대칭이동</a>
   <a href="#s6" class="tlink">⑥ 변수·그래프</a>
   <a href="#s7" class="tlink">⑦ 그래프 해석</a>
-  <a href="#s8" class="tlink">⑧ 심화</a>
   <a href="#wrong" class="tlink">📕 오답노트</a>
   <a href="#gate" class="tlink">✏️ 연습문제</a>
 </nav>
@@ -512,32 +511,6 @@
     </div>
   </section>
 
-  <section class="section" id="s8">
-    <div class="section-head"><span class="section-num">8</span><span class="section-title">심화 — 킬러 문제</span>
-      <button class="complete-btn" onclick="toggleDone('s8')">완료하기</button></div>
-    <div class="box box-purple"><div class="box-title">🔮 유료 전용 심화 — 좌표평면 위의 삼각형 넓이</div>
-      <p style="margin:0;">좌표평면 문제의 단골 킬러 유형. <strong>축 위에 밑변이 있으면</strong> 밑변의 길이와 높이를 좌표에서 바로 읽어낼 수 있어요.</p></div>
-    <div class="solution">
-      <div class="sol-head">🧩 단계별 풀이 — 삼각형의 넓이</div>
-      <div class="sol-q">세 점 A(-3, 0), B(5, 0), C(2, 6)을 꼭짓점으로 하는 삼각형의 넓이는?</div>
-      <div class="step"><span class="s-label">STEP 1</span><br>A, B가 모두 x축 위에 있으므로 AB를 밑변으로 삼는다. 밑변 길이 = 5 − (−3) = 8</div>
-      <div class="step"><span class="s-label">STEP 2</span><br>높이는 C에서 x축(AB가 놓인 직선)까지의 거리 = C의 y좌표 = 6</div>
-      <div class="step"><span class="s-label">STEP 3</span><br>삼각형 넓이 공식: (밑변 × 높이) ÷ 2 = (8 × 6) ÷ 2</div>
-      <div class="step"><span class="s-label">정답</span><br>= <strong>24</strong></div>
-      <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
-    </div>
-    <div class="quiz" data-qid="b15" data-ans="24" data-type="num">
-      <div class="quiz-q">Q. 위 삼각형 A(-3,0), B(5,0), C(2,6)의 넓이는?</div>
-      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="넓이"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-fb"></div>
-    </div>
-    <div class="quiz" data-qid="b16" data-ans="8" data-type="num">
-      <div class="quiz-q">Q. 위 문제에서 밑변 AB의 길이는?</div>
-      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="길이"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-fb"></div>
-    </div>
-  </section>
-
   <section class="wrongnote" id="wrong">
     <h2>📕 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(본문에서 틀린 문제가 자동으로 모여요)</span></h2>
     <div id="wrongList"><p class="empty">아직 틀린 문제가 없어요. 퀴즈를 풀어보세요!</p></div>
@@ -549,7 +522,7 @@
     <h2>🔓 연습문제 잠금 해제</h2>
     <p class="desc">아래 두 조건을 모두 채우면 기본·응용·심화 연습문제가 열려요.</p>
     <ul class="checklist">
-      <li id="ck_quiz"><span class="mark">✓</span><span>본문 퀴즈 전부 채점하기 (<span id="gradedCount">0</span> / <span id="quizTotal">16</span>)</span></li>
+      <li id="ck_quiz"><span class="mark">✓</span><span>본문 퀴즈 전부 채점하기 (<span id="gradedCount">0</span> / <span id="quizTotal">14</span>)</span></li>
       <li id="ck_review"><span class="mark">✓</span><span>오답노트 확인하기 (위에서 '오답 정리 완료' 누르기)</span></li>
     </ul>
     <button class="start-btn locked" id="startBtn" onclick="startPractice()">🔒 연습문제 풀기 (잠김)</button>
@@ -560,52 +533,205 @@
     <div class="practice-sub">기본 10문제를 모두 채점하면 응용이, 응용을 모두 채점하면 심화가 열려요. 음수는 −5 처럼, 좌표는 4,6 형태로 입력하세요. 틀린 문제는 아래 연습 오답노트에 모입니다.</div>
 
     <div class="pset" id="pset_basic">
-      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">좌표 읽기·거리·사분면·대칭</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">좌표 · 사분면 · 대칭이동</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
       <div class="pbody">
-        <div class="prob" data-qid="pb1" data-ans="7" data-type="num"><div class="pq"><span class="pnum">1.</span>두 점 A(-5), B(2) 사이의 거리는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="거리"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb2" data-ans="8" data-type="num"><div class="pq"><span class="pnum">2.</span>두 점 A(1), B(9) 사이의 거리는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="거리"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb3" data-ans="5" data-type="num"><div class="pq"><span class="pnum">3.</span>점 (5, -2)의 x좌표는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="x좌표"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb4" data-ans="-2" data-type="num"><div class="pq"><span class="pnum">4.</span>점 (5, -2)의 y좌표는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="y좌표"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb5" data-ans="y축" data-type="text"><div class="pq"><span class="pnum">5.</span>점 (0, 7)은 어느 축 위에 있나요?</div><div class="quiz-row"><input class="quiz-input" placeholder="x축 / y축" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb6" data-ans="x축" data-type="text"><div class="pq"><span class="pnum">6.</span>점 (-6, 0)은 어느 축 위에 있나요?</div><div class="quiz-row"><input class="quiz-input" placeholder="x축 / y축" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb7" data-ans="1" data-type="num"><div class="pq"><span class="pnum">7.</span>점 (4, 4)는 제 몇 사분면에 있나요? (숫자만)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="숫자"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb8" data-ans="3" data-type="num"><div class="pq"><span class="pnum">8.</span>점 (-1, -1)은 제 몇 사분면에 있나요? (숫자만)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="숫자"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb9" data-ans="3,8|(3,8)" data-type="text"><div class="pq"><span class="pnum">9.</span>점 (3, -8)을 x축에 대해 대칭이동하면? (예: 3,8)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 3,8" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb10" data-ans="-3,-8|(-3,-8)" data-type="text"><div class="pq"><span class="pnum">10.</span>점 (3, -8)을 y축에 대해 대칭이동하면?</div><div class="quiz-row"><input class="quiz-input" placeholder="예: -3,-8" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb1" data-ans="8" data-type="num"><div class="pq"><span class="pnum">1.</span>두 순서쌍 (4 − a, 5) 와 (2, 2b − 7) 이 <strong>서로 같을 때</strong>, a + b 의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 순서쌍이 같다 = x끼리 같고 y끼리 같다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb2" data-ans="2" data-type="num"><div class="pq"><span class="pnum">2.</span>점 (−3, 7) 은 제 몇 사분면 위의 점인가? (숫자만)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="사분면" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb3" data-ans="5,2" data-type="text"><div class="pq"><span class="pnum">3.</span>점 (5, −2) 를 <strong>x축</strong>에 대하여 대칭이동한 점의 좌표는? (예: 5,2 처럼 입력)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 5,2" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb4" data-ans="-5,2" data-type="text"><div class="pq"><span class="pnum">4.</span>점 (5, −2) 를 <strong>원점</strong>에 대하여 대칭이동한 점의 좌표는? (예: -5,2 처럼 입력)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: -5,2" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 원점 대칭은 x좌표·y좌표의 부호가 <strong>둘 다</strong> 바뀐다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb5" data-ans="4" data-type="num"><div class="pq"><span class="pnum">5.</span>다음 설명 중 <strong>옳은 것</strong>은 몇 개인가?<br>ㄱ. 점 (−2, 4)는 제2사분면 위에 있다<br>ㄴ. x좌표가 양수인 점은 제1사분면과 제4사분면 위에 있다<br>ㄷ. 점 (3, 0)은 어느 사분면에도 속하지 않는다<br>ㄹ. y축 위의 모든 점은 x좌표가 0이다 &nbsp; ㅁ. 점 (−1, −3)은 제3사분면 위에 있다</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ ㄴ은 (3, 0) 같은 점을 떠올려 볼 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb6" data-ans="1/2|0.5" data-type="text"><div class="pq"><span class="pnum">6.</span>점 (2a − 1, 3) 이 <strong>y축 위</strong>에 있을 때, a 의 값은? (기약분수)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 1/2" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ y축 위의 점은 x좌표가 0이다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb7" data-ans="-2" data-type="num"><div class="pq"><span class="pnum">7.</span>점 (4, b + 2) 가 <strong>x축 위</strong>에 있을 때, b 의 값은?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb8" data-ans="8" data-type="num"><div class="pq"><span class="pnum">8.</span>두 점 A(−3, 2), B(5, 2) 사이의 거리는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ y좌표가 같으므로 x좌표의 차를 구하면 된다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb9" data-ans="15" data-type="num"><div class="pq"><span class="pnum">9.</span>세 점 A(−2, 0), B(4, 0), C(1, 5) 를 꼭짓점으로 하는 삼각형의 넓이는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb10" data-ans="4" data-type="num"><div class="pq"><span class="pnum">10.</span>점 P(a, b) 가 제3사분면 위의 점일 때, 점 Q(−a, b) 는 제 몇 사분면 위의 점인가? (숫자만)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="사분면" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
       </div>
     </div>
 
     <div class="pset locked" id="pset_applied">
-      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">부호 추론·복합 대칭</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">축 위의 점 · 넓이 · 그래프 해석</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
       <div class="lockmsg">🔒 기본 10문제를 모두 채점하면 열려요.</div>
       <div class="pbody">
-        <div class="prob" data-qid="pa1" data-ans="7" data-type="num"><div class="pq"><span class="pnum">1.</span>두 점 A(-8), B(-1) 사이의 거리는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="거리"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa2" data-ans="음수" data-type="text"><div class="pq"><span class="pnum">2.</span>점 (a, b)가 제2사분면에 있다. a의 부호는? (양수/음수)</div><div class="quiz-row"><input class="quiz-input" placeholder="양수 / 음수" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa3" data-ans="음수" data-type="text"><div class="pq"><span class="pnum">3.</span>점 (a, b)가 제4사분면에 있다. b의 부호는? (양수/음수)</div><div class="quiz-row"><input class="quiz-input" placeholder="양수 / 음수" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa4" data-ans="2,-7|(2,-7)" data-type="text"><div class="pq"><span class="pnum">4.</span>점 (-2, 7)을 원점에 대해 대칭이동하면?</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 2,-7" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa5" data-ans="2,-7|(2,-7)" data-type="text"><div class="pq"><span class="pnum">5.</span>점 (-2, 7)을 x축 대칭 후 다시 y축 대칭이동하면?</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 2,-7" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 4번과 결과가 같은지 확인해보세요</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa6" data-ans="4" data-type="num"><div class="pq"><span class="pnum">6.</span>a &gt; 0, b &lt; 0일 때 점 (a, b)는 제 몇 사분면에 있나요? (숫자만)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="숫자"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa7" data-ans="3" data-type="num"><div class="pq"><span class="pnum">7.</span>a &lt; 0, b &lt; 0일 때 점 (a, b)는 제 몇 사분면에 있나요? (숫자만)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="숫자"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa8" data-ans="0" data-type="num"><div class="pq"><span class="pnum">8.</span>점 P(2, k)가 x축 위에 있으려면 k의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="k"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa9" data-ans="0" data-type="num"><div class="pq"><span class="pnum">9.</span>점 Q(k, 5)가 y축 위에 있으려면 k의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="k"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa10" data-ans="7" data-type="num"><div class="pq"><span class="pnum">10.</span>두 점 A(-3, 2), B(-3, 9) 사이의 거리는? (x좌표가 같은 두 점)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="거리"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ y좌표의 차로 구해요</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa1" data-ans="-2" data-type="num"><div class="pq"><span class="pnum">1.</span>점 ( 2a, <sup>a</sup>⁄<sub>4</sub> + 1 ) 이 <strong>x축 위</strong>의 점이고, 점 (b − 2, 3b + 6) 이 <strong>y축 위</strong>의 점일 때, a + b 의 값은?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ x축 위면 y좌표가 0, y축 위면 x좌표가 0</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa2" data-ans="4" data-type="num"><div class="pq"><span class="pnum">2.</span>점 P(a, b) 가 <strong>제2사분면</strong> 위의 점일 때, 다음 중 <strong>옳은 것</strong>은 몇 개인가?<br>ㄱ. M(0, b) : y축 위의 점 &nbsp; ㄴ. Q(−a, b) : 제1사분면 위의 점<br>ㄷ. R(a<sup>2</sup>, b) : 제2사분면 위의 점 &nbsp; ㄹ. S(a, −b) : 제3사분면 위의 점<br>ㅁ. T(b − a, ab) : 제4사분면 위의 점</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ a<sup>2</sup> 은 a 가 음수여도 <strong>양수</strong>가 된다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa3" data-ans="2" data-type="num"><div class="pq"><span class="pnum">3.</span>a − b &lt; 0, ab &lt; 0 일 때, 다음 중 <strong>제2사분면</strong> 위의 점은 몇 개인가?<br>ㄱ. (a, b) &nbsp; ㄴ. (b, a) &nbsp; ㄷ. (a − b, a) &nbsp; ㄹ. (−b, −a) &nbsp; ㅁ. (−a, −b)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 두 조건에서 a 와 b 의 <strong>부호</strong>를 먼저 확정할 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa4" data-ans="15" data-type="num"><div class="pq"><span class="pnum">4.</span>세 점 A(2, 3), B(−2, 1), C(5, −3) 을 꼭짓점으로 하는 삼각형의 넓이는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 축 위에 변이 없으면 <strong>직사각형으로 감싸고</strong> 바깥 직각삼각형 3개를 빼면 된다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa5" data-ans="1,5" data-type="text"><div class="pq"><span class="pnum">5.</span>좌표평면 위의 세 점 A(−1, −2), B(2, −2), C(4, 5) 에 대하여, 선분 AB 와 선분 BC 를 두 변으로 하는 <strong>평행사변형 ABCD</strong> 에서 점 D 의 좌표는? (예: 1,5 처럼 입력)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 1,5" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 평행사변형에서 A에서 B로 간 만큼 D에서 C로 간다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa6" data-ans="10" data-type="num"><div class="pq"><span class="pnum">6.</span>점 A( 2a, <sup>a−1</sup>⁄<sub>3</sub> ) 는 x축 위의 점이고, 점 B(b − 4, b + 6) 은 y축 위의 점일 때, 두 점 A, B 와 원점 O 로 둘러싸인 <strong>삼각형 AOB 의 넓이</strong>는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ A는 x축 위, B는 y축 위이므로 직각을 낀 두 변의 길이가 바로 밑변과 높이다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa7" data-ans="10" data-type="num"><div class="pq"><span class="pnum">7.</span>다음은 열기구가 지면에서 출발하여 위아래로 움직일 때, 출발한 지 x시간 후의 지면으로부터의 높이 y km 를 나타낸 그래프이다. 지면에 다시 내려올 때까지 열기구가 <strong>이동한 거리</strong>는? (km, 단 열기구는 수직 방향으로만 움직인다)<div style="margin:10px 0;max-width:420px;"><svg viewBox="0 0 360 250" xmlns="http://www.w3.org/2000/svg">
+  <line x1="52" y1="159.2" x2="340" y2="159.2" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="52" y1="126.4" x2="340" y2="126.4" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="52" y1="93.6" x2="340" y2="93.6" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="52" y1="60.8" x2="340" y2="60.8" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="148.0" y1="28" x2="148.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="244.0" y1="28" x2="244.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="340.0" y1="28" x2="340.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="52" y1="192" x2="348" y2="192" stroke="#9aa7bd" stroke-width="1.6"/>
+  <line x1="52" y1="192" x2="52" y2="20" stroke="#9aa7bd" stroke-width="1.6"/>
+  <polygon points="348,192 341,188 341,196" fill="#9aa7bd"/>
+  <polygon points="52,20 48,27 56,27" fill="#9aa7bd"/>
+  <text x="45" y="163.2" font-size="11" fill="#9aa7bd" text-anchor="end">1</text>
+  <text x="45" y="130.4" font-size="11" fill="#9aa7bd" text-anchor="end">2</text>
+  <text x="45" y="97.6" font-size="11" fill="#9aa7bd" text-anchor="end">3</text>
+  <text x="45" y="64.8" font-size="11" fill="#9aa7bd" text-anchor="end">4</text>
+  <text x="148.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">1</text>
+  <text x="244.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">2</text>
+  <text x="340.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">3</text>
+  <text x="45" y="207" font-size="11" fill="#9aa7bd" text-anchor="end">O</text>
+  <text x="48" y="15" font-size="11" fill="#9aa7bd" text-anchor="start">y(km)</text>
+  <text x="348" y="224" font-size="11" fill="#9aa7bd" text-anchor="end">x(시간)</text>
+  <polyline points="52.0,192.0 100.0,126.4 128.8,159.2 167.2,159.2 224.8,60.8 272.8,60.8 340.0,192.0" fill="none" stroke="#34d399" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="52.0" cy="192.0" r="2.6" fill="#34d399"/>
+  <circle cx="100.0" cy="126.4" r="2.6" fill="#34d399"/>
+  <circle cx="128.8" cy="159.2" r="2.6" fill="#34d399"/>
+  <circle cx="167.2" cy="159.2" r="2.6" fill="#34d399"/>
+  <circle cx="224.8" cy="60.8" r="2.6" fill="#34d399"/>
+  <circle cx="272.8" cy="60.8" r="2.6" fill="#34d399"/>
+  <circle cx="340.0" cy="192.0" r="2.6" fill="#34d399"/>
+</svg></div></div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 올라간 거리와 내려온 거리를 <strong>모두 더한다</strong>. 최종 높이가 아니다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa8" data-ans="6" data-type="num"><div class="pq"><span class="pnum">8.</span>점 (−4, 3) 을 y축에 대하여 대칭이동한 점을 P, 원점에 대하여 대칭이동한 점을 Q 라 할 때, 두 점 P, Q 사이의 거리는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa9" data-ans="3" data-type="num"><div class="pq"><span class="pnum">9.</span>다음은 어느 날의 기온 변화를 나타낸 그래프이다. <strong>옳은 것</strong>은 몇 개인가?<br>ㄱ. 최고 기온과 최저 기온의 차는 20℃이다<br>ㄴ. 4시부터 14시까지 기온이 계속 올라간다<br>ㄷ. 기온이 20℃ 이상인 시간대가 있다<br>ㄹ. 0시의 기온이 22시의 기온보다 높다<div style="margin:10px 0;max-width:420px;"><svg viewBox="0 0 360 250" xmlns="http://www.w3.org/2000/svg">
+  <line x1="52" y1="145.1" x2="340" y2="145.1" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="52" y1="98.3" x2="340" y2="98.3" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="52" y1="51.4" x2="340" y2="51.4" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="76.0" y1="28" x2="76.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="100.0" y1="28" x2="100.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="124.0" y1="28" x2="124.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="148.0" y1="28" x2="148.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="172.0" y1="28" x2="172.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="196.0" y1="28" x2="196.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="220.0" y1="28" x2="220.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="244.0" y1="28" x2="244.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="268.0" y1="28" x2="268.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="292.0" y1="28" x2="292.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="316.0" y1="28" x2="316.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="340.0" y1="28" x2="340.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="52" y1="192" x2="348" y2="192" stroke="#9aa7bd" stroke-width="1.6"/>
+  <line x1="52" y1="192" x2="52" y2="20" stroke="#9aa7bd" stroke-width="1.6"/>
+  <polygon points="348,192 341,188 341,196" fill="#9aa7bd"/>
+  <polygon points="52,20 48,27 56,27" fill="#9aa7bd"/>
+  <text x="45" y="149.1" font-size="11" fill="#9aa7bd" text-anchor="end">10</text>
+  <text x="45" y="102.3" font-size="11" fill="#9aa7bd" text-anchor="end">20</text>
+  <text x="45" y="55.4" font-size="11" fill="#9aa7bd" text-anchor="end">30</text>
+  <text x="76.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">2</text>
+  <text x="100.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">4</text>
+  <text x="124.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">6</text>
+  <text x="148.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">8</text>
+  <text x="172.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">10</text>
+  <text x="196.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">12</text>
+  <text x="220.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">14</text>
+  <text x="244.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">16</text>
+  <text x="268.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">18</text>
+  <text x="292.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">20</text>
+  <text x="316.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">22</text>
+  <text x="340.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">24</text>
+  <text x="45" y="207" font-size="11" fill="#9aa7bd" text-anchor="end">O</text>
+  <text x="48" y="15" font-size="11" fill="#9aa7bd" text-anchor="start">y(℃)</text>
+  <text x="348" y="224" font-size="11" fill="#9aa7bd" text-anchor="end">x(시)</text>
+  <polyline points="52.0,121.7 55.0,121.9 58.0,122.6 61.0,123.7 64.0,125.1 67.0,126.9 70.0,128.9 73.0,131.1 76.0,133.4 79.0,135.7 82.0,137.9 85.0,139.9 88.0,141.7 91.0,143.2 94.0,144.3 97.0,144.9 100.0,145.1 103.0,145.0 106.0,144.6 109.0,143.8 112.0,142.8 115.0,141.6 118.0,140.0 121.0,138.2 124.0,136.2 127.0,133.9 130.0,131.4 133.0,128.7 136.0,125.8 139.0,122.8 142.0,119.6 145.0,116.2 148.0,112.8 151.0,109.2 154.0,105.6 157.0,102.0 160.0,98.3 163.0,94.6 166.0,91.0 169.0,87.3 172.0,83.8 175.0,80.4 178.0,77.0 181.0,73.8 184.0,70.7 187.0,67.9 190.0,65.2 193.0,62.7 196.0,60.4 199.0,58.3 202.0,56.5 205.0,55.0 208.0,53.7 211.0,52.7 214.0,52.0 217.0,51.6 220.0,51.4 223.0,51.6 226.0,52.0 229.0,52.7 232.0,53.7 235.0,55.0 238.0,56.6 241.0,58.3 244.0,60.3 247.0,62.6 250.0,65.0 253.0,67.5 256.0,70.2 259.0,73.0 262.0,75.9 265.0,78.9 268.0,81.9 271.0,84.9 274.0,87.8 277.0,90.7 280.0,93.5 283.0,96.2 286.0,98.8 289.0,101.2 292.0,103.4 295.0,105.4 298.0,107.2 301.0,108.7 304.0,110.0 307.0,111.0 310.0,111.8 313.0,112.2 316.0,112.3 319.0,112.5 322.0,113.0 325.0,113.8 328.0,114.7 331.0,115.6 334.0,116.3 337.0,116.9 340.0,117.0" fill="none" stroke="#34d399" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="round"/>
+</svg></div></div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa10" data-ans="1,4" data-type="text"><div class="pq"><span class="pnum">10.</span>준서와 성근이가 가위바위보를 하여 좌표평면 위의 점 A(2, 0) 을 다음 규칙으로 이동시킨다. 5번의 가위바위보에서 준서가 3번, 성근이가 2번 이겼을 때 점 A 가 이동된 점의 좌표는? (예: 1,4 처럼 입력)<br>· 준서가 이기면 x축 방향으로 1, y축 방향으로 2 만큼 이동<br>· 성근이가 이기면 x축 방향으로 −2, y축 방향으로 −1 만큼 이동</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 1,4" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
       </div>
     </div>
 
     <div class="pset locked" id="pset_hard">
-      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">킬러 — 사분면 변화·넓이</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">킬러 — 부호 추론 · 넓이 역산 · 그래프</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
       <div class="lockmsg">🔒 응용 10문제를 모두 채점하면 열려요.</div>
       <div class="pbody">
-        <div class="prob" data-qid="ph1" data-ans="4" data-type="num"><div class="pq"><span class="pnum">1.</span>점 A(a, b)가 제3사분면에 있을 때, 점 B(-a, b)는 제 몇 사분면에 있나요? (숫자만)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="숫자"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ a&lt;0, b&lt;0 이므로 -a&gt;0</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph2" data-ans="3" data-type="num"><div class="pq"><span class="pnum">2.</span>점 A(a, b)가 제2사분면에 있을 때, 점 B(a, -b)는 제 몇 사분면에 있나요? (숫자만)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="숫자"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph3" data-ans="3" data-type="num"><div class="pq"><span class="pnum">3.</span>점 A(a, b)가 제1사분면에 있을 때, 점 (-a, -b)는 제 몇 사분면에 있나요? (숫자만)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="숫자"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 원점 대칭은 항상 대각선 반대 사분면(1↔3, 2↔4)</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph4" data-ans="1/2|0.5" data-type="text"><div class="pq"><span class="pnum">4.</span>점 (2a-1, 3)이 y축 위에 있을 때, a의 값은?</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 1/2" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph5" data-ans="-2" data-type="num"><div class="pq"><span class="pnum">5.</span>점 (4, b+2)가 x축 위에 있을 때, b의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="b"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph6" data-ans="15" data-type="num"><div class="pq"><span class="pnum">6.</span>세 점 A(-2, 0), B(4, 0), C(1, 5)로 이루어진 삼각형의 넓이는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="넓이"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 밑변 AB(x축 위) × 높이(C의 y좌표) ÷ 2</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph7" data-ans="21" data-type="num"><div class="pq"><span class="pnum">7.</span>세 점 A(0, -3), B(0, 4), C(6, 1)로 이루어진 삼각형의 넓이는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="넓이"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 밑변 AB(y축 위) × 높이(C의 x좌표) ÷ 2</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph8" data-ans="-5,2|(-5,2)" data-type="text"><div class="pq"><span class="pnum">8.</span>점 (5, -2)를 y축 대칭 후 x축 대칭시키면?</div><div class="quiz-row"><input class="quiz-input" placeholder="예: -5,2" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph9" data-ans="6" data-type="num"><div class="pq"><span class="pnum">9.</span>두 점 A(-4, -4), B(2, -4) 사이의 거리는? (y좌표가 같은 두 점)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="거리"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph10" data-ans="5,-3|(5,-3)" data-type="text"><div class="pq"><span class="pnum">10.</span>점 P가 제4사분면 위에 있고 x좌표와 y좌표의 절댓값이 각각 5, 3일 때 P의 좌표는?</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 5,-3" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="box box-purple"><div class="box-title">🔮 이 세트의 핵심 — 좌표는 <em>부호</em>와 <em>길이</em> 두 가지로 읽는다</div>
+          <p style="margin:0;">좌표평면 킬러는 크게 셋입니다. ① <strong>사분면 문제</strong> — 문자의 부호만 확정하면 끝나므로, 조건에서 부호부터 뽑아내고 필요하면 <strong>구체적인 수를 하나 대입</strong>해 확인하세요. ② <strong>넓이 문제</strong> — 축에 평행한 변을 밑변으로 잡고, 없으면 직사각형으로 감싸 빼냅니다. ③ <strong>그래프 해석</strong> — 축이 무엇을 나타내는지부터 확인하세요. 속력 그래프에서 "높이"를 거리로 읽는 실수가 가장 많습니다.</p></div>
+        <div class="solution">
+          <div class="sol-head">🧩 준비 예제 — 좌표평면 위 삼각형의 넓이</div>
+          <div class="sol-q">세 점 A(−3, 0), B(5, 0), C(2, 6) 을 꼭짓점으로 하는 삼각형의 넓이는?</div>
+          <div class="step"><span class="s-label">STEP 1</span><br>A, B가 모두 x축 위에 있으므로 <strong>AB를 밑변</strong>으로 삼는다. 밑변 = 5 − (−3) = 8</div>
+          <div class="step"><span class="s-label">STEP 2</span><br>높이는 C에서 x축까지의 거리 = <strong>C의 y좌표</strong> = 6</div>
+          <div class="step"><span class="s-label">STEP 3</span><br>(밑변 × 높이) ÷ 2 = (8 × 6) ÷ 2</div>
+          <div class="step"><span class="s-label">정답</span><br>= <strong>24</strong> — 축 위에 변이 놓이면 좌표에서 길이를 바로 읽을 수 있다</div>
+          <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
+        </div>
+        <div class="solution">
+          <div class="sol-head">🧩 본 유형 — 넓이가 주어지고 좌표를 거꾸로 찾기 (아래 3·8번 유형)</div>
+          <div class="sol-q">세 점 A(−1, 2), B(5, 2), C(2, k) 를 꼭짓점으로 하는 삼각형의 넓이가 <strong>18</strong> 일 때, 가능한 k 를 모두 구하면?</div>
+          <div class="step"><span class="s-label">STEP 1</span><br>A, B의 y좌표가 같으므로 AB가 밑변. 밑변 = 5 − (−1) = <strong>6</strong></div>
+          <div class="step"><span class="s-label">STEP 2</span><br>높이는 C에서 직선 AB(y = 2)까지의 거리 = <strong>|k − 2|</strong> &nbsp;— 절댓값인 것이 핵심</div>
+          <div class="step"><span class="s-label">STEP 3</span><br>(6 × |k − 2|) ÷ 2 = 18 → 3|k − 2| = 18 → |k − 2| = 6</div>
+          <div class="step"><span class="s-label">정답</span><br>k − 2 = 6 또는 k − 2 = −6 → <strong>k = 8 또는 k = −4</strong> — C가 AB의 <strong>위·아래</strong> 두 곳에 놓일 수 있으므로 답이 두 개다</div>
+          <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
+        </div>
+        <div class="prob" data-qid="ph1" data-ans="3" data-type="num"><div class="pq"><span class="pnum">1.</span>점 P(a, b) 가 <strong>제4사분면</strong> 위의 점이고 |a| &lt; |b| 일 때, 점 Q(a + b, ab) 는 제 몇 사분면 위의 점인가? (숫자만)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="사분면" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 제4사분면이면 a &gt; 0, b &lt; 0. 절댓값 조건이 a + b 의 <strong>부호</strong>를 정해 준다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph2" data-ans="5" data-type="num"><div class="pq"><span class="pnum">2.</span>세 점 A(−1, −2), B(2, −2), C(4, 5) 와 함께 <strong>평행사변형</strong>을 이루는 점 D 는 모두 <strong>3가지</strong>가 있다. 그 세 점의 <strong>x좌표의 합</strong>은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 어느 변이 대각선이 되느냐에 따라 세 경우가 나온다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph3" data-ans="2" data-type="num"><div class="pq"><span class="pnum">3.</span>세 점 A(−3, 1), B(5, 1), C(1, k) 를 꼭짓점으로 하는 삼각형의 넓이가 <strong>20</strong> 일 때, 가능한 모든 k 의 값의 <strong>합</strong>은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ C가 직선 AB의 <strong>위쪽·아래쪽</strong> 두 경우가 모두 가능하다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph4" data-ans="30" data-type="num"><div class="pq"><span class="pnum">4.</span>점 A(3a − 6, a + 2) 가 x축 위에 있고, 점 B(2b + 8, b − 1) 이 y축 위에 있을 때, 삼각형 AOB 의 넓이는? (O는 원점)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ a, b 를 먼저 구해 두 점의 좌표를 확정할 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph5" data-ans="52" data-type="num"><div class="pq"><span class="pnum">5.</span>다음은 원 모양 대관람차의 한 칸이 지면으로부터 갖는 높이 y m 를 시간 x분에 따라 나타낸 그래프이다. 이 관람차의 <strong>지름(m)</strong> 과 <strong>한 바퀴 도는 데 걸리는 시간(분)</strong> 의 <strong>합</strong>은?<div style="margin:10px 0;max-width:420px;"><svg viewBox="0 0 360 250" xmlns="http://www.w3.org/2000/svg">
+  <line x1="52" y1="159.2" x2="340" y2="159.2" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="52" y1="126.4" x2="340" y2="126.4" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="52" y1="93.6" x2="340" y2="93.6" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="52" y1="60.8" x2="340" y2="60.8" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="100.0" y1="28" x2="100.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="148.0" y1="28" x2="148.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="196.0" y1="28" x2="196.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="244.0" y1="28" x2="244.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="292.0" y1="28" x2="292.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="340.0" y1="28" x2="340.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="52" y1="192" x2="348" y2="192" stroke="#9aa7bd" stroke-width="1.6"/>
+  <line x1="52" y1="192" x2="52" y2="20" stroke="#9aa7bd" stroke-width="1.6"/>
+  <polygon points="348,192 341,188 341,196" fill="#9aa7bd"/>
+  <polygon points="52,20 48,27 56,27" fill="#9aa7bd"/>
+  <text x="45" y="163.2" font-size="11" fill="#9aa7bd" text-anchor="end">10</text>
+  <text x="45" y="130.4" font-size="11" fill="#9aa7bd" text-anchor="end">20</text>
+  <text x="45" y="97.6" font-size="11" fill="#9aa7bd" text-anchor="end">30</text>
+  <text x="45" y="64.8" font-size="11" fill="#9aa7bd" text-anchor="end">40</text>
+  <text x="100.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">4</text>
+  <text x="148.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">8</text>
+  <text x="196.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">12</text>
+  <text x="244.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">16</text>
+  <text x="292.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">20</text>
+  <text x="340.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">24</text>
+  <text x="45" y="207" font-size="11" fill="#9aa7bd" text-anchor="end">O</text>
+  <text x="48" y="15" font-size="11" fill="#9aa7bd" text-anchor="start">y(m)</text>
+  <text x="348" y="224" font-size="11" fill="#9aa7bd" text-anchor="end">x(분)</text>
+  <polyline points="52.0,175.6 55.0,175.0 58.0,173.4 61.0,170.6 64.0,166.8 67.0,162.0 70.0,156.4 73.0,149.9 76.0,142.8 79.0,135.1 82.0,127.0 85.0,118.6 88.0,110.0 91.0,101.4 94.0,93.0 97.0,84.9 100.0,77.2 103.0,70.1 106.0,63.6 109.0,58.0 112.0,53.2 115.0,49.4 118.0,46.6 121.0,45.0 124.0,44.4 127.0,45.0 130.0,46.6 133.0,49.4 136.0,53.2 139.0,58.0 142.0,63.6 145.0,70.1 148.0,77.2 151.0,84.9 154.0,93.0 157.0,101.4 160.0,110.0 163.0,118.6 166.0,127.0 169.0,135.1 172.0,142.8 175.0,149.9 178.0,156.4 181.0,162.0 184.0,166.8 187.0,170.6 190.0,173.4 193.0,175.0 196.0,175.6 199.0,175.0 202.0,173.4 205.0,170.6 208.0,166.8 211.0,162.0 214.0,156.4 217.0,149.9 220.0,142.8 223.0,135.1 226.0,127.0 229.0,118.6 232.0,110.0 235.0,101.4 238.0,93.0 241.0,84.9 244.0,77.2 247.0,70.1 250.0,63.6 253.0,58.0 256.0,53.2 259.0,49.4 262.0,46.6 265.0,45.0 268.0,44.4 271.0,45.0 274.0,46.6 277.0,49.4 280.0,53.2 283.0,58.0 286.0,63.6 289.0,70.1 292.0,77.2 295.0,84.9 298.0,93.0 301.0,101.4 304.0,110.0 307.0,118.6 310.0,127.0 313.0,135.1 316.0,142.8 319.0,149.9 322.0,156.4 325.0,162.0 328.0,166.8 331.0,170.6 334.0,173.4 337.0,175.0 340.0,175.6" fill="none" stroke="#fbbf24" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="round"/>
+</svg></div></div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 지름 = (가장 높은 높이) − (가장 낮은 높이). 한 바퀴 = 같은 높이로 <strong>처음 되돌아올 때까지</strong></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph6" data-ans="3,-5" data-type="text"><div class="pq"><span class="pnum">6.</span>점 (3, −5) 를 <strong>x축</strong>에 대하여 대칭이동한 뒤, 그 점을 <strong>원점</strong>에 대하여 대칭이동하고, 다시 <strong>y축</strong>에 대하여 대칭이동한 점의 좌표는? (예: 3,-5 처럼 입력)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 3,-5" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 한 번에 하나씩 차근차근. 결과가 뜻밖일 수 있다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph7" data-ans="12" data-type="num"><div class="pq"><span class="pnum">7.</span>x좌표와 y좌표가 모두 <strong>정수</strong>이고 |x| + |y| = 3 을 만족하는 점은 모두 몇 개인가?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ |x| 가 0, 1, 2, 3 인 경우로 나누어 세되 <strong>부호</strong>도 함께 셀 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph8" data-ans="2" data-type="num"><div class="pq"><span class="pnum">8.</span>세 점 A(−2, 3), B(4, 3), C(1, k) 를 꼭짓점으로 하는 삼각형의 넓이가 <strong>15</strong> 이고 k &lt; 0 일 때, 점 (k, k + 3) 은 제 몇 사분면 위의 점인가? (숫자만)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="사분면" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ k 를 두 개 구한 뒤 <strong>조건에 맞는 것만</strong> 골라 쓸 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph9" data-ans="4" data-type="num"><div class="pq"><span class="pnum">9.</span>다음은 승마 체험장에서 손님이 x분 동안 말을 탈 때 말의 속력 y m/min 를 나타낸 그래프이다. 이 그래프에서 알 수 있는 <strong>옳은 것</strong>은 몇 개인가?<br>ㄱ. 말의 최고 속력은 분속 400m이다 &nbsp; ㄴ. 말을 타는 총 시간은 30분이다<br>ㄷ. 말이 일정한 속력으로 움직이는 시간은 10분이다<br>ㄹ. 출발 후 처음 5분보다 그다음 5분에 속력이 더 빠르게 증가한다<br>ㅁ. 말이 일정한 속력으로 움직인 거리는 400m이다<div style="margin:10px 0;max-width:420px;"><svg viewBox="0 0 360 250" xmlns="http://www.w3.org/2000/svg">
+  <line x1="52" y1="159.2" x2="340" y2="159.2" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="52" y1="126.4" x2="340" y2="126.4" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="52" y1="93.6" x2="340" y2="93.6" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="52" y1="60.8" x2="340" y2="60.8" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="100.0" y1="28" x2="100.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="148.0" y1="28" x2="148.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="196.0" y1="28" x2="196.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="244.0" y1="28" x2="244.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="292.0" y1="28" x2="292.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="340.0" y1="28" x2="340.0" y2="192" stroke="#9aa7bd" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="52" y1="192" x2="348" y2="192" stroke="#9aa7bd" stroke-width="1.6"/>
+  <line x1="52" y1="192" x2="52" y2="20" stroke="#9aa7bd" stroke-width="1.6"/>
+  <polygon points="348,192 341,188 341,196" fill="#9aa7bd"/>
+  <polygon points="52,20 48,27 56,27" fill="#9aa7bd"/>
+  <text x="45" y="163.2" font-size="11" fill="#9aa7bd" text-anchor="end">100</text>
+  <text x="45" y="130.4" font-size="11" fill="#9aa7bd" text-anchor="end">200</text>
+  <text x="45" y="97.6" font-size="11" fill="#9aa7bd" text-anchor="end">300</text>
+  <text x="45" y="64.8" font-size="11" fill="#9aa7bd" text-anchor="end">400</text>
+  <text x="100.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">5</text>
+  <text x="148.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">10</text>
+  <text x="196.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">15</text>
+  <text x="244.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">20</text>
+  <text x="292.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">25</text>
+  <text x="340.0" y="207" font-size="11" fill="#9aa7bd" text-anchor="middle">30</text>
+  <text x="45" y="207" font-size="11" fill="#9aa7bd" text-anchor="end">O</text>
+  <text x="48" y="15" font-size="11" fill="#9aa7bd" text-anchor="start">y(m/min)</text>
+  <text x="348" y="224" font-size="11" fill="#9aa7bd" text-anchor="end">x(분)</text>
+  <polyline points="52.0,192.0 100.0,159.2 148.0,60.8 244.0,60.8 292.0,159.2 340.0,192.0" fill="none" stroke="#34d399" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="52.0" cy="192.0" r="2.6" fill="#34d399"/>
+  <circle cx="100.0" cy="159.2" r="2.6" fill="#34d399"/>
+  <circle cx="148.0" cy="60.8" r="2.6" fill="#34d399"/>
+  <circle cx="244.0" cy="60.8" r="2.6" fill="#34d399"/>
+  <circle cx="292.0" cy="159.2" r="2.6" fill="#34d399"/>
+  <circle cx="340.0" cy="192.0" r="2.6" fill="#34d399"/>
+</svg></div></div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ ㅁ은 속력과 <strong>거리</strong>를 혼동하게 만드는 함정이다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph10" data-ans="4" data-type="num"><div class="pq"><span class="pnum">10.</span>두 순서쌍 (2a − 4, 3) 과 (6, b + 5) 가 서로 같을 때, 점 (a − b, ab) 는 제 몇 사분면 위의 점인가? (숫자만)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="사분면" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
       </div>
     </div>
 
@@ -695,6 +821,7 @@ function renderWrongList(boxId,list){
 
 function refresh(){
   const secs=document.querySelectorAll('.section');
+  state.done=state.done.filter(id=>document.getElementById(id));
   secs.forEach(s=>{const on=state.done.indexOf(s.id)>=0;s.classList.toggle('done',on);const b=s.querySelector('.complete-btn');if(b)b.textContent=on?'✓ 완료됨':'완료하기';});
   const total=secs.length;const p=Math.round(state.done.length/total*100);
   document.getElementById('ring').style.setProperty('--p',p);document.getElementById('ringTxt').textContent=p+'%';
