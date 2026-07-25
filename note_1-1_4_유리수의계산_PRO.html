@@ -229,7 +229,6 @@
   <a href="#s5" class="tlink">⑤ 곱셈</a>
   <a href="#s6" class="tlink">⑥ 거듭제곱 부호</a>
   <a href="#s7" class="tlink">⑦ 나눗셈</a>
-  <a href="#s8" class="tlink">⑧ 심화</a>
   <a href="#wrong" class="tlink">📕 오답노트</a>
   <a href="#gate" class="tlink">✏️ 연습문제</a>
 </nav>
@@ -376,33 +375,6 @@
     </div>
   </section>
 
-  <section class="section" id="s8">
-    <div class="section-head"><span class="section-num">8</span><span class="section-title">심화 — 킬러 문제</span>
-      <button class="complete-btn" onclick="toggleDone('s8')">완료하기</button></div>
-    <div class="box box-purple"><div class="box-title">🔮 유료 전용 심화</div>
-      <p>괄호·거듭제곱·곱셈/나눗셈·덧셈/뺄셈이 섞인 <strong>연산 순서</strong> 종합 유형이에요.</p></div>
-    <div class="solution">
-      <div class="sol-head">🧩 단계별 풀이 — (−2)³ + (−3)² × 2 − 10 ÷ (−5)</div>
-      <div class="sol-q">연산 순서대로 차근차근 계산해 보세요.</div>
-      <div class="step"><span class="s-label">STEP 1</span><br>거듭제곱 먼저: (−2)³ = −8, (−3)² = 9</div>
-      <div class="step"><span class="s-label">STEP 2</span><br>곱셈·나눗셈: 9 × 2 = 18, 10 ÷ (−5) = −2</div>
-      <div class="step"><span class="s-label">STEP 3</span><br>덧셈·뺄셈: −8 + 18 − (−2) = −8 + 18 + 2</div>
-      <div class="step"><span class="s-label">정답</span><br>= <strong>12</strong></div>
-      <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
-    </div>
-    <div class="quiz" data-qid="b13" data-ans="12" data-type="num">
-      <div class="quiz-q">Q. (−2)<sup>3</sup> + (−3)<sup>2</sup> × 2 − 10 ÷ (−5) = ?</div>
-      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-fb"></div>
-    </div>
-    <div class="quiz" data-qid="b14" data-ans="0" data-type="num">
-      <div class="quiz-q">Q. (−1)<sup>100</sup> + (−1)<sup>99</sup> = ?</div>
-      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">→ 짝수 지수=1, 홀수 지수=−1</div>
-      <div class="quiz-fb"></div>
-    </div>
-  </section>
-
   <section class="wrongnote" id="wrong">
     <h2>📕 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(본문에서 틀린 문제가 자동으로 모여요)</span></h2>
     <div id="wrongList"><p class="empty">아직 틀린 문제가 없어요. 퀴즈를 풀어보세요!</p></div>
@@ -414,7 +386,7 @@
     <h2>🔓 연습문제 잠금 해제</h2>
     <p class="desc">아래 두 조건을 모두 채우면 기본·응용·심화 연습문제가 열려요.</p>
     <ul class="checklist">
-      <li id="ck_quiz"><span class="mark">✓</span><span>본문 퀴즈 전부 채점하기 (<span id="gradedCount">0</span> / <span id="quizTotal">14</span>)</span></li>
+      <li id="ck_quiz"><span class="mark">✓</span><span>본문 퀴즈 전부 채점하기 (<span id="gradedCount">0</span> / <span id="quizTotal">12</span>)</span></li>
       <li id="ck_review"><span class="mark">✓</span><span>오답노트 확인하기 (위에서 '오답 정리 완료' 누르기)</span></li>
     </ul>
     <button class="start-btn locked" id="startBtn" onclick="startPractice()">🔒 연습문제 풀기 (잠김)</button>
@@ -425,54 +397,77 @@
     <div class="practice-sub">기본 10문제를 모두 채점하면 응용이, 응용을 모두 채점하면 심화가 열려요. 음수는 −12 처럼 입력하세요. 틀린 문제는 아래 연습 오답노트에 모입니다.</div>
 
     <div class="pset" id="pset_basic">
-      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">사칙연산 한 단계</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">개념 다지기</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
       <div class="pbody">
-        <div class="prob" data-qid="pb1" data-ans="-12" data-type="num"><div class="pq"><span class="pnum">1.</span>(−7) + (−5) = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb2" data-ans="-5" data-type="num"><div class="pq"><span class="pnum">2.</span>4 + (−9) = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb3" data-ans="8" data-type="num"><div class="pq"><span class="pnum">3.</span>5 − (−3) = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb4" data-ans="-4" data-type="num"><div class="pq"><span class="pnum">4.</span>3 − 7 = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb5" data-ans="-6" data-type="num"><div class="pq"><span class="pnum">5.</span>(−2) × 3 = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb6" data-ans="6" data-type="num"><div class="pq"><span class="pnum">6.</span>(−2) × (−3) = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb7" data-ans="-4" data-type="num"><div class="pq"><span class="pnum">7.</span>24 ÷ (−6) = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb8" data-ans="2" data-type="num"><div class="pq"><span class="pnum">8.</span>(−18) ÷ (−9) = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb9" data-ans="-16" data-type="num"><div class="pq"><span class="pnum">9.</span>−2<sup>4</sup> = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb10" data-ans="16" data-type="num"><div class="pq"><span class="pnum">10.</span>(−2)<sup>4</sup> = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb1" data-ans="-3" data-type="num"><div class="pq"><span class="pnum">1.</span>(+5) + (−8) 을 계산하면?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb2" data-ans="4" data-type="num"><div class="pq"><span class="pnum">2.</span>(−3) − (−7) 을 계산하면?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 빼기는 부호를 바꿔 더하기</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb3" data-ans="-12" data-type="num"><div class="pq"><span class="pnum">3.</span>(−2) × (+6) 을 계산하면?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb4" data-ans="8" data-type="num"><div class="pq"><span class="pnum">4.</span>(−24) ÷ (−3) 을 계산하면?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb5" data-ans="-8" data-type="num"><div class="pq"><span class="pnum">5.</span>(−2)<sup>3</sup> 의 값은?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb6" data-ans="-9" data-type="num"><div class="pq"><span class="pnum">6.</span>−3<sup>2</sup> 의 값은?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 괄호가 없으면 제곱이 먼저! (−3)<sup>2</sup> 과 다르다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb7" data-ans="2" data-type="num"><div class="pq"><span class="pnum">7.</span>다음 중 <strong>옳은 것</strong>은 몇 개인가?<br>ㄱ. 양수와 음수의 곱은 음수이다 &nbsp; ㄴ. 음수와 음수의 합은 양수이다<br>ㄷ. 두 수의 뺄셈은 순서를 바꿔도 결과가 같다 &nbsp; ㄹ. 부호가 같은 두 수의 곱은 양수이다</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb8" data-ans="-3/2|-1.5" data-type="text"><div class="pq"><span class="pnum">8.</span>−<sup>2</sup>⁄<sub>3</sub> 의 <strong>역수</strong>는? (기약분수로)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: -3/2" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb9" data-ans="10" data-type="num"><div class="pq"><span class="pnum">9.</span>|−7| + |+3| 의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb10" data-ans="5/2|2.5" data-type="text"><div class="pq"><span class="pnum">10.</span>3 + (−<sup>1</sup>⁄<sub>2</sub>) 를 기약분수로 나타내면?</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 5/2" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
       </div>
     </div>
 
     <div class="pset locked" id="pset_applied">
-      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">여러 수 · 분배법칙 · 부호</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">문장 해석 · 혼합 계산 · 판별</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
       <div class="lockmsg">🔒 기본 10문제를 모두 채점하면 열려요.</div>
       <div class="pbody">
-        <div class="prob" data-qid="pa1" data-ans="-24" data-type="num"><div class="pq"><span class="pnum">1.</span>(−2) × (−3) × (−4) = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa2" data-ans="24" data-type="num"><div class="pq"><span class="pnum">2.</span>2 × (−3) × (−4) = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa3" data-ans="-250" data-type="num"><div class="pq"><span class="pnum">3.</span>분배법칙을 이용해 계산하세요: 32 × (−2.5) + 68 × (−2.5) = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 공통수 −2.5로 묶기: (32+68) × (−2.5)</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa4" data-ans="1352" data-type="num"><div class="pq"><span class="pnum">4.</span>13 × 104 = ? (분배법칙)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa5" data-ans="9" data-type="num"><div class="pq"><span class="pnum">5.</span>(−3)<sup>2</sup> = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa6" data-ans="-9" data-type="num"><div class="pq"><span class="pnum">6.</span>−3<sup>2</sup> = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 지수는 3에만</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa7" data-ans="-1" data-type="num"><div class="pq"><span class="pnum">7.</span>(−1)<sup>5</sup> = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa8" data-ans="10" data-type="num"><div class="pq"><span class="pnum">8.</span>(−20) ÷ 4 × (−2) = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa9" data-ans="0" data-type="num"><div class="pq"><span class="pnum">9.</span>(−6) + 10 + (−4) = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa10" data-ans="5" data-type="num"><div class="pq"><span class="pnum">10.</span>8 − (−2) − 5 = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa1" data-ans="15/28" data-type="text"><div class="pq"><span class="pnum">1.</span>3보다 −<sup>12</sup>⁄<sub>7</sub> 만큼 <strong>큰</strong> 수와 −5보다 −<sup>17</sup>⁄<sub>4</sub> 만큼 <strong>작은</strong> 수의 합을 기약분수로 나타내면?</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 15/28" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ '−만큼 크다'는 빼는 것, '−만큼 작다'는 더하는 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa2" data-ans="2" data-type="num"><div class="pq"><span class="pnum">2.</span>다음 중 <strong>옳은 것</strong>은 몇 개인가?<br>ㄱ. 양수와 음수의 곱은 항상 음수이다 &nbsp; ㄴ. 음수와 음수의 합은 항상 양수이다<br>ㄷ. 부호가 다른 두 수의 합의 부호는 절댓값이 큰 수의 부호와 같다<br>ㄹ. 두 수의 뺄셈에서 순서를 바꾸어도 결과는 같다<br>ㅁ. 부호가 같은 두 수의 곱의 부호는 두 수의 공통부호와 같다</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ ㅁ은 (−2)×(−3)으로 확인해 보자</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa3" data-ans="39/5|7.8" data-type="text"><div class="pq"><span class="pnum">3.</span>다음 중 <strong>가장 큰 수</strong>를 기약분수로 나타내면?<br>4보다 −8만큼 큰 수 &nbsp;|&nbsp; 0보다 −<sup>1</sup>⁄<sub>2</sub> 만큼 작은 수 &nbsp;|&nbsp; −6보다 −7만큼 큰 수 &nbsp;|&nbsp; <sup>3</sup>⁄<sub>2</sub> 보다 <sup>3</sup>⁄<sub>4</sub> 만큼 큰 수 &nbsp;|&nbsp; <sup>24</sup>⁄<sub>5</sub> 보다 −3만큼 작은 수</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 39/5" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa4" data-ans="13" data-type="num"><div class="pq"><span class="pnum">4.</span>인천이 4월 26일 오전 11시일 때, 뉴욕은 4월 25일 오후 10시이다. 두 도시의 시차는 몇 시간인가?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="시간"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa5" data-ans="60" data-type="num"><div class="pq"><span class="pnum">5.</span>천연 비누 5개를 만드는 데 에센셜 오일 <sup>25</sup>⁄<sub>6</sub> mL가 필요하다. 사용된 오일이 50mL였다면 만든 비누는 모두 몇 개인가?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 1개당 필요한 양을 먼저 구한다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa6" data-ans="3/10|0.3" data-type="text"><div class="pq"><span class="pnum">6.</span>1 − <sup>2</sup>⁄<sub>3</sub> × { ( <sup>2</sup>⁄<sub>3</sub> − <sup>1</sup>⁄<sub>5</sub> ) ÷ ( <sup>2</sup>⁄<sub>3</sub> )<sup>2</sup> } 을 계산하면? (기약분수)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 3/10" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 거듭제곱 → 소괄호 → 중괄호 → 곱셈 → 뺄셈 순</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa7" data-ans="2" data-type="num"><div class="pq"><span class="pnum">7.</span>다음 중 <strong>옳은 것</strong>은 몇 개인가?<br>ㄱ. −(−3)<sup>2</sup> = 9 &nbsp; ㄴ. −1<sup>2</sup> = −1 &nbsp; ㄷ. <sup>2<sup>2</sup></sup>⁄<sub>3</sub> = <sup>4</sup>⁄<sub>9</sub> &nbsp; ㄹ. (−3<sup>2</sup>) = 9 &nbsp; ㅁ. (−<sup>2</sup>⁄<sub>3</sub>)<sup>2</sup> = <sup>4</sup>⁄<sub>9</sub></div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 괄호가 어디까지 걸리는지가 전부다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa8" data-ans="0.1|1/10" data-type="text"><div class="pq"><span class="pnum">8.</span>올해 1월 평균 기온은 작년 1월 평균 기온인 <strong>영하 0.7℃</strong>보다 0.8℃ 높았다. 올해 1월 평균 기온은 몇 ℃인가? (소수로)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 0.1" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 영하 0.7℃ = −0.7℃</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa9" data-ans="a" data-type="text"><div class="pq"><span class="pnum">9.</span>두 유리수 a, b가 a × b &lt; 0, a − b &gt; 0, a + b &gt; 0 을 모두 만족할 때, a와 b 중 <strong>절댓값이 큰 것</strong>은? (a 또는 b)</div><div class="quiz-row"><input class="quiz-input" placeholder="a 또는 b" style="width:140px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ a×b&lt;0에서 부호가 다르고, a−b&gt;0에서 누가 큰지 알 수 있다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa10" data-ans="21/2|10.5" data-type="text"><div class="pq"><span class="pnum">10.</span>네 유리수 −<sup>7</sup>⁄<sub>3</sub>, −<sup>3</sup>⁄<sub>2</sub>, 0.5, −9 중에서 서로 다른 세 수를 택하여 곱한 값 중 <strong>가장 큰 수</strong>를 기약분수로 나타내면?</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 21/2" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 곱이 양수가 되려면 음수를 <strong>짝수 개</strong> 골라야 한다</div><div class="quiz-fb"></div></div>
       </div>
     </div>
 
     <div class="pset locked" id="pset_hard">
-      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">킬러 — 연산 순서 종합</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">킬러 — 부호 규칙 · 복합 계산 · 조건 추론</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
       <div class="lockmsg">🔒 응용 10문제를 모두 채점하면 열려요.</div>
       <div class="pbody">
-        <div class="prob" data-qid="ph1" data-ans="12" data-type="num"><div class="pq"><span class="pnum">1.</span>(−2)<sup>3</sup> + (−3)<sup>2</sup> × 2 − 10 ÷ (−5) = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph2" data-ans="0" data-type="num"><div class="pq"><span class="pnum">2.</span>(−1)<sup>100</sup> + (−1)<sup>99</sup> = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph3" data-ans="0" data-type="num"><div class="pq"><span class="pnum">3.</span>−5<sup>2</sup> + (−5)<sup>2</sup> = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ −25 + 25</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph4" data-ans="9" data-type="num"><div class="pq"><span class="pnum">4.</span>12 ÷ (−2)<sup>2</sup> × 3 = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ (−2)²=4 먼저</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph5" data-ans="24" data-type="num"><div class="pq"><span class="pnum">5.</span>(−3) × (−2)<sup>3</sup> = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph6" data-ans="-4" data-type="num"><div class="pq"><span class="pnum">6.</span>(−24) ÷ (−2) ÷ (−3) = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph7" data-ans="14" data-type="num"><div class="pq"><span class="pnum">7.</span>2 − 3 × (−4) = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph8" data-ans="-18" data-type="num"><div class="pq"><span class="pnum">8.</span>(−10) − (−4) × (−2) = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph9" data-ans="-3" data-type="num"><div class="pq"><span class="pnum">9.</span>1 − 2 + 3 − 4 + 5 − 6 = ?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="결과"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph10" data-ans="5" data-type="num"><div class="pq"><span class="pnum">10.</span>어떤 수에서 −3/2을 빼야 할 것을 잘못하여 더했더니 2가 되었다. 바르게 계산한 답을 소수로 쓰시오.</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="소수로 입력"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 어떤 수를 먼저 구한 뒤 바르게 계산</div><div class="quiz-fb"></div></div>
+        <div class="box box-purple"><div class="box-title">🔮 이 세트의 핵심 — 부호를 먼저, 크기는 나중에</div>
+          <p style="margin:0;">유리수 계산 킬러는 대부분 <strong>부호 판단</strong>에서 갈립니다. 곱셈은 <strong>음수의 개수가 짝수면 +, 홀수면 −</strong>. 조건에 |a|, a×b, a+b가 섞여 나오면 <strong>부호부터 확정</strong>한 뒤 절댓값 크기를 비교하세요. "가장 큰/작은 값"을 물으면 <strong>모든 조합을 계산</strong>해야 합니다.</p></div>
+        <div class="solution">
+          <div class="sol-head">🧩 준비 예제 — 부호가 섞인 조건에서 대소 정하기</div>
+          <div class="sol-q">두 유리수 a, b가 a × b &lt; 0, a − b &gt; 0, a + b &gt; 0 을 만족할 때, a, −a, b, −b 를 작은 것부터 나열하면?</div>
+          <div class="step"><span class="s-label">STEP 1</span><br>a × b &lt; 0 → a와 b의 <strong>부호가 다르다</strong>.</div>
+          <div class="step"><span class="s-label">STEP 2</span><br>a − b &gt; 0 → a &gt; b. 부호가 다른데 a가 더 크므로 <strong>a &gt; 0, b &lt; 0</strong>.</div>
+          <div class="step"><span class="s-label">STEP 3</span><br>a + b &gt; 0 → 양수 쪽이 더 세다 → <strong>|a| &gt; |b|</strong>.</div>
+          <div class="step"><span class="s-label">STEP 4</span><br>예를 들어 a = 5, b = −2 로 두면 −a = −5, −b = 2 → 작은 것부터 −5, −2, 2, 5</div>
+          <div class="step"><span class="s-label">정답</span><br><strong>−a, b, −b, a</strong> — 구체적인 수를 하나 대입해 보면 실수가 확 줄어든다</div>
+          <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
+        </div>
+        <div class="solution">
+          <div class="sol-head">🧩 본 유형 — 부호가 규칙적으로 바뀌는 긴 곱셈 (아래 1번 유형)</div>
+          <div class="sol-q">(−<sup>1</sup>⁄<sub>2</sub>) × (+<sup>2</sup>⁄<sub>3</sub>) × (−<sup>3</sup>⁄<sub>4</sub>) × … × (−<sup>99</sup>⁄<sub>100</sub>) 처럼 항이 아주 많을 때는?</div>
+          <div class="step"><span class="s-label">STEP 1</span><br><strong>부호와 크기를 분리</strong>한다. 먼저 음수가 몇 개인지 센다.</div>
+          <div class="step"><span class="s-label">STEP 2</span><br>분모가 짝수인 항이 음수 → 2, 4, …, 100 → <strong>50개</strong>. 짝수 개이므로 결과는 <strong>양수</strong>.</div>
+          <div class="step"><span class="s-label">STEP 3</span><br>크기는 <sup>1</sup>⁄<sub>2</sub> × <sup>2</sup>⁄<sub>3</sub> × <sup>3</sup>⁄<sub>4</sub> × … × <sup>99</sup>⁄<sub>100</sub> — 앞 분자와 뒤 분모가 <strong>줄줄이 약분</strong>된다.</div>
+          <div class="step"><span class="s-label">STEP 4</span><br>맨 앞 분자 1과 맨 뒤 분모 100만 남는다 → <sup>1</sup>⁄<sub>100</sub></div>
+          <div class="step"><span class="s-label">정답</span><br>= <strong><sup>1</sup>⁄<sub>100</sub></strong> — 하나하나 곱하지 말고 <strong>약분 구조</strong>를 볼 것</div>
+          <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
+        </div>
+        <div class="prob" data-qid="ph1" data-ans="1/100" data-type="text"><div class="pq"><span class="pnum">1.</span>(−<sup>1</sup>⁄<sub>2</sub>) × (+<sup>2</sup>⁄<sub>3</sub>) × (−<sup>3</sup>⁄<sub>4</sub>) × (+<sup>4</sup>⁄<sub>5</sub>) × … × (+<sup>98</sup>⁄<sub>99</sub>) × (−<sup>99</sup>⁄<sub>100</sub>) 를 계산하면? (기약분수)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 1/100" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 위 본 유형 풀이 참고</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph2" data-ans="-7/2|-3.5" data-type="text"><div class="pq"><span class="pnum">2.</span>정육면체에서 마주 보는 면에 적힌 두 수가 서로 <strong>역수</strong> 관계이다. 마주 보는 세 쌍이 (a, −<sup>1</sup>⁄<sub>4</sub>), (b, −1), (c, <sup>2</sup>⁄<sub>3</sub>) 일 때, a + b + c 의 값은? (기약분수)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: -7/2" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph3" data-ans="-3/4|-0.75" data-type="text"><div class="pq"><span class="pnum">3.</span>세 유리수 a, b, c가 |a| = |b|, a × b &lt; 0, b − a = <sup>8</sup>⁄<sub>3</sub> 을 만족하고 c는 a의 역수일 때, c의 값은? (기약분수)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: -3/4" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ |a|=|b|이고 부호가 다르므로 b = −a</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph4" data-ans="25" data-type="num"><div class="pq"><span class="pnum">4.</span>5 − (−<sup>2<sup>2</sup></sup>⁄<sub>3</sub>) − [ { (−3)<sup>2</sup> + (−<sup>11</sup>⁄<sub>2</sub>) } × 5 ] ÷ <sup>5</sup>⁄<sub>4</sub> = a, &nbsp; −2<sup>2</sup> + (−3)<sup>2</sup> − 18 × (−<sup>2</sup>⁄<sub>3</sub>) = b 일 때, a &lt; x ≤ b 를 만족하는 <strong>정수 x의 개수</strong>는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ −2<sup>2</sup> 은 제곱이 아니라 −(2<sup>2</sup>) 이다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph5" data-ans="c&lt;b&lt;a" data-type="text"><div class="pq"><span class="pnum">5.</span>서로 다른 정수 a, b, c가 다음을 모두 만족할 때 대소 관계를 부등호로 나타내면?<br>· b는 수직선에서 0보다 오른쪽에 있다 &nbsp; · b의 절댓값은 −3의 절댓값과 같다<br>· a는 3보다 크다 &nbsp; · c의 절댓값이 제일 작다</div><div class="quiz-row"><input class="quiz-input" placeholder="예: a&lt;b&lt;c" style="width:170px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph6" data-ans="-a,b,-b,a" data-type="text"><div class="pq"><span class="pnum">6.</span>두 유리수 a, b가 a × b &lt; 0, a − b &gt; 0, a + b &gt; 0 을 만족할 때, a, −a, b, −b 를 <strong>작은 것부터</strong> 차례로 나열하면? (쉼표로 구분)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: -a,b,-b,a" style="width:180px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 위 준비 예제 참고</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph7" data-ans="D,B,A,C" data-type="text"><div class="pq"><span class="pnum">7.</span>서로 다른 네 정수 A, B, C, D가 다음 조건을 만족할 때 <strong>작은 것부터</strong> 나열하면? (쉼표로 구분)<br>· C는 A, B, C, D 중 가장 큰 수이다 &nbsp; · A는 양의 정수이다<br>· 수직선에서 B와 C가 나타내는 점은 0에서 같은 거리에 있다 &nbsp; · B &gt; D</div><div class="quiz-row"><input class="quiz-input" placeholder="예: D,B,A,C" style="width:180px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 0에서 같은 거리 → B = −C</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph8" data-ans="-63/2|-31.5" data-type="text"><div class="pq"><span class="pnum">8.</span>네 유리수 −<sup>7</sup>⁄<sub>3</sub>, −<sup>3</sup>⁄<sub>2</sub>, 0.5, −9 중에서 서로 다른 세 수를 택하여 곱한 값 중 <strong>가장 작은 수</strong>를 기약분수로 나타내면?</div><div class="quiz-row"><input class="quiz-input" placeholder="예: -63/2" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 가장 작으려면 음수여야 한다. 음수를 <strong>홀수 개</strong> 고르되 절댓값은 크게</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph9" data-ans="0" data-type="num"><div class="pq"><span class="pnum">9.</span>(−1) + (−1)<sup>2</sup> + (−1)<sup>3</sup> + … + (−1)<sup>100</sup> 의 값은?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 홀수 번째와 짝수 번째가 각각 몇 개씩일까?</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph10" data-ans="-2" data-type="num"><div class="pq"><span class="pnum">10.</span>두 유리수 a, b가 a × b &gt; 0, a + b &lt; 0, |a| − |b| = 2, |a| + |b| = 10 을 모두 만족할 때, a − b 의 값은?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 두 조건에서 |a|, |b|를 먼저 구하고 부호를 정한다</div><div class="quiz-fb"></div></div>
       </div>
     </div>
+
 
     <section class="wrongnote" id="pwrong">
       <h2>📒 연습 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(연습문제에서 틀린 문제)</span></h2>
@@ -555,6 +550,7 @@ function renderWrongList(boxId,list){
 
 function refresh(){
   const secs=document.querySelectorAll('.section');
+  state.done=state.done.filter(id=>document.getElementById(id));
   secs.forEach(s=>{const on=state.done.indexOf(s.id)>=0;s.classList.toggle('done',on);const b=s.querySelector('.complete-btn');if(b)b.textContent=on?'✓ 완료됨':'완료하기';});
   const total=secs.length;const p=Math.round(state.done.length/total*100);
   document.getElementById('ring').style.setProperty('--p',p);document.getElementById('ringTxt').textContent=p+'%';
