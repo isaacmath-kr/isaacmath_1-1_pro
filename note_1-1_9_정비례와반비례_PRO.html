@@ -253,7 +253,6 @@
   <a href="#s5" class="tlink">⑤ 반비례 그래프</a>
   <a href="#s6" class="tlink">⑥ 두 변수의 곱</a>
   <a href="#s7" class="tlink">⑦ 총정리</a>
-  <a href="#s8" class="tlink">⑧ 심화</a>
   <a href="#wrong" class="tlink">📕 오답노트</a>
   <a href="#gate" class="tlink">✏️ 연습문제</a>
 </nav>
@@ -487,32 +486,6 @@
     </div>
   </section>
 
-  <section class="section" id="s8">
-    <div class="section-head"><span class="section-num">8</span><span class="section-title">심화 — 킬러 문제</span>
-      <button class="complete-btn" onclick="toggleDone('s8')">완료하기</button></div>
-    <div class="box box-purple"><div class="box-title">🔮 유료 전용 심화 — 정비례·반비례 그래프의 교점</div>
-      <p style="margin:0;">두 그래프가 <strong>같은 점을 지난다</strong>는 조건이 나오면, 그 점의 좌표를 각 관계식에 그대로 대입해서 미지수를 구하면 끝!</p></div>
-    <div class="solution">
-      <div class="sol-head">🧩 단계별 풀이 — 두 그래프가 만나는 점</div>
-      <div class="sol-q">정비례 그래프 y=ax와 반비례 그래프 y=b/x가 모두 점 (3, 6)을 지날 때, a+b의 값은?</div>
-      <div class="step"><span class="s-label">STEP 1</span><br>y=ax에 x=3, y=6 대입: 6 = 3a → a = 2</div>
-      <div class="step"><span class="s-label">STEP 2</span><br>y=b/x에 x=3, y=6 대입: 6 = b/3 → b = 18</div>
-      <div class="step"><span class="s-label">STEP 3</span><br>a + b = 2 + 18</div>
-      <div class="step"><span class="s-label">정답</span><br>= <strong>20</strong></div>
-      <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
-    </div>
-    <div class="quiz" data-qid="b15" data-ans="2" data-type="num">
-      <div class="quiz-q">Q. 위 문제에서 a의 값은?</div>
-      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="a"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-fb"></div>
-    </div>
-    <div class="quiz" data-qid="b16" data-ans="20" data-type="num">
-      <div class="quiz-q">Q. a + b의 값은?</div>
-      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="a+b"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-fb"></div>
-    </div>
-  </section>
-
   <section class="wrongnote" id="wrong">
     <h2>📕 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(본문에서 틀린 문제가 자동으로 모여요)</span></h2>
     <div id="wrongList"><p class="empty">아직 틀린 문제가 없어요. 퀴즈를 풀어보세요!</p></div>
@@ -524,7 +497,7 @@
     <h2>🔓 연습문제 잠금 해제</h2>
     <p class="desc">아래 두 조건을 모두 채우면 기본·응용·심화 연습문제가 열려요.</p>
     <ul class="checklist">
-      <li id="ck_quiz"><span class="mark">✓</span><span>본문 퀴즈 전부 채점하기 (<span id="gradedCount">0</span> / <span id="quizTotal">16</span>)</span></li>
+      <li id="ck_quiz"><span class="mark">✓</span><span>본문 퀴즈 전부 채점하기 (<span id="gradedCount">0</span> / <span id="quizTotal">14</span>)</span></li>
       <li id="ck_review"><span class="mark">✓</span><span>오답노트 확인하기 (위에서 '오답 정리 완료' 누르기)</span></li>
     </ul>
     <button class="start-btn locked" id="startBtn" onclick="startPractice()">🔒 연습문제 풀기 (잠김)</button>
@@ -535,52 +508,182 @@
     <div class="practice-sub">기본 10문제를 모두 채점하면 응용이, 응용을 모두 채점하면 심화가 열려요. 음수는 −5 처럼, 분수는 1/2 처럼, 좌표는 2,4 형태로 입력하세요. 틀린 문제는 아래 연습 오답노트에 모입니다.</div>
 
     <div class="pset" id="pset_basic">
-      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">정비례·반비례 기본 계산</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">정비례 · 반비례 판별과 관계식</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
       <div class="pbody">
-        <div class="prob" data-qid="pb1" data-ans="15" data-type="num"><div class="pq"><span class="pnum">1.</span>y = 3x 일 때, x = 5이면 y는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="y"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb2" data-ans="8" data-type="num"><div class="pq"><span class="pnum">2.</span>y = -2x 일 때, x = -4이면 y는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="y"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb3" data-ans="5" data-type="num"><div class="pq"><span class="pnum">3.</span>y = ax 가 점 (2, 10)을 지날 때, a의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="a"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb4" data-ans="-3" data-type="num"><div class="pq"><span class="pnum">4.</span>y = ax 가 점 (-3, 9)를 지날 때, a의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="a"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb5" data-ans="10" data-type="num"><div class="pq"><span class="pnum">5.</span>y = a/x 에서 x=2일 때 y=5이다. a의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="a"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb6" data-ans="5" data-type="num"><div class="pq"><span class="pnum">6.</span>y = 20/x 일 때, x = 4이면 y는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="y"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb7" data-ans="20" data-type="num"><div class="pq"><span class="pnum">7.</span>y = a/x 가 점 (5, 4)를 지날 때, a의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="a"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb8" data-ans="양수" data-type="text"><div class="pq"><span class="pnum">8.</span>정비례 그래프가 제1, 3사분면을 지날 때, a의 부호는? (양수/음수)</div><div class="quiz-row"><input class="quiz-input" placeholder="양수 / 음수" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb9" data-ans="음수" data-type="text"><div class="pq"><span class="pnum">9.</span>반비례 그래프가 제2, 4사분면을 지날 때, a의 부호는? (양수/음수)</div><div class="quiz-row"><input class="quiz-input" placeholder="양수 / 음수" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb10" data-ans="4" data-type="num"><div class="pq"><span class="pnum">10.</span>정비례 관계에서 x=4, y=16일 때, a(=y/x)의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="a"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb1" data-ans="9600" data-type="num"><div class="pq"><span class="pnum">1.</span>어떤 음료수 8캔에 들어 있는 음료의 양은 2560mL이다. 음료수 x캔에 들어 있는 양을 y mL라 할 때 y는 x에 정비례한다. 음료수 <strong>30캔</strong>에 들어 있는 음료의 양은? (mL)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 1캔에 몇 mL인지 먼저 구할 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb2" data-ans="2" data-type="num"><div class="pq"><span class="pnum">2.</span>다음 중 y가 x에 <strong>정비례</strong>하는 것은 몇 개인가?<br>ㄱ. 한 사람당 3000원씩 x명이 모은 성금 y원<br>ㄴ. 주스 15L를 x명이 똑같이 나누어 마실 때 한 사람이 마신 양 yL<br>ㄷ. 1분에 16장을 인쇄하는 프린터가 x분 동안 인쇄한 종이 수 y장<br>ㄹ. 넓이가 60cm<sup>2</sup>인 평행사변형의 밑변의 길이가 x cm일 때 높이 y cm</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ y = (수)×x 꼴이면 정비례, y = (수)÷x 꼴이면 반비례</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb3" data-ans="-2" data-type="num"><div class="pq"><span class="pnum">3.</span>정비례 관계 y = ax 의 그래프가 두 점 (6, 3), (−8, b) 를 지날 때, ab 의 값은?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ (6, 3)으로 a 를 먼저 구한 뒤 b 를 구한다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb4" data-ans="6" data-type="num"><div class="pq"><span class="pnum">4.</span>반비례 관계 y = <sup>a</sup>⁄<sub>x</sub> 의 그래프가 점 (3, 2) 를 지날 때, a 의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb5" data-ans="1" data-type="num"><div class="pq"><span class="pnum">5.</span>다음 중 y가 x에 <strong>반비례</strong>하는 것은 몇 개인가?<br>ㄱ. 낮의 길이가 x시간일 때 밤의 길이 y시간<br>ㄴ. 1개의 열량이 20kcal인 사탕 x개의 열량 y kcal<br>ㄷ. 1분에 15장씩 인쇄하는 프린터가 x분 동안 인쇄한 종이 y장<br>ㄹ. 연료 1L로 15km를 달리는 자동차가 연료 xL로 달린 거리 y km<br>ㅁ. 무게가 800g인 케이크를 x조각으로 똑같이 자를 때 한 조각의 무게 y g</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ xy 가 <strong>일정한 수</strong>가 되는 것을 찾을 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb6" data-ans="3/2|1.5" data-type="text"><div class="pq"><span class="pnum">6.</span>y가 x에 반비례하고 x = 2일 때 y = 3이다. x = 4 일 때 y의 값은? (기약분수)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 3/2" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 반비례에서는 xy 의 값이 항상 일정하다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb7" data-ans="-3" data-type="num"><div class="pq"><span class="pnum">7.</span>반비례 관계 y = <sup>12</sup>⁄<sub>x</sub> 의 그래프가 점 (−4, k) 를 지날 때, k 의 값은?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb8" data-ans="음수" data-type="text"><div class="pq"><span class="pnum">8.</span>정비례 관계 y = ax 의 그래프가 제2사분면과 제4사분면을 지날 때, a 의 부호는? (양수 / 음수)</div><div class="quiz-row"><input class="quiz-input" placeholder="양수 / 음수" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb9" data-ans="9" data-type="num"><div class="pq"><span class="pnum">9.</span>톱니가 각각 12개, a개인 두 톱니바퀴 A, B가 맞물려 돌아간다. A가 3번 회전하는 동안 B가 4번 회전할 때, a 의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 맞물린 톱니바퀴는 (톱니 수) × (회전수) 가 서로 같다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb10" data-ans="-15" data-type="num"><div class="pq"><span class="pnum">10.</span>정비례 관계 y = 3x 의 그래프 위의 점 중 x좌표가 −5인 점의 y좌표는?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
       </div>
     </div>
 
     <div class="pset locked" id="pset_applied">
-      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">부호 추론·연립 조건</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">표 · 톱니바퀴 · 그래프와 넓이</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
       <div class="lockmsg">🔒 기본 10문제를 모두 채점하면 열려요.</div>
       <div class="pbody">
-        <div class="prob" data-qid="pa1" data-ans="2" data-type="num"><div class="pq"><span class="pnum">1.</span>y = ax 가 점 (-4, -8)을 지날 때, a의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="a"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa2" data-ans="1,3" data-type="text"><div class="pq"><span class="pnum">2.</span>위 1번 그래프가 지나는 사분면 두 개를 작은 순서로 쓰면? (예: 1,3)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 1,3" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa3" data-ans="-12" data-type="num"><div class="pq"><span class="pnum">3.</span>y = b/x 가 점 (-3, 4)를 지날 때, b의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="b"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa4" data-ans="2,4" data-type="text"><div class="pq"><span class="pnum">4.</span>위 3번 그래프가 지나는 사분면 두 개를 작은 순서로 쓰면?</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 2,4" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa5" data-ans="4" data-type="num"><div class="pq"><span class="pnum">5.</span>정비례 y=ax와 반비례 y=b/x가 모두 점 (2, 8)을 지난다. a의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="a"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa6" data-ans="16" data-type="num"><div class="pq"><span class="pnum">6.</span>위 5번 조건에서 b의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="b"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa7" data-ans="9" data-type="num"><div class="pq"><span class="pnum">7.</span>반비례 관계에서 x=6일 때 y=3이다. x=2일 때 y는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="y"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ xy=a부터 구해보세요</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa8" data-ans="-20" data-type="num"><div class="pq"><span class="pnum">8.</span>정비례 관계에서 x=-3일 때 y=12이다. x=5일 때 y는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="y"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa9" data-ans="10" data-type="num"><div class="pq"><span class="pnum">9.</span>y = a/x 가 점 (4, -5)를 지난다. 이 그래프가 점 (-2, k)도 지날 때, k의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="k"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa10" data-ans="6" data-type="num"><div class="pq"><span class="pnum">10.</span>y = ax 가 점 (6, -9)를 지난다. 이 그래프가 점 (-4, k)도 지날 때, k의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="k"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa1" data-ans="68" data-type="num"><div class="pq"><span class="pnum">1.</span>x와 y가 반비례할 때, 다음 표의 a, b, c, d 에 대하여 a + b + c + d 의 값은?<br><span style="display:inline-block;margin-top:6px">| x | a | <sup>1</sup>⁄<sub>2</sub> | 1 | 4 | d |<br>| y | −2 | b | c | 6 | 3 |</span></div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ x = 4, y = 6 인 칸에서 xy 의 값(일정한 수)을 먼저 구할 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa2" data-ans="2" data-type="num"><div class="pq"><span class="pnum">2.</span>다음 중 <strong>옳은 것</strong>은 몇 개인가?<br>ㄱ. y = ax (a ≠ 0) 의 그래프는 원점을 지나는 직선이다<br>ㄴ. 좌표축 위의 점은 어느 사분면에도 속하지 않는다<br>ㄷ. x축 위의 점의 x좌표는 0이다<br>ㄹ. y = <sup>x</sup>⁄<sub>2</sub> 의 그래프는 반비례 관계를 나타낸다</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa3" data-ans="15" data-type="num"><div class="pq"><span class="pnum">3.</span>톱니가 각각 24개, 36개인 두 톱니바퀴 A, B가 서로 맞물려 돌고 있다. <strong>B가 10번 회전하는 동안 A는 몇 번</strong> 회전하는가?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa4" data-ans="2" data-type="num"><div class="pq"><span class="pnum">4.</span>y는 x에 반비례하고 x = 2일 때 y = 3이다. 이 그래프에 대한 설명 중 <strong>옳은 것</strong>은 몇 개인가?<br>ㄱ. 점 (−1, 6) 을 지난다 &nbsp; ㄴ. 원점을 지나는 직선이다<br>ㄷ. 제2사분면과 제4사분면을 지난다<br>ㄹ. x &gt; 0 일 때, x의 값이 커지면 y의 값은 작아진다<br>ㅁ. x &lt; 0 일 때, x의 값이 커지면 y의 값은 작아진다</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 먼저 관계식을 구하고, ㅁ은 x = −6 과 x = −1 을 넣어 비교해 볼 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa5" data-ans="16" data-type="num"><div class="pq"><span class="pnum">5.</span>반비례 관계 y = <sup>a</sup>⁄<sub>x</sub> 의 그래프가 점 (−6, 4) 를 지날 때, 이 그래프 위의 점 중 <strong>x좌표와 y좌표가 모두 정수</strong>인 점은 모두 몇 개인가?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ xy 가 일정하므로 x 는 그 수의 약수여야 한다. <strong>음의 약수</strong>도 잊지 말 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa6" data-ans="42" data-type="num"><div class="pq"><span class="pnum">6.</span>두 정비례 관계 y = 2x, y = −<sup>1</sup>⁄<sub>3</sub>x 의 그래프가 다음 그림과 같이 <strong>x좌표가 6인 점 A, B</strong> 를 각각 지날 때, 삼각형 AOB 의 넓이는?<div style="margin:10px 0;max-width:420px;"><svg viewBox="0 0 360 250" xmlns="http://www.w3.org/2000/svg">
+  <line x1="28.0" y1="118.0" x2="344.0" y2="118.0" stroke="#9aa7bd" stroke-width="1.5"/>
+  <line x1="186.0" y1="222.0" x2="186.0" y2="14.0" stroke="#9aa7bd" stroke-width="1.5"/>
+  <polygon points="344.0,118.0 337.0,114.0 337.0,122.0" fill="#9aa7bd"/>
+  <polygon points="186.0,14.0 182.0,21.0 190.0,21.0" fill="#9aa7bd"/>
+  <text x="179.0" y="132.0" font-size="11" fill="#9aa7bd" text-anchor="end">O</text>
+  <text x="342.0" y="110.0" font-size="11" fill="#9aa7bd" text-anchor="end">x</text>
+  <text x="194.0" y="22.0" font-size="11" fill="#9aa7bd" text-anchor="start">y</text>
+  <line x1="72.0" y1="115.0" x2="72.0" y2="121.0" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="72.0" y="133.0" font-size="10.5" fill="#9aa7bd" text-anchor="middle">-6</text>
+  <line x1="129.0" y1="115.0" x2="129.0" y2="121.0" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="129.0" y="133.0" font-size="10.5" fill="#9aa7bd" text-anchor="middle">-3</text>
+  <line x1="243.0" y1="115.0" x2="243.0" y2="121.0" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="243.0" y="133.0" font-size="10.5" fill="#9aa7bd" text-anchor="middle">3</text>
+  <line x1="300.0" y1="115.0" x2="300.0" y2="121.0" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="300.0" y="133.0" font-size="10.5" fill="#9aa7bd" text-anchor="middle">6</text>
+  <line x1="183.0" y1="202.0" x2="189.0" y2="202.0" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="180.0" y="206.0" font-size="10.5" fill="#9aa7bd" text-anchor="end">-12</text>
+  <line x1="183.0" y1="160.0" x2="189.0" y2="160.0" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="180.0" y="164.0" font-size="10.5" fill="#9aa7bd" text-anchor="end">-6</text>
+  <line x1="183.0" y1="76.0" x2="189.0" y2="76.0" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="180.0" y="80.0" font-size="10.5" fill="#9aa7bd" text-anchor="end">6</text>
+  <line x1="183.0" y1="34.0" x2="189.0" y2="34.0" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="180.0" y="38.0" font-size="10.5" fill="#9aa7bd" text-anchor="end">12</text>
+  <polyline points="53.0,216.0 186.0,118.0 319.0,20.0" fill="none" stroke="#34d399" stroke-width="2.0"/>
+  <polyline points="43.5,100.5 186.0,118.0 328.5,135.5" fill="none" stroke="#60a5fa" stroke-width="2.0"/>
+  <polygon points="186.0,118.0 300.0,34.0 300.0,132.0" fill="#fbbf24" fill-opacity="0.22" stroke="#fbbf24" stroke-width="1.6"/>
+  <circle cx="300.0" cy="34.0" r="3.2" fill="#34d399"/>
+  <text x="294.0" y="25.0" font-size="12" font-weight="700" fill="#34d399" text-anchor="end">A(6, 12)</text>
+  <circle cx="300.0" cy="132.0" r="3.2" fill="#60a5fa"/>
+  <text x="309.0" y="152.0" font-size="12" font-weight="700" fill="#60a5fa" text-anchor="start">B(6, −2)</text>
+  <text x="129.0" y="198.5" font-size="11.5" fill="#34d399" text-anchor="start">y = 2x</text>
+  <text x="41.6" y="84.4" font-size="11.5" fill="#60a5fa" text-anchor="start">y = −⅓x</text>
+  <line x1="300.0" y1="34.0" x2="300.0" y2="132.0" stroke="#9aa7bd" stroke-width="1.1" stroke-dasharray="4 3"/>
+</svg></div></div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 선분 AB 를 밑변으로 보면 높이는 점 O 에서 AB 까지의 거리다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa7" data-ans="-2" data-type="num"><div class="pq"><span class="pnum">7.</span>정비례 관계 y = ax 의 그래프와 반비례 관계 y = −<sup>8</sup>⁄<sub>x</sub> 의 그래프가 <strong>x좌표가 2인 점</strong>에서 만날 때, 상수 a 의 값은?</div><div class="quiz-row"><input class="quiz-input" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 반비례 식에 x = 2 를 넣어 만나는 점의 좌표를 먼저 구한다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa8" data-ans="4" data-type="num"><div class="pq"><span class="pnum">8.</span>y = ax 의 그래프와 y = <sup>b</sup>⁄<sub>x</sub> 의 그래프가 모두 점 (3, 2) 를 지날 때, ab 의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa9" data-ans="12" data-type="num"><div class="pq"><span class="pnum">9.</span>어떤 일을 하는 데 필요한 사람 수와 걸리는 시간은 반비례한다. 6명이 하면 10일이 걸리는 일을 <strong>5일 만에</strong> 끝내려면 몇 명이 필요한가?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa10" data-ans="6,2" data-type="text"><div class="pq"><span class="pnum">10.</span>다음 그림에서 두 점 A, C 는 각각 정비례 관계 y = 3x, y = <sup>1</sup>⁄<sub>3</sub>x 의 그래프 위의 점이고, 사각형 ABCD 는 한 변의 길이가 4인 <strong>정사각형</strong>이다. 점 C 의 좌표는? (단, x ≥ 0 이고 두 점 A, B 의 x좌표는 같다. 예: 6,2 처럼 입력)<div style="margin:10px 0;max-width:420px;"><svg viewBox="0 0 360 250" xmlns="http://www.w3.org/2000/svg">
+  <line x1="28.0" y1="194.2" x2="344.0" y2="194.2" stroke="#9aa7bd" stroke-width="1.5"/>
+  <line x1="64.4" y1="222.0" x2="64.4" y2="14.0" stroke="#9aa7bd" stroke-width="1.5"/>
+  <polygon points="344.0,194.2 337.0,190.2 337.0,198.2" fill="#9aa7bd"/>
+  <polygon points="64.4,14.0 60.4,21.0 68.4,21.0" fill="#9aa7bd"/>
+  <text x="57.4" y="208.2" font-size="11" fill="#9aa7bd" text-anchor="end">O</text>
+  <text x="342.0" y="186.2" font-size="11" fill="#9aa7bd" text-anchor="end">x</text>
+  <text x="72.4" y="22.0" font-size="11" fill="#9aa7bd" text-anchor="start">y</text>
+  <line x1="125.2" y1="191.2" x2="125.2" y2="197.2" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="125.2" y="209.2" font-size="10.5" fill="#9aa7bd" text-anchor="middle">2</text>
+  <line x1="186.0" y1="191.2" x2="186.0" y2="197.2" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="186.0" y="209.2" font-size="10.5" fill="#9aa7bd" text-anchor="middle">4</text>
+  <line x1="246.8" y1="191.2" x2="246.8" y2="197.2" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="246.8" y="209.2" font-size="10.5" fill="#9aa7bd" text-anchor="middle">6</text>
+  <line x1="307.6" y1="191.2" x2="307.6" y2="197.2" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="307.6" y="209.2" font-size="10.5" fill="#9aa7bd" text-anchor="middle">8</text>
+  <line x1="61.4" y1="150.7" x2="67.4" y2="150.7" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="58.4" y="154.7" font-size="10.5" fill="#9aa7bd" text-anchor="end">2</text>
+  <line x1="61.4" y1="107.1" x2="67.4" y2="107.1" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="58.4" y="111.1" font-size="10.5" fill="#9aa7bd" text-anchor="end">4</text>
+  <line x1="61.4" y1="63.6" x2="67.4" y2="63.6" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="58.4" y="67.6" font-size="10.5" fill="#9aa7bd" text-anchor="end">6</text>
+  <polyline points="55.3,213.8 97.8,122.4 140.4,30.9" fill="none" stroke="#34d399" stroke-width="2.0"/>
+  <polyline points="37.0,200.8 181.4,166.3 325.8,131.8" fill="none" stroke="#60a5fa" stroke-width="2.0"/>
+  <polygon points="125.2,63.6 246.8,63.6 246.8,150.7 125.2,150.7" fill="#c4b5fd" fill-opacity="0.16" stroke="#c4b5fd" stroke-width="1.6"/>
+  <circle cx="125.2" cy="63.6" r="3.2" fill="#c4b5fd"/>
+  <text x="115.2" y="54.6" font-size="12" font-weight="700" fill="#c4b5fd" text-anchor="end">A</text>
+  <circle cx="246.8" cy="63.6" r="3.2" fill="#c4b5fd"/>
+  <text x="255.8" y="54.6" font-size="12" font-weight="700" fill="#c4b5fd" text-anchor="start">D</text>
+  <circle cx="125.2" cy="150.7" r="3.2" fill="#c4b5fd"/>
+  <text x="115.2" y="167.7" font-size="12" font-weight="700" fill="#c4b5fd" text-anchor="end">B</text>
+  <circle cx="246.8" cy="150.7" r="3.2" fill="#c4b5fd"/>
+  <text x="257.8" y="167.7" font-size="12" font-weight="700" fill="#c4b5fd" text-anchor="start">C</text>
+  <text x="158.6" y="41.8" font-size="11.5" fill="#34d399" text-anchor="start">y = 3x</text>
+  <text x="331.9" y="109.3" font-size="11.5" fill="#60a5fa" text-anchor="end">y = ⅓x</text>
+</svg></div></div><div class="quiz-row"><input class="quiz-input" placeholder="예: 6,2" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ A의 x좌표를 t 로 놓으면 A(t, 3t), C(t + 4, 3t − 4) 다</div><div class="quiz-fb"></div></div>
       </div>
     </div>
 
     <div class="pset locked" id="pset_hard">
-      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">킬러 — 실생활 활용·교점</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">킬러 — 정수 좌표 · 넓이 · 일정한 곱</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
       <div class="lockmsg">🔒 응용 10문제를 모두 채점하면 열려요.</div>
       <div class="pbody">
-        <div class="prob" data-qid="ph1" data-ans="16" data-type="num"><div class="pq"><span class="pnum">1.</span>맞물린 두 톱니바퀴 A, B는 (톱니 수)×(회전수)가 서로 같다. A는 톱니 20개로 12회전했다. B의 톱니가 15개라면 B는 몇 회전 하나요?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="회전"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 20×12 = 15×(회전수)</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph2" data-ans="1/3" data-type="text"><div class="pq"><span class="pnum">2.</span>넓이가 24로 일정한 직사각형에서 가로 길이가 3배가 되면, 세로 길이는 몇 배가 되나요? (분수로)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 1/3" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph3" data-ans="4" data-type="num"><div class="pq"><span class="pnum">3.</span>정비례 그래프 y=ax와 반비례 그래프 y=b/x가 모두 점 (4, 2)를 지날 때, a×b의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="a×b"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ a, b를 각각 구한 뒤 곱해보세요</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph4" data-ans="4" data-type="num"><div class="pq"><span class="pnum">4.</span>x, y가 반비례 관계다. 표에서 x=2일 때 y=12, x=3일 때 y=8이다. y=6일 때 x(=A)의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="A"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ a=xy=24부터 확인</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph5" data-ans="2" data-type="num"><div class="pq"><span class="pnum">5.</span>자동차가 시속 60km로 3시간 걸리는 거리를, 시속 90km로 가면 몇 시간 걸리나요? (거리 일정 → 반비례)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="시간"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph6" data-ans="-1" data-type="num"><div class="pq"><span class="pnum">6.</span>정비례 그래프 y=3x 위에 점 (m, 2m-1)이 있다. m의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="m"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 2m-1 = 3m</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph7" data-ans="3" data-type="num"><div class="pq"><span class="pnum">7.</span>y = a/x 가 두 점 (2, 9), (m, 6)을 모두 지날 때, m의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="m"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph8" data-ans="음수" data-type="text"><div class="pq"><span class="pnum">8.</span>정비례 그래프 y=ax가 제2, 4사분면을 지난다. 이 그래프가 점 (4, k)를 지날 때 k의 부호는? (양수/음수)</div><div class="quiz-row"><input class="quiz-input" placeholder="양수 / 음수" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph9" data-ans="2,4|(2,4)" data-type="text"><div class="pq"><span class="pnum">9.</span>정비례 그래프 y=2x와 반비례 그래프 y=8/x가 만나는 점 중 x&gt;0인 점의 좌표는?</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 2,4" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 2x = 8/x</div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph10" data-ans="14" data-type="num"><div class="pq"><span class="pnum">10.</span>y = 12/x 위의 점 P의 x좌표가 3일 때, P에서 x축·y축에 내린 수선의 발과 원점이 만드는 직사각형의 둘레는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="둘레"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ y좌표부터 구하고 둘레=2×(가로+세로)</div><div class="quiz-fb"></div></div>
+        <div class="box box-purple"><div class="box-title">🔮 이 세트의 핵심 — 정비례는 <em>비율</em>, 반비례는 <em>곱</em>이 일정하다</div>
+          <p style="margin:0;">두 관계의 성질을 한 줄로 줄이면 이렇습니다. 정비례 y = ax 는 <strong><sup>y</sup>⁄<sub>x</sub> 가 항상 a</strong>, 반비례 y = <sup>a</sup>⁄<sub>x</sub> 는 <strong>xy 가 항상 a</strong>. 킬러 문제는 대부분 이 "일정한 값"을 찾는 데서 풀립니다 — 톱니바퀴는 (톱니 수)×(회전수)가, 일감은 (사람 수)×(시간)이 일정하고, 반비례 그래프 위 점으로 만든 직사각형의 넓이도 항상 |a| 로 일정하죠. 좌표에 정수 조건이 붙으면 <strong>약수 문제</strong>가 되고, 음의 약수를 빠뜨리는 실수가 가장 많습니다.</p></div>
+        <div class="solution">
+          <div class="sol-head">🧩 준비 예제 — 두 그래프가 같은 점을 지날 때</div>
+          <div class="sol-q">정비례 관계 y = ax 와 반비례 관계 y = <sup>b</sup>⁄<sub>x</sub> 의 그래프가 모두 점 (3, 6) 을 지날 때, a + b 의 값은?</div>
+          <div class="step"><span class="s-label">STEP 1</span><br>y = ax 에 x = 3, y = 6 대입 : 6 = 3a → <strong>a = 2</strong></div>
+          <div class="step"><span class="s-label">STEP 2</span><br>y = <sup>b</sup>⁄<sub>x</sub> 에 x = 3, y = 6 대입 : 6 = <sup>b</sup>⁄<sub>3</sub> → <strong>b = 18</strong></div>
+          <div class="step"><span class="s-label">STEP 3</span><br>a + b = 2 + 18</div>
+          <div class="step"><span class="s-label">정답</span><br>= <strong>20</strong> — "지난다"는 조건은 <strong>좌표를 그대로 대입</strong>하라는 뜻이다</div>
+          <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
+        </div>
+        <div class="solution">
+          <div class="sol-head">🧩 본 유형 — 정수 좌표점 세기 (아래 5번 유형)</div>
+          <div class="sol-q">반비례 관계 y = <sup>a</sup>⁄<sub>x</sub> 의 그래프가 점 (2, −6) 을 지날 때, 그래프 위의 점 중 x좌표와 y좌표가 <strong>모두 정수</strong>인 점은 몇 개인가?</div>
+          <div class="step"><span class="s-label">STEP 1</span><br>xy 가 일정하므로 a = 2 × (−6) = <strong>−12</strong>. 즉 xy = −12</div>
+          <div class="step"><span class="s-label">STEP 2</span><br>x, y 가 모두 정수 → x 는 <strong>12의 약수</strong>여야 한다 : 1, 2, 3, 4, 6, 12 → <strong>6개</strong></div>
+          <div class="step"><span class="s-label">STEP 3</span><br>x 는 <strong>음수</strong>도 될 수 있다(−1, −2, …, −12) → 6개 더</div>
+          <div class="step"><span class="s-label">정답</span><br>6 + 6 = <strong>12개</strong> — <strong>음의 약수를 빠뜨리는 것</strong>이 이 유형의 최다 실수다</div>
+          <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
+        </div>
+        <div class="prob" data-qid="ph1" data-ans="21/4|5.25" data-type="text"><div class="pq"><span class="pnum">1.</span>정비례 관계 y = ax 의 그래프와 반비례 관계 y = <sup>5</sup>⁄<sub>x</sub> 의 그래프가 점 A 에서 만난다. 점 A 의 x좌표가 2, 점 B 의 x좌표가 5일 때, 삼각형 OAB 의 넓이는? (기약분수)<div style="margin:10px 0;max-width:420px;"><svg viewBox="0 0 360 250" xmlns="http://www.w3.org/2000/svg">
+  <line x1="28.0" y1="200.5" x2="344.0" y2="200.5" stroke="#9aa7bd" stroke-width="1.5"/>
+  <line x1="58.0" y1="222.0" x2="58.0" y2="14.0" stroke="#9aa7bd" stroke-width="1.5"/>
+  <polygon points="344.0,200.5 337.0,196.5 337.0,204.5" fill="#9aa7bd"/>
+  <polygon points="58.0,14.0 54.0,21.0 62.0,21.0" fill="#9aa7bd"/>
+  <text x="51.0" y="214.5" font-size="11" fill="#9aa7bd" text-anchor="end">O</text>
+  <text x="342.0" y="192.5" font-size="11" fill="#9aa7bd" text-anchor="end">x</text>
+  <text x="66.0" y="22.0" font-size="11" fill="#9aa7bd" text-anchor="start">y</text>
+  <line x1="98.0" y1="197.5" x2="98.0" y2="203.5" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="98.0" y="215.5" font-size="10.5" fill="#9aa7bd" text-anchor="middle">1</text>
+  <line x1="138.0" y1="197.5" x2="138.0" y2="203.5" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="138.0" y="215.5" font-size="10.5" fill="#9aa7bd" text-anchor="middle">2</text>
+  <line x1="178.0" y1="197.5" x2="178.0" y2="203.5" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="178.0" y="215.5" font-size="10.5" fill="#9aa7bd" text-anchor="middle">3</text>
+  <line x1="218.0" y1="197.5" x2="218.0" y2="203.5" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="218.0" y="215.5" font-size="10.5" fill="#9aa7bd" text-anchor="middle">4</text>
+  <line x1="258.0" y1="197.5" x2="258.0" y2="203.5" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="258.0" y="215.5" font-size="10.5" fill="#9aa7bd" text-anchor="middle">5</text>
+  <line x1="298.0" y1="197.5" x2="298.0" y2="203.5" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="298.0" y="215.5" font-size="10.5" fill="#9aa7bd" text-anchor="middle">6</text>
+  <line x1="55.0" y1="174.7" x2="61.0" y2="174.7" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="52.0" y="178.7" font-size="10.5" fill="#9aa7bd" text-anchor="end">1</text>
+  <line x1="55.0" y1="148.9" x2="61.0" y2="148.9" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="52.0" y="152.9" font-size="10.5" fill="#9aa7bd" text-anchor="end">2</text>
+  <line x1="55.0" y1="123.2" x2="61.0" y2="123.2" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="52.0" y="127.2" font-size="10.5" fill="#9aa7bd" text-anchor="end">3</text>
+  <line x1="55.0" y1="97.4" x2="61.0" y2="97.4" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="52.0" y="101.4" font-size="10.5" fill="#9aa7bd" text-anchor="end">4</text>
+  <line x1="55.0" y1="71.6" x2="61.0" y2="71.6" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="52.0" y="75.6" font-size="10.5" fill="#9aa7bd" text-anchor="end">5</text>
+  <line x1="55.0" y1="45.8" x2="61.0" y2="45.8" stroke="#9aa7bd" stroke-width="1.2"/>
+  <text x="52.0" y="49.8" font-size="10.5" fill="#9aa7bd" text-anchor="end">6</text>
+  <polyline points="86.8,21.4 88.4,30.7 89.9,39.0 91.5,46.6 93.1,53.5 94.7,59.8 96.2,65.6 97.8,70.9 99.4,75.8 100.9,80.4 102.5,84.6 104.1,88.6 105.6,92.3 107.2,95.7 108.8,99.0 110.4,102.0 111.9,104.9 113.5,107.6 115.1,110.1 116.6,112.6 118.2,114.8 119.8,117.0 121.3,119.1 122.9,121.1 124.5,122.9 126.1,124.7 127.6,126.4 129.2,128.1 130.8,129.6 132.3,131.1 133.9,132.6 135.5,133.9 137.0,135.3 138.6,136.5 140.2,137.8 141.8,138.9 143.3,140.1 144.9,141.2 146.5,142.2 148.0,143.2 149.6,144.2 151.2,145.2 152.7,146.1 154.3,147.0 155.9,147.8 157.4,148.7 159.0,149.5 160.6,150.2 162.2,151.0 163.7,151.7 165.3,152.5 166.9,153.1 168.4,153.8 170.0,154.5 171.6,155.1 173.2,155.7 174.7,156.3 176.3,156.9 177.9,157.5 179.4,158.1 181.0,158.6 182.6,159.1 184.1,159.6 185.7,160.1 187.3,160.6 188.9,161.1 190.4,161.6 192.0,162.0 193.6,162.5 195.1,162.9 196.7,163.3 198.3,163.8 199.8,164.2 201.4,164.6 203.0,164.9 204.6,165.3 206.1,165.7 207.7,166.1 209.3,166.4 210.8,166.8 212.4,167.1 214.0,167.5 215.5,167.8 217.1,168.1 218.7,168.4 220.2,168.7 221.8,169.0 223.4,169.3 225.0,169.6 226.5,169.9 228.1,170.2 229.7,170.5 231.2,170.8 232.8,171.0 234.4,171.3 235.9,171.5 237.5,171.8 239.1,172.0 240.7,172.3 242.2,172.5 243.8,172.8 245.4,173.0 246.9,173.2 248.5,173.5 250.1,173.7 251.7,173.9 253.2,174.1 254.8,174.3 256.4,174.5 257.9,174.7 259.5,174.9 261.1,175.1 262.6,175.3 264.2,175.5 265.8,175.7 267.4,175.9 268.9,176.1 270.5,176.3 272.1,176.4 273.6,176.6 275.2,176.8 276.8,176.9 278.3,177.1 279.9,177.3 281.5,177.4 283.0,177.6 284.6,177.8 286.2,177.9 287.8,178.1 289.3,178.2 290.9,178.4 292.5,178.5 294.0,178.7 295.6,178.8 297.2,179.0 298.8,179.1 300.3,179.2 301.9,179.4 303.5,179.5 305.0,179.6 306.6,179.8 308.2,179.9 309.7,180.0 311.3,180.2 312.9,180.3 314.5,180.4 316.0,180.5 317.6,180.7 319.2,180.8 320.7,180.9 322.3,181.0 323.9,181.1 325.4,181.2 327.0,181.4 328.6,181.5 330.1,181.6 331.7,181.7 333.3,181.8 334.9,181.9 336.4,182.0 338.0,182.1" fill="none" stroke="#fbbf24" stroke-width="2.0" stroke-linejoin="round"/>
+  <polyline points="46.0,210.2 160.0,118.3 274.0,26.4" fill="none" stroke="#34d399" stroke-width="2.0"/>
+  <polygon points="58.0,200.5 138.0,136.1 258.0,174.7" fill="#60a5fa" fill-opacity="0.2" stroke="#60a5fa" stroke-width="1.6"/>
+  <circle cx="138.0" cy="136.1" r="3.2" fill="#34d399"/>
+  <text x="138.0" y="118.1" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">A</text>
+  <circle cx="258.0" cy="174.7" r="3.2" fill="#fbbf24"/>
+  <text x="269.0" y="163.7" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="start">B</text>
+  <text x="198.0" y="32.9" font-size="11.5" fill="#34d399" text-anchor="start">y = ax</text>
+  <text x="336.0" y="152.8" font-size="11.5" fill="#fbbf24" text-anchor="end">y = 5/x</text>
+</svg></div></div><div class="quiz-row"><input class="quiz-input" placeholder="예: 21/4" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 두 점의 좌표를 먼저 확정한 뒤, 축에 평행한 변이 없으므로 직사각형으로 감싸 빼낼 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph2" data-ans="12" data-type="num"><div class="pq"><span class="pnum">2.</span>반비례 관계 y = <sup>a</sup>⁄<sub>x</sub> 의 그래프 위의 점 P 에서 x축, y축에 각각 수선을 그어 만든 직사각형(원점과 점 P 를 마주 보는 꼭짓점으로 하는)의 넓이는 <strong>P 를 어디에 잡아도 항상 일정</strong>하다. 이 그래프가 점 (3, 4) 를 지날 때 그 넓이는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 직사각형의 넓이는 |x| × |y| 인데, 반비례에서 xy 는 항상 일정하다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph3" data-ans="15/4|3.75" data-type="text"><div class="pq"><span class="pnum">3.</span>두 점 A(2, 6), B(a, 3) 을 지나는 반비례 관계의 그래프가 있다. 정비례 관계 y = kx 의 그래프가 <strong>선분 AB 를 지날 때</strong>, 가능한 k 중 가장 큰 값과 가장 작은 값의 <strong>합</strong>은? (기약분수)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: 15/4" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ y = kx 가 점 A 를 지날 때와 점 B 를 지날 때가 각각 범위의 끝이 된다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph4" data-ans="30" data-type="num"><div class="pq"><span class="pnum">4.</span>톱니가 각각 20개, 30개, x개인 세 톱니바퀴 A, B, C 가 차례로 맞물려 돌아간다. A가 6번 회전하는 동안 C가 4번 회전한다면 C 의 톱니 수 x 는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 가운데 톱니바퀴 B 의 톱니 수는 <strong>답에 필요하지 않다</strong></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph5" data-ans="6" data-type="num"><div class="pq"><span class="pnum">5.</span>반비례 관계 y = <sup>a</sup>⁄<sub>x</sub> 의 그래프가 점 (−2, 6) 을 지난다. 이 그래프 위의 점 중 x좌표와 y좌표가 모두 정수이고 <strong>제2사분면</strong>에 있는 점은 몇 개인가?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ a 의 부호를 보면 그래프가 어느 사분면을 지나는지 먼저 알 수 있다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph6" data-ans="-2,-6" data-type="text"><div class="pq"><span class="pnum">6.</span>정비례 관계 y = ax 와 반비례 관계 y = <sup>b</sup>⁄<sub>x</sub> 의 그래프가 점 (2, 6) 에서 만난다. 두 그래프가 만나는 <strong>또 다른 점</strong>의 좌표는? (예: -2,-6 처럼 입력)</div><div class="quiz-row"><input class="quiz-input" placeholder="예: -2,-6" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 두 그래프는 원점에 대하여 대칭인 두 점에서 만난다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph7" data-ans="10" data-type="num"><div class="pq"><span class="pnum">7.</span>반비례 관계 y = <sup>24</sup>⁄<sub>x</sub> 의 그래프 위의 점 P(a, b) 에 대하여 a, b 가 모두 <strong>자연수</strong>일 때, a + b 의 <strong>최솟값</strong>은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ ab = 24 를 만족하는 자연수 쌍을 모두 나열해 합을 비교할 것</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph8" data-ans="6" data-type="num"><div class="pq"><span class="pnum">8.</span>정비례 관계 y = <sup>3</sup>⁄<sub>2</sub>x 의 그래프 위의 점 A(제1사분면)에서 x축에 수선을 내린 발을 H 라 하자. 삼각형 OAH 의 넓이가 <strong>27</strong> 일 때, 점 A 의 x좌표는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ A의 x좌표를 t 로 놓으면 A(t, <sup>3</sup>⁄<sub>2</sub>t), H(t, 0) 이다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph9" data-ans="20" data-type="num"><div class="pq"><span class="pnum">9.</span>맞물려 도는 두 톱니바퀴 A, B 에서 A 의 톱니 수는 B 보다 <strong>8개 많고</strong>, A가 3번 도는 동안 B는 5번 돈다. A 의 톱니 수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ B 의 톱니 수를 x 로 놓으면 A 는 x + 8 이다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph10" data-ans="24" data-type="num"><div class="pq"><span class="pnum">10.</span>반비례 관계 y = <sup>a</sup>⁄<sub>x</sub> 의 그래프와 정비례 관계 y = 2x 의 그래프가 제1사분면에서 만나는 점의 x좌표가 3일 때, <strong>a 의 값과 그 교점의 y좌표의 합</strong>은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값" style="width:130px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
       </div>
     </div>
 
@@ -670,6 +773,7 @@ function renderWrongList(boxId,list){
 
 function refresh(){
   const secs=document.querySelectorAll('.section');
+  state.done=state.done.filter(id=>document.getElementById(id));
   secs.forEach(s=>{const on=state.done.indexOf(s.id)>=0;s.classList.toggle('done',on);const b=s.querySelector('.complete-btn');if(b)b.textContent=on?'✓ 완료됨':'완료하기';});
   const total=secs.length;const p=Math.round(state.done.length/total*100);
   document.getElementById('ring').style.setProperty('--p',p);document.getElementById('ringTxt').textContent=p+'%';
