@@ -257,7 +257,6 @@
   <a href="#s5" class="tlink">⑤ 공배수·LCM</a>
   <a href="#s6" class="tlink">⑥ LCM 구하기</a>
   <a href="#s7" class="tlink">⑦ 핵심 관계식</a>
-  <a href="#s8" class="tlink">⑧ 심화</a>
   <a href="#wrong" class="tlink">📕 오답노트</a>
   <a href="#gate" class="tlink">✏️ 연습문제</a>
 </nav>
@@ -435,32 +434,6 @@
     </div>
   </section>
 
-  <section class="section" id="s8">
-    <div class="section-head"><span class="section-num">8</span><span class="section-title">심화 — 킬러 문제</span>
-      <button class="complete-btn" onclick="toggleDone('s8')">완료하기</button></div>
-    <div class="box box-purple"><div class="box-title">🔮 유료 전용 심화</div>
-      <p>두 수를 <strong>A = G×a, B = G×b (a, b 서로소)</strong> 로 두고 푸는 비(比) 유형이에요.</p></div>
-    <div class="solution">
-      <div class="sol-head">🧩 단계별 풀이 — 비가 3:4, 최소공배수 48</div>
-      <div class="sol-q">두 자연수의 비가 3 : 4이고 최소공배수가 48일 때, 두 수의 최대공약수는?</div>
-      <div class="step"><span class="s-label">STEP 1</span><br>비가 3:4이고 3과 4는 서로소 → A = 3G, B = 4G 로 둔다.</div>
-      <div class="step"><span class="s-label">STEP 2</span><br>서로소 두 수의 최소공배수 = G × 3 × 4 = 12G</div>
-      <div class="step"><span class="s-label">STEP 3</span><br>12G = 48 → G = 4</div>
-      <div class="step"><span class="s-label">정답</span><br>최대공약수 G = <strong>4</strong> (두 수는 12와 16)</div>
-      <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
-    </div>
-    <div class="quiz" data-qid="b12" data-ans="4" data-type="num">
-      <div class="quiz-q">Q. 두 자연수의 비가 3 : 4, 최소공배수가 48일 때, 최대공약수는?</div>
-      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="GCD"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-fb"></div>
-    </div>
-    <div class="quiz" data-qid="b13" data-ans="192" data-type="num">
-      <div class="quiz-q">Q. 위 두 수(12와 16)의 곱은? (A × B = G × L 로도 확인 가능)</div>
-      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="곱"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-fb"></div>
-    </div>
-  </section>
-
   <section class="wrongnote" id="wrong">
     <h2>📕 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(본문에서 틀린 문제가 자동으로 모여요)</span></h2>
     <div id="wrongList"><p class="empty">아직 틀린 문제가 없어요. 퀴즈를 풀어보세요!</p></div>
@@ -472,7 +445,7 @@
     <h2>🔓 연습문제 잠금 해제</h2>
     <p class="desc">아래 두 조건을 모두 채우면 기본·응용·심화 연습문제가 열려요.</p>
     <ul class="checklist">
-      <li id="ck_quiz"><span class="mark">✓</span><span>본문 퀴즈 전부 채점하기 (<span id="gradedCount">0</span> / <span id="quizTotal">13</span>)</span></li>
+      <li id="ck_quiz"><span class="mark">✓</span><span>본문 퀴즈 전부 채점하기 (<span id="gradedCount">0</span> / <span id="quizTotal">11</span>)</span></li>
       <li id="ck_review"><span class="mark">✓</span><span>오답노트 확인하기 (위에서 '오답 정리 완료' 누르기)</span></li>
     </ul>
     <button class="start-btn locked" id="startBtn" onclick="startPractice()">🔒 연습문제 풀기 (잠김)</button>
@@ -483,54 +456,75 @@
     <div class="practice-sub">기본 10문제를 모두 채점하면 응용이, 응용을 모두 채점하면 심화가 열려요. 틀린 문제는 아래 연습 오답노트에 모입니다.</div>
 
     <div class="pset" id="pset_basic">
-      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">GCD·LCM 직접 구하기</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">개념 다지기</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
       <div class="pbody">
-        <div class="prob" data-qid="pb1" data-ans="6" data-type="num"><div class="pq"><span class="pnum">1.</span>12 = 2<sup>2</sup> × 3, 18 = 2 × 3<sup>2</sup> 의 최대공약수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="GCD"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb2" data-ans="36" data-type="num"><div class="pq"><span class="pnum">2.</span>12와 18의 최소공배수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="LCM"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb3" data-ans="4" data-type="num"><div class="pq"><span class="pnum">3.</span>8과 12의 최대공약수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="GCD"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb4" data-ans="24" data-type="num"><div class="pq"><span class="pnum">4.</span>8과 12의 최소공배수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="LCM"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb5" data-ans="예|네" data-type="text"><div class="pq"><span class="pnum">5.</span>6과 35는 서로소인가요? (예 / 아니오)</div><div class="quiz-row"><input class="quiz-input" placeholder="예 / 아니오" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb6" data-ans="3" data-type="num"><div class="pq"><span class="pnum">6.</span>9와 12의 최대공약수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="GCD"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb7" data-ans="20" data-type="num"><div class="pq"><span class="pnum">7.</span>4와 5의 최소공배수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="LCM"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb8" data-ans="2" data-type="num"><div class="pq"><span class="pnum">8.</span>두 수의 최대공약수가 7일 때, 두 수의 공약수의 개수는? (7의 약수)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb9" data-ans="5" data-type="num"><div class="pq"><span class="pnum">9.</span>10과 15의 최대공약수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="GCD"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pb10" data-ans="30" data-type="num"><div class="pq"><span class="pnum">10.</span>10과 15의 최소공배수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="LCM"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb1" data-ans="4" data-type="num"><div class="pq"><span class="pnum">1.</span>20과 28의 최대공약수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="GCD"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb2" data-ans="24" data-type="num"><div class="pq"><span class="pnum">2.</span>6과 8의 최소공배수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="LCM"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb3" data-ans="예|네" data-type="text"><div class="pq"><span class="pnum">3.</span>15와 28은 서로소인가? (예 / 아니요)</div><div class="quiz-row"><input class="quiz-input" placeholder="예 / 아니요" style="width:160px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb4" data-ans="6" data-type="num"><div class="pq"><span class="pnum">4.</span>두 자연수의 최대공약수가 12일 때, 두 수의 공약수는 모두 몇 개인가?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 공약수 = 최대공약수의 약수</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb5" data-ans="3" data-type="num"><div class="pq"><span class="pnum">5.</span>다음 중 <strong>옳은 것</strong>은 몇 개인가?<br>ㄱ. 가장 작은 소수는 1이다 &nbsp; ㄴ. 합성수는 약수가 3개 이상이다<br>ㄷ. 서로소인 두 수의 최대공약수는 1이다 &nbsp; ㄹ. 서로소인 두 수의 최소공배수는 두 수의 곱과 같다</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb6" data-ans="12" data-type="num"><div class="pq"><span class="pnum">6.</span>2<sup>3</sup>×3<sup>2</sup> 과 2<sup>2</sup>×3×5 의 최대공약수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="GCD"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 공통 소인수의 <strong>작은</strong> 지수</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb7" data-ans="360" data-type="num"><div class="pq"><span class="pnum">7.</span>2<sup>3</sup>×3<sup>2</sup> 과 2<sup>2</sup>×3×5 의 최소공배수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="LCM"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 모든 소인수의 <strong>큰</strong> 지수</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb8" data-ans="6" data-type="num"><div class="pq"><span class="pnum">8.</span>12, 18, 30의 최대공약수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="GCD"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb9" data-ans="486" data-type="num"><div class="pq"><span class="pnum">9.</span>어떤 두 자연수의 최대공약수가 9, 최소공배수가 54일 때, 두 수의 곱은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="곱"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ A × B = G × L</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pb10" data-ans="144" data-type="num"><div class="pq"><span class="pnum">10.</span>9와 16의 최소공배수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="LCM"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 두 수가 서로소일 때 최소공배수는?</div><div class="quiz-fb"></div></div>
       </div>
     </div>
 
     <div class="pset locked" id="pset_applied">
-      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">세 수 · 관계식 활용</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">판별 · 조건 · 실생활</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
       <div class="lockmsg">🔒 기본 10문제를 모두 채점하면 열려요.</div>
       <div class="pbody">
-        <div class="prob" data-qid="pa1" data-ans="12" data-type="num"><div class="pq"><span class="pnum">1.</span>24와 36의 최대공약수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="GCD"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa2" data-ans="72" data-type="num"><div class="pq"><span class="pnum">2.</span>24와 36의 최소공배수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="LCM"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa3" data-ans="6" data-type="num"><div class="pq"><span class="pnum">3.</span>12, 18, 24의 최대공약수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="GCD"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa4" data-ans="72" data-type="num"><div class="pq"><span class="pnum">4.</span>12, 18, 24의 최소공배수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="LCM"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa5" data-ans="384" data-type="num"><div class="pq"><span class="pnum">5.</span>최대공약수가 8, 최소공배수가 48인 두 자연수의 곱은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="곱"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa6" data-ans="60" data-type="num"><div class="pq"><span class="pnum">6.</span>두 수의 곱이 240, 최대공약수가 4일 때 최소공배수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="LCM"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa7" data-ans="15" data-type="num"><div class="pq"><span class="pnum">7.</span>45와 60의 최대공약수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="GCD"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa8" data-ans="180" data-type="num"><div class="pq"><span class="pnum">8.</span>45와 60의 최소공배수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="LCM"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa9" data-ans="15" data-type="num"><div class="pq"><span class="pnum">9.</span>자연수 a와 9의 최대공약수가 3, 최소공배수가 45일 때 a는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="a"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="pa10" data-ans="36" data-type="num"><div class="pq"><span class="pnum">10.</span>두 자연수의 곱이 216, 최대공약수가 6일 때 최소공배수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="LCM"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa1" data-ans="6" data-type="num"><div class="pq"><span class="pnum">1.</span>두 수 2<sup>3</sup>×3<sup>2</sup>×5 와 3<sup>3</sup>×5<sup>3</sup> 의 공약수는 모두 몇 개인가?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 최대공약수를 먼저 구하고 그 약수의 개수를 센다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa2" data-ans="6" data-type="num"><div class="pq"><span class="pnum">2.</span>50보다 큰 두 자리 자연수 중, 15와의 최대공약수가 5인 수는 모두 몇 개인가?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 5의 배수이면서 3의 배수는 <strong>아니어야</strong> 한다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa3" data-ans="8" data-type="num"><div class="pq"><span class="pnum">3.</span>가로 40cm, 세로 24cm, 높이 16cm인 직육면체 상자를 크기가 같은 정육면체로 빈틈없이 채우려고 한다. 가능한 한 큰 정육면체를 쓸 때, 그 한 모서리의 길이는? (cm)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="cm"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa4" data-ans="36" data-type="num"><div class="pq"><span class="pnum">4.</span>사과 110개, 감 183개를 학생들에게 똑같이 나누어 주었더니 사과는 2개, 감은 3개가 남았다. 학생 수가 될 수 있는 가장 큰 수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="명"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 나누어떨어지는 것은 110−2와 183−3</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa5" data-ans="15" data-type="num"><div class="pq"><span class="pnum">5.</span>4로 나누어도 3이 남고, 6으로 나누어도 3이 남는 가장 작은 두 자리 자연수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="자연수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ (공배수) + 3 꼴</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa6" data-ans="금요일|금" data-type="text"><div class="pq"><span class="pnum">6.</span>도서관에 6일마다 오는 학생과 8일마다 오는 학생이 오늘 <strong>화요일</strong>에 함께 왔다. 두 학생이 다시 처음으로 함께 오는 날은 무슨 요일인가?</div><div class="quiz-row"><input class="quiz-input" placeholder="○요일" style="width:160px"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 최소공배수를 구한 뒤 7로 나눈 나머지만큼 요일을 뒤로 센다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa7" data-ans="36" data-type="num"><div class="pq"><span class="pnum">7.</span>공원을 한 바퀴 도는 데 A는 12분, B는 18분이 걸린다. 같은 지점에서 동시에 출발해 같은 방향으로 돌 때, 출발 지점에서 처음으로 다시 만나는 것은 몇 분 후인가?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="분"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa8" data-ans="18" data-type="num"><div class="pq"><span class="pnum">8.</span>두 분수 <sup>20</sup>⁄<sub>a</sub>, <sup>30</sup>⁄<sub>a</sub> 를 모두 자연수가 되도록 하는 자연수 a의 값을 모두 더하면?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="합"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ a는 20과 30의 공약수</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa9" data-ans="41" data-type="num"><div class="pq"><span class="pnum">9.</span>다음 조건을 모두 만족하는 자연수 중 가장 작은 수는?<br>ㄱ. 약수가 1과 자기 자신뿐이다 &nbsp; ㄴ. 40 이상이다 &nbsp; ㄷ. 65와 서로소이다</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="자연수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 65 = 5 × 13</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="pa10" data-ans="2" data-type="num"><div class="pq"><span class="pnum">10.</span>다음 중 <strong>옳은 것</strong>은 몇 개인가?<br>ㄱ. 29와 87은 서로소이다 &nbsp; ㄴ. 54와 45의 최대공약수는 9이다<br>ㄷ. 2<sup>3</sup>과 2×3<sup>2</sup>의 최소공배수는 두 수의 곱과 같다 &nbsp; ㄹ. 최대공약수가 18인 두 자연수의 공약수는 6개이다</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
       </div>
     </div>
 
     <div class="pset locked" id="pset_hard">
-      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">킬러 — 비 · 활용 문제</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">킬러 — 역산 · 케이스 분류 · 추상 추론</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
       <div class="lockmsg">🔒 응용 10문제를 모두 채점하면 열려요.</div>
       <div class="pbody">
-        <div class="prob" data-qid="ph1" data-ans="4" data-type="num"><div class="pq"><span class="pnum">1.</span>두 자연수의 비가 3 : 4, 최소공배수가 48일 때 최대공약수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="GCD"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph2" data-ans="192" data-type="num"><div class="pq"><span class="pnum">2.</span>위 1번 두 수의 곱은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="곱"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph3" data-ans="216" data-type="num"><div class="pq"><span class="pnum">3.</span>최대공약수가 6, 최소공배수가 36인 두 자연수의 곱은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="곱"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph4" data-ans="120" data-type="num"><div class="pq"><span class="pnum">4.</span>8, 12, 20의 최소공배수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="LCM"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph5" data-ans="4" data-type="num"><div class="pq"><span class="pnum">5.</span>8, 12, 20의 최대공약수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="GCD"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph6" data-ans="25" data-type="num"><div class="pq"><span class="pnum">6.</span>50과 75를 모두 나누어떨어지게 하는 가장 큰 자연수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph7" data-ans="6" data-type="num"><div class="pq"><span class="pnum">7.</span>가로 12, 세로 18인 직사각형을 빈틈없이 채우는 가장 큰 정사각형의 한 변의 길이는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="길이"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph8" data-ans="37" data-type="num"><div class="pq"><span class="pnum">8.</span>4, 6, 9 중 어느 것으로 나눠도 1이 남는 가장 작은 자연수(1보다 큰)는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph9" data-ans="72" data-type="num"><div class="pq"><span class="pnum">9.</span>톱니 수가 24, 36인 두 톱니바퀴가 맞물려 돌 때, 처음 맞물린 곳이 다시 만나려면 최소 몇 개의 톱니가 지나야 할까?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
-        <div class="prob" data-qid="ph10" data-ans="16" data-type="num"><div class="pq"><span class="pnum">10.</span>최대공약수 4, 최소공배수 48인 두 자연수 중 하나가 12일 때, 다른 한 수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="수"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="box box-purple"><div class="box-title">🔮 이 세트의 핵심 — G·L 역설계</div>
+          <p style="margin:0;">두 수를 <strong>A = G×a, B = G×b (a, b는 서로소)</strong> 로 두면 <strong>L = G×a×b</strong>. 이 한 줄로 대부분의 킬러 문제가 풀립니다. 조건이 여러 개면 (a, b) 후보를 <strong>빠짐없이 나열</strong>하는 게 핵심이에요.</p></div>
+        <div class="solution">
+          <div class="sol-head">🧩 준비 예제 — 비가 3 : 4, 최소공배수 48</div>
+          <div class="sol-q">두 자연수의 비가 3 : 4이고 최소공배수가 48일 때, 두 수의 최대공약수는?</div>
+          <div class="step"><span class="s-label">STEP 1</span><br>비가 3:4이고 3과 4는 서로소 → A = 3G, B = 4G 로 둔다.</div>
+          <div class="step"><span class="s-label">STEP 2</span><br>L = G × 3 × 4 = 12G</div>
+          <div class="step"><span class="s-label">STEP 3</span><br>12G = 48 → G = 4</div>
+          <div class="step"><span class="s-label">정답</span><br>최대공약수 G = <strong>4</strong> (두 수는 12와 16)</div>
+          <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
+        </div>
+        <div class="solution">
+          <div class="sol-head">🧩 본 유형 — 조건이 둘일 때 후보 나열하기 (아래 8번 유형)</div>
+          <div class="sol-q">최대공약수가 6이고 최소공배수가 60인 두 자연수가 <strong>모두 두 자리</strong>일 때, 두 수의 합은?</div>
+          <div class="step"><span class="s-label">STEP 1</span><br>A = 6a, B = 6b (a, b 서로소) 로 두면 L = 6ab = 60 → <strong>ab = 10</strong>.</div>
+          <div class="step"><span class="s-label">STEP 2</span><br>ab = 10이면서 서로소인 (a, b)를 <strong>모두</strong> 나열: (1, 10), (2, 5).</div>
+          <div class="step"><span class="s-label">STEP 3</span><br>(1, 10) → 두 수는 6과 60. 6은 <strong>한 자리</strong>라 조건 위반. (2, 5) → 12와 30, 둘 다 두 자리 ✓</div>
+          <div class="step"><span class="s-label">정답</span><br>12 + 30 = <strong>42</strong> — 조건을 다 쓰지 않으면 답이 두 개로 갈린다는 게 함정!</div>
+          <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
+        </div>
+        <div class="prob" data-qid="ph1" data-ans="15" data-type="num"><div class="pq"><span class="pnum">1.</span>자연수 a, b, c가 있다. a와 b의 최대공약수는 30, b와 c의 최대공약수는 45일 때, a, b, c의 최대공약수는?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="GCD"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 세 수의 공약수는 30과 45의 공약수이기도 하다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph2" data-ans="66" data-type="num"><div class="pq"><span class="pnum">2.</span>두 자연수의 곱이 605이고 최대공약수가 11일 때, 두 자연수의 합은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="합"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 11a × 11b = 605 에서 ab를 먼저 구한다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph3" data-ans="7" data-type="num"><div class="pq"><span class="pnum">3.</span>12와 42에 어떤 분수를 각각 곱하였더니 그 결과가 모두 자연수가 되었다. 이러한 분수 중에서 가장 작은 수가 <sup>b</sup>⁄<sub>a</sub> (기약분수)일 때, a + b의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="a+b"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 분모 a는 12와 42의 공약수여야 한다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph4" data-ans="17" data-type="num"><div class="pq"><span class="pnum">4.</span>세 변의 길이가 각각 28, 42, 49인 삼각형의 세 변에 일정한 간격으로 점을 찍으려고 한다. 세 꼭짓점에는 반드시 점을 찍는다고 할 때, 최소한 몇 개의 점을 찍어야 하는가?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 간격은 세 변의 최대공약수. 꼭짓점이 겹쳐 세어지지 않도록 주의</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph5" data-ans="30" data-type="num"><div class="pq"><span class="pnum">5.</span>세 수 2<sup>6</sup>×5, 2<sup>7</sup>×3, 2<sup>6</sup>×3×5 의 최소공배수는 이 수들의 최대공약수의 몇 배인가?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="배"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph6" data-ans="4" data-type="num"><div class="pq"><span class="pnum">6.</span>두 수 2<sup>2</sup>×3<sup>a</sup>×5 와 2<sup>b</sup>×3<sup>2</sup> 의 최대공약수가 12이고 최소공배수가 360일 때, a + b의 값은? (단, a, b는 자연수)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="a+b"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 12와 360을 소인수분해해 지수를 하나씩 맞춘다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph7" data-ans="96" data-type="num"><div class="pq"><span class="pnum">7.</span>두 자연수 a, b의 최대공약수를 a★b, 최소공배수를 a▲b로 나타내기로 하면 (24★30)▲32 의 값은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 괄호 안부터. ★는 최대공약수</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph8" data-ans="42" data-type="num"><div class="pq"><span class="pnum">8.</span>최대공약수가 6이고 최소공배수가 60인 두 자연수가 <strong>모두 두 자리</strong>일 때, 두 수의 합은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="합"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 위 단계별 풀이 참고</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph9" data-ans="4" data-type="num"><div class="pq"><span class="pnum">9.</span>최대공약수가 8이고 최소공배수가 240인 두 자연수 a, b의 순서쌍 (a, b)는 모두 몇 개인가? (단, a ≤ b)</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="개"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 8ab = 240에서 ab를 구하고 서로소인 쌍을 모두 센다</div><div class="quiz-fb"></div></div>
+        <div class="prob" data-qid="ph10" data-ans="96" data-type="num"><div class="pq"><span class="pnum">10.</span>최대공약수가 12이고 최소공배수가 180인 두 자연수의 쌍 중에서, 두 수의 <strong>합이 가장 작은</strong> 쌍의 합은?</div><div class="quiz-row"><input class="quiz-input" type="number" placeholder="합"><button class="quiz-submit" onclick="grade(this)">채점</button></div><div class="quiz-hint">→ 후보를 모두 나열한 뒤 합을 비교</div><div class="quiz-fb"></div></div>
       </div>
     </div>
+
 
     <section class="wrongnote" id="pwrong">
       <h2>📒 연습 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(연습문제에서 틀린 문제)</span></h2>
@@ -613,6 +607,7 @@ function renderWrongList(boxId,list){
 
 function refresh(){
   const secs=document.querySelectorAll('.section');
+  state.done=state.done.filter(id=>document.getElementById(id));
   secs.forEach(s=>{const on=state.done.indexOf(s.id)>=0;s.classList.toggle('done',on);const b=s.querySelector('.complete-btn');if(b)b.textContent=on?'✓ 완료됨':'완료하기';});
   const total=secs.length;const p=Math.round(state.done.length/total*100);
   document.getElementById('ring').style.setProperty('--p',p);document.getElementById('ringTxt').textContent=p+'%';
