@@ -54,6 +54,17 @@
   .unit .u-bar > i{display:block;height:100%;width:0%;background:var(--green);border-radius:5px;}
   .unit .u-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);}
   .unit .u-go{margin-top:14px;font-size:13px;font-weight:700;color:var(--green);}
+  .intro{margin-top:30px;background:var(--card);border:1px solid var(--border);border-radius:16px;
+    padding:24px 26px;backdrop-filter:blur(10px);}
+  .intro h2{font-size:1.05rem;font-weight:800;letter-spacing:-.01em;margin-bottom:10px;}
+  .intro p{font-size:.93rem;color:var(--muted);margin-bottom:11px;}
+  .intro p:last-child{margin-bottom:0;}
+  .intro strong{color:var(--text);}
+  .intro a{color:var(--green);}
+  .flow{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:14px 0 4px;font-size:.84rem;}
+  .flow .st{background:rgba(148,163,184,.08);border:1px solid var(--border);border-radius:9px;
+    padding:6px 12px;font-weight:700;color:var(--text);}
+  .flow .ar{color:var(--muted);}
   .foot{text-align:center;color:var(--muted);font-size:12.5px;margin-top:40px;}
   @media (max-width:600px){.grid{grid-template-columns:1fr;}.cover h1{font-size:30px;}}
 </style>
@@ -135,8 +146,22 @@
       <div class="u-go">강의노트 열기 →</div>
     </a>
   </div>
+  <div class="intro">
+    <h2>중1 1학기는 이런 학기입니다</h2>
+    <p>중학교 수학의 출발점입니다. 초등학교에서 다루던 수의 세계를 <strong>소수·약수에서 정수와 유리수까지</strong> 넓히고, 처음으로 <strong>문자를 써서 식을 세우는</strong> 법을 배웁니다. 그 문자를 이용해 일차방정식을 풀고, 마지막에는 좌표평면 위에서 두 양의 관계를 그래프로 읽는 데까지 나아갑니다.</p>
+    <p>앞 단원이 뒤 단원의 도구가 되는 구조라 순서가 중요합니다. 소인수분해를 알아야 최대공약수를 구하고, 유리수의 계산이 익숙해야 방정식을 풀 수 있으며, 정비례 관계를 이해해야 그래프가 보입니다. <strong>9개 단원 전체가 공개되어 있습니다.</strong></p>
+    <h2 style="margin-top:20px;">각 단원은 이렇게 구성됩니다</h2>
+    <div class="flow">
+      <span class="st">개념 7섹션</span><span class="ar">→</span>
+      <span class="st">본문 퀴즈</span><span class="ar">→</span>
+      <span class="st">오답노트</span><span class="ar">→</span>
+      <span class="st">연습문제 30문항</span>
+    </div>
+    <p style="margin-top:12px;">개념을 한 조각 읽으면 곧바로 확인 퀴즈를 풉니다. 틀린 문항은 자동으로 오답노트에 모이고, 개념을 모두 정리해야 연습문제(기본 10 · 응용 10 · 심화 10)가 열립니다. 진행 상황은 기기에 저장되어 창을 닫아도 이어집니다. 문항 검증과 난이도 기준은 <a href="/about.html">사이트 소개</a>를 참고해 주세요.</p>
+  </div>
+
   <div class="foot">
-  <p style="margin-bottom:6px;"><a href="/" style="color:var(--muted);">Isaac Math 홈</a> · <a href="/privacy.html" style="color:var(--muted);">개인정보처리방침</a></p>
+  <p style="margin-bottom:6px;"><a href="/" style="color:var(--muted);">Isaac Math 홈</a> · <a href="/about.html" style="color:var(--muted);">사이트 소개</a> · <a href="/privacy.html" style="color:var(--muted);">개인정보처리방침</a></p>
   © Isaac Math · 개인 학습용으로 자유롭게 이용하세요. 무단 복제·재배포는 금합니다.</div>
 </div>
 
